@@ -1,0 +1,84 @@
+[submodule "libs/cider"]
+	path = libs/cider
+	url = https://github.com/clojure-emacs/cider.git
+[submodule "libs/clojure-mode"]
+	path = libs/clojure-mode
+	url = https://github.com/clojure-emacs/clojure-mode.git
+[submodule "libs/dash"]
+	path = libs/dash
+	url = https://github.com/magnars/dash.el.git
+[submodule "libs/queue"]
+	path = libs/queue
+	url = https://github.com/ffailla/elpa-queue.git
+[submodule "libs/spinner"]
+	path = libs/spinner
+	url = https://github.com/Malabarba/spinner.el.git
+[submodule "libs/company"]
+	path = libs/company
+	url = https://github.com/company-mode/company-mode.git
+[submodule "libs/paredit"]
+	path = libs/paredit
+	url = https://github.com/emacsmirror/paredit.git
+[submodule "libs/undo-tree"]
+	path = libs/undo-tree
+	url = https://github.com/emacsmirror/undo-tree.git
+[submodule "libs/eval-sexp-fu"]
+	path = libs/eval-sexp-fu
+	url = https://github.com/emacsmirror/eval-sexp-fu.git
+[submodule "libs/cider-eval-sexp-fu"]
+	path = libs/cider-eval-sexp-fu
+	url = https://github.com/clojure-emacs/cider-eval-sexp-fu.git
+[submodule "libs/yasnippet"]
+	path = libs/yasnippet
+	url = https://github.com/capitaomorte/yasnippet.git
+[submodule "libs/highlight"]
+	path = libs/highlight
+	url = https://github.com/emacsmirror/highlight.git
+[submodule "libs/align-cljlet"]
+	path = libs/align-cljlet
+	url = https://github.com/gstamp/align-cljlet.git
+[submodule "libs/auto-highlight-symbol"]
+	path = libs/auto-highlight-symbol
+	url = https://github.com/emacsmirror/auto-highlight-symbol.git
+[submodule "libs/popwin"]
+	path = libs/popwin
+	url = https://github.com/m2ym/popwin-el.git
+[submodule "libs/async"]
+	path = libs/async
+	url = https://github.com/jwiegley/emacs-async.git
+[submodule "libs/magit"]
+	path = libs/magit
+	url = https://github.com/magit/magit.git
+[submodule "libs/smex"]
+	path = libs/smex
+	url = https://github.com/nonsequitur/smex.git
+[submodule "libs/tabbar"]
+	path = libs/tabbar
+	url = https://github.com/dholm/tabbar.git
+[submodule "libs/color-theme"]
+	path = libs/color-theme
+	url = https://github.com/emacsattic/color-theme.git
+[submodule "libs/clj-refactor"]
+	path = libs/clj-refactor
+	url = https://github.com/clojure-emacs/clj-refactor.el.git
+[submodule "libs/s"]
+	path = libs/s
+	url = https://github.com/magnars/s.el.git
+[submodule "libs/multiple-cursors"]
+	path = libs/multiple-cursors
+	url = https://github.com/magnars/multiple-cursors.el.git
+[submodule "libs/edn"]
+	path = libs/edn
+	url = https://github.com/expez/edn.el.git
+[submodule "libs/peg.el"]
+	path = libs/peg
+	url = https://github.com/ellerh/peg.el.git
+[submodule "libs/hydra"]
+	path = libs/hydra
+	url = https://github.com/abo-abo/hydra.git
+[submodule "libs/pkg-info"]
+	path = libs/pkg-info
+	url = https://github.com/lunaryorn/pkg-info.el.git
+[submodule "libs/epl"]
+	path = libs/epl
+	url = https://github.com/cask/epl.git
