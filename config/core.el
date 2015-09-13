@@ -17,12 +17,14 @@
         edn ;; clj-refactor
         epl ;; cider
         eval-sexp-fu
+        ggtags
         highlight ;; yasnippet
         hydra ;; clj-refactor
         magit/lisp
         multiple-cursors ;; clj-refactor
         paredit
         peg ;; clj-refactor
+        projectile
         pkg-info ;; cider
         popwin
         queue ;; cider
@@ -46,11 +48,13 @@
         color-theme
         company
         erc-services
+        ggtags
         magit
         mpc
         mu4e
         paredit
         paren
+        projectile
         popwin
         saveplace
         smex
@@ -64,7 +68,7 @@
   (require lib))
 
 (setq config-files
-      '(clojure
+      '(lisp
         global-modes
         misc
         mu4e

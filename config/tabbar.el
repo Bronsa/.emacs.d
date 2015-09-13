@@ -43,6 +43,7 @@
                                 (equal "*clang-complete*" (buffer-name b))
                                 (equal "*Shell Command Output*" (buffer-name b))
                                 (equal "*Ido Completions*" (buffer-name b))
+                                (equal "*ggtags-global*" (buffer-name b))
                                 (equal "*Completions*" (buffer-name b))
                                 (equal "*Compile-Log*" (buffer-name b))
                                 (equal "*vc*" (buffer-name b))

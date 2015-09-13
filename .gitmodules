@@ -82,3 +82,9 @@
 [submodule "libs/epl"]
 	path = libs/epl
 	url = https://github.com/cask/epl.git
+[submodule "libs/projectile"]
+	path = libs/projectile
+	url = https://github.com/bbatsov/projectile.git
+[submodule "ggtags"]
+	path = libs/ggtags
+	url = https://github.com/leoliu/ggtags.git
