@@ -123,7 +123,7 @@
 
 (setq ggtags-split-window-function (lambda () (interactive)))
 (push '("*ggtags-global*" :noselect tn) popwin:special-display-config)
-
+(push '("*cider-doc*" :noselect tn) popwin:special-display-config)
 
 (defvar doc-buffer-timer nil)
 
