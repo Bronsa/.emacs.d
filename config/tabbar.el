@@ -67,6 +67,7 @@
                                 (memq (buffer-local-value 'major-mode b)
                                       '(mu4e-main-mode mu4e-view-mode mu4e-compose-mode mu4e-headers-mode message-mode mail-mode))
                                 (string-match "\\*draft\\*.*" (buffer-name b))
+                                (string-match "\\*JDEE.*\\*" (buffer-name b))
                                 (string-match "\\*emacs\\*.*" (buffer-name b))
                                 (string-match "\\*ediff\\*.*" (buffer-name b))
                                 (memq (buffer-local-value 'major-mode b)

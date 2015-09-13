@@ -119,3 +119,5 @@
 region if there is a region"
   (interactive)
   (mu4e-mark-set mark))
+
+(add-to-list 'recentf-exclude "Gmail")

@@ -90,12 +90,7 @@
 
 (global-set-key (kbd "C-c C-k") 'compile)
 
-(global-set-key (kbd "TAB")
-                '(lambda ()
-                   (interactive)
-                   (if (and company-mode (looking-at "\\_>"))
-                       (company-complete-common)
-                     (indent-according-to-mode))))
+(global-set-key (kbd "C-\\") 'company-complete-common)
 
 (define-key company-active-map (kbd "TAB") 'company-complete-common-or-cycle)
 (define-key company-active-map (kbd "<backtab>") 'company-select-previous-or-abort)

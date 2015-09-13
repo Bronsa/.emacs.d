@@ -88,3 +88,6 @@
 [submodule "ggtags"]
 	path = libs/ggtags
 	url = https://github.com/leoliu/ggtags.git
+[submodule "libs/jdee"]
+	path = libs/jdee
+	url = https://github.com/jdee-emacs/jdee.git
