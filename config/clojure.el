@@ -2,9 +2,10 @@
                 cider-repl-mode-hook))
   (add-hook hook #'eldoc-mode)
   (add-hook hook #'paredit-mode)
-  ;; (add-hook hook (lambda ()
-  ;;                  (clj-refactor-mode 1)
-  ;;                  (cljr-add-keybindings-with-prefix "C-c C-m")))
+  (add-hook hook #'auto-highlight-symbol-mode)
+  (add-hook hook (lambda ()
+                   (clj-refactor-mode 1)
+                   (cljr-add-keybindings-with-prefix "C-c r")))
 
   (add-hook hook (lambda ()
                    (dolist (el '(("(\\(fn\\)[[:space:]]"         . "ƒ")
@@ -42,7 +43,8 @@
       cider-stacktrace-default-filters nil
       cider-stacktrace-fill-column nil
       cider-use-overlays nil
-      cider-prompt-save-file-on-load 'always-save)
+      cider-prompt-save-file-on-load 'always-save
+      cider-font-lock-dynamically nil)
 
 (add-to-list 'auto-mode-alist '("\\.clj\\(s\\|c\\)?$" . clojure-mode))
 

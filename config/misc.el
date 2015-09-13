@@ -78,11 +78,11 @@
 
 (setq magit-last-seen-setup-instructions "1.4.0")
 
-(defadvice with-editor-finish (after delete-window activate)
-  (magit-status))
+;; (defadvice with-editor-finish (after delete-window activate)
+;;   (magit-status))
 
-(defadvice with-editor-cancel (after delete-window activate)
-  (magit-status))
+;; (defadvice with-editor-cancel (after delete-window activate)
+;;   (magit-status))
 
 (defun javap-handler (op &rest args)
   "Handle .class files by putting the output of javap in the buffer."
@@ -113,3 +113,5 @@
 (add-to-list 'file-name-handler-alist '("\\.class$" . javap-handler))
 
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
+
+(add-to-list 'recentf-exclude "Gmail")

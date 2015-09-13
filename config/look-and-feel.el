@@ -115,6 +115,8 @@
      (fg:erc-color-face12 ((t (:foreground "brightblue"))))
      (fg:erc-color-face2 ((t (:foreground "blue"))))
 
+     (cider-debug-code-overlay-face ((t (:background "#454545"))))
+
      (company-tooltip ((t (:background "#333333" :foreground "white"))))
      (company-tooltip-annotation ((t (:background "#333333" :foreground "white"))))
      (company-scrollbar-bg ((t (:background "#0A0A0A"))))
