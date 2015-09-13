@@ -123,3 +123,17 @@
 
 (setq ggtags-split-window-function (lambda () (interactive)))
 (push '("*ggtags-global*" :noselect tn) popwin:special-display-config)
+
+
+(defvar doc-buffer-timer nil)
+
+(add-to-list 'company-frontends
+             (lambda (command)
+               (pcase command
+                 (`post-command
+                  (setq doc-buffer-timer (run-with-idle-timer 0.6 nil (lambda () (company-show-doc-buffer)))))
+                 (`hide
+                  (when (timerp doc-buffer-timer)
+                    (cancel-timer doc-buffer-timer)
+                    (setq doc-buffer-timer nil)))))
+             :append)
