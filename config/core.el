@@ -20,7 +20,6 @@
         ggtags
         highlight ;; yasnippet
         hydra ;; clj-refactor
-        jdee
         magit/lisp
         multiple-cursors ;; clj-refactor
         paredit
@@ -50,7 +49,6 @@
         company
         erc-services
         ggtags
-        jdee
         magit
         mpc
         mu4e
