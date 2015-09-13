@@ -16,7 +16,7 @@
 ;;(auto-insert-mode t)
 (show-paren-mode t)
 (global-auto-highlight-symbol-mode t)
-(yas-global-mode 1)
+;(yas-global-mode 1)
 (popwin-mode 1)
 (recentf-mode 1)
 (global-company-mode)
