@@ -120,3 +120,6 @@
           (lambda ()
             (when (derived-mode-p 'c-mode 'c++-mode 'java-mode)
               (ggtags-mode 1))))
+
+(setq ggtags-split-window-function (lambda () (interactive)))
+(push '("*ggtags-global*" :noselect tn) popwin:special-display-config)
