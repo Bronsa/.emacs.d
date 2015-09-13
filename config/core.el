@@ -61,6 +61,7 @@
         smtpmail-async
         tabbar
         undo-tree
+        uniquify
         yasnippet
         ))
 

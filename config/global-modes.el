@@ -21,3 +21,4 @@
 (recentf-mode 1)
 (global-company-mode)
 (projectile-global-mode)
+(global-auto-revert-mode 1)

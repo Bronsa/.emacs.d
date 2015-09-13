@@ -111,3 +111,4 @@
              :append)
 
 (setq company-idle-delay 0.2)
+(setq uniquify-buffer-name-style 'forward)
