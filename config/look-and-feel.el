@@ -123,7 +123,9 @@
      (company-scrollbar-fg ((t (:background "#555555"))))
      (company-tooltip-selection ((t (:background "gray60" :foreground "black"))))
      (company-tooltip-common ((t (:background "black" :foreground "gray50"))))
-     (company-tooltip-common-selection ((t (:background "black" :foreground "gray80")))))))
+     (company-tooltip-common-selection ((t (:background "black" :foreground "gray80"))))
+
+     (ggtags-global-line ((t (:background "#121212")))))))
 
 (my-theme)
 
