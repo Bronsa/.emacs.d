@@ -14,7 +14,8 @@
                                                   magit-log-edit-mode magit-branch-manager-mode magit-wazzup-mode
                                                   magit-reflog-mode))
                     (equal "*magit-process*" (buffer-name (current-buffer)))
-                    (string-match "\\*Magit.*\\*" (buffer-name (current-buffer))))
+                    (string-match "\\*Magit.*\\*" (buffer-name (current-buffer)))
+                    (string-match "COMMIT_EDITMSG$" (buffer-name (current-buffer))))
                 "Magit")
                ;; ((memq major-mode '(mu4e-main-mode mu4e-view-mode mu4e-compose-mode mu4e-headers-mode message-mode mail-mode))
                ;;  "Mail")
