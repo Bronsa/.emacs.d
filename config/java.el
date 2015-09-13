@@ -26,4 +26,8 @@
 
 (add-to-list 'file-name-handler-alist '("\\.class$" . javap-handler))
 
-(add-to-list 'company-backends '(company-gtags company-dabbrev-code company-keywords))
+(add-hook 'java-mode-hook
+          (lambda ()
+            (ggtags-mode 1)
+            (make-local-variable 'company-backends)
+            (add-to-list 'company-backends '(company-gtags company-dabbrev-code company-keywords))))

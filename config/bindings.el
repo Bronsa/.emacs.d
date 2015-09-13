@@ -92,5 +92,17 @@
 
 (global-set-key (kbd "C-\\") 'company-complete-common)
 
+(global-set-key (kbd "TAB")
+                (lambda (&optional arg)
+                  (interactive "P")
+                  (let ((old-tick (buffer-chars-modified-tick))
+                        (old-point (point)))
+                    (funcall indent-line-function)
+                    (when (and (eq old-point (point))
+                               (eq old-tick (buffer-chars-modified-tick))
+                               (not (or (bolp)
+                                        (string-match-p "[[:space:]]" (string (char-before))))))
+                      (company-complete-common)))))
+
 (define-key company-active-map (kbd "TAB") 'company-complete-common-or-cycle)
 (define-key company-active-map (kbd "<backtab>") 'company-select-previous-or-abort)

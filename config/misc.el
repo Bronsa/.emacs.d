@@ -50,7 +50,6 @@
  tab-width 4
  indent-line-function 'insert-tab
  tab-always-indent 'complete
- completion-at-point-functions '(company-complete-common)
 
  default-major-mode 'text-mode
 
@@ -88,27 +87,8 @@
 
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
-(add-hook 'c-mode-common-hook
-          (lambda ()
-            (when (derived-mode-p 'c-mode 'c++-mode 'java-mode)
-              (ggtags-mode 1))))
-
 (setq ggtags-split-window-function (lambda () (interactive)))
 (push '("*ggtags-global*" :noselect tn) popwin:special-display-config)
 (push '("*cider-doc*" :noselect tn) popwin:special-display-config)
 
-(defvar doc-buffer-timer nil)
-
-(add-to-list 'company-frontends
-             (lambda (command)
-               (pcase command
-                 (`post-command
-                  (setq doc-buffer-timer (run-with-idle-timer 0.6 nil (lambda () (ignore-errors (company-show-doc-buffer))))))
-                 (`hide
-                  (when (timerp doc-buffer-timer)
-                    (cancel-timer doc-buffer-timer)
-                    (setq doc-buffer-timer nil)))))
-             :append)
-
-(setq company-idle-delay 0.2)
 (setq uniquify-buffer-name-style 'forward)
