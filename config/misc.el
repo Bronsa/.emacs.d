@@ -70,8 +70,6 @@
 (quietly-read-abbrev-file)
 (smex-initialize)
 
-(add-to-list 'completion-styles 'initials)
-
 (defalias 'byte-compile-cl-warn 'identity)
 
 (put 'overwrite-mode 'disabled t)
@@ -92,3 +90,5 @@
 (push '("*cider-doc*" :noselect tn) popwin:special-display-config)
 
 (setq uniquify-buffer-name-style 'forward)
+
+(setq browse-url-browser-function 'eww-browse-url)

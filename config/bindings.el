@@ -96,8 +96,9 @@
                 (lambda (&optional arg)
                   (interactive "P")
                   (let ((old-tick (buffer-chars-modified-tick))
-                        (old-point (point)))
-                    (funcall indent-line-function)
+                        (old-point (point))
+                        (tab-always-indent t))
+                    (call-interactively #'indent-for-tab-command)
                     (when (and (eq old-point (point))
                                (eq old-tick (buffer-chars-modified-tick))
                                (not (or (bolp)
@@ -106,3 +107,7 @@
 
 (define-key company-active-map (kbd "TAB") 'company-complete-common-or-cycle)
 (define-key company-active-map (kbd "<backtab>") 'company-select-previous-or-abort)
+
+(global-set-key (kbd "C-c s") 'cider-scratch)
+
+(define-key cider-clojure-interaction-mode-map (kbd "M-RET") #'cider-eval-print-last-sexp)

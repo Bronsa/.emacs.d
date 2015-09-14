@@ -35,6 +35,7 @@
                                                                         nil))))))))
 
 (dolist (hook '(cider-mode-hook cider-repl-mode-hook))
+  (add-hook hook #'#'subword-mode)
   (add-hook hook (lambda ()
                    (clj-refactor-mode 1)
                    (cljr-add-keybindings-with-prefix "C-c r"))))

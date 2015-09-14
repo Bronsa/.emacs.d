@@ -48,6 +48,7 @@
                                 (equal "*Compile-Log*" (buffer-name b))
                                 (equal "*vc*" (buffer-name b))
                                 (equal "*edn*" (buffer-name b))
+                                (equal "*eww*" (buffer-name b))
                                 (equal "*clang-complete*" (buffer-name b))
                                 (equal "*grep*" (buffer-name b))
                                 (equal "*Open Recent*" (buffer-name b))
