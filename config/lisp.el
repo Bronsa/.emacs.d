@@ -35,7 +35,7 @@
                                                                         nil))))))))
 
 (dolist (hook '(cider-mode-hook cider-repl-mode-hook))
-  (add-hook hook #'#'subword-mode)
+  (add-hook hook #'subword-mode)
   (add-hook hook (lambda ()
                    (clj-refactor-mode 1)
                    (cljr-add-keybindings-with-prefix "C-c r"))))
@@ -96,14 +96,23 @@
 (defun figwheel-jack-in ()
   (interactive)
   (setq cider-current-clojure-buffer (current-buffer))
-  (add-hook 'cider-connected-hook
-            (lambda ()
-              (cider-nrepl-request:eval "(require 'figwheel-sidecar.repl-api)\n(figwheel-sidecar.repl-api/cljs-repl)"
-                                        (cider-repl-switch-ns-handler (cider-current-connection)) nil))
-            :local t)
   (let* ((project-dir (clojure-project-dir (cider-current-dir)))
          (cmd "lein figwheel"))
     (-when-let (repl-buff (cider-find-reusable-repl-buffer nil project-dir))
-      (let ((nrepl-create-client-buffer-function #'cider-repl-create)
+      (let ((nrepl-create-client-buffer-function
+             (lambda (endpoint)
+               (let ((buf (cider-repl-create endpoint)))
+
+                 buf)))
             (nrepl-use-this-as-repl-buffer repl-buff))
         (figwheel-start-server-process project-dir cmd nil)))))
+
+(defadvice cider-jack-in (around cider-jack-in act)
+  (if (string-match-p "\.cljs$" (buffer-name))
+      (figwheel-jack-in)
+    ad-do-it))
+
+(add-hook 'cider-connected-hook
+          (lambda ()
+            (cider-nrepl-request:eval "(try (require 'figwheel-sidecar.repl-api)\n((resolve 'figwheel-sidecar.repl-api/cljs-repl)) (catch Exception _))"
+                                      (cider-repl-switch-ns-handler (cider-current-connection)) nil)))

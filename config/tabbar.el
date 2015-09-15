@@ -5,7 +5,7 @@
                 "Shell")
                ((or
                  (eq major-mode 'compilation-mode)
-                 (string-match ".*cider.*" (buffer-name b))
+                 (string-match "\\*cider.*\\*" (buffer-name b))
                  (equal "*inferior-lisp*" (buffer-name (current-buffer)))
                  (equal "*ielm*" (buffer-name (current-buffer))))
                 "Interaction")

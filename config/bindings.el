@@ -110,8 +110,3 @@
 (global-set-key (kbd "C-c s") 'cider-scratch)
 
 (define-key cider-clojure-interaction-mode-map (kbd "M-RET") #'cider-eval-print-last-sexp)
-
-(define-key cider-mode-map (kbd "C-c M-j") (lambda ()
-                                             (if (string-match-p "\.cljs$" (buffer-name))
-                                                 (figwheel-jack-in)
-                                               (cider-jack-in))))

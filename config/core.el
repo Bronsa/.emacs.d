@@ -44,6 +44,7 @@
         auto-highlight-symbol
         cider
         cider-eval-sexp-fu
+        cider-scratch
         clj-refactor
         color-theme
         company
