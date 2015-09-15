@@ -101,7 +101,7 @@
                     (call-interactively #'indent-for-tab-command)
                     (when (and (eq old-point (point))
                                (eq old-tick (buffer-chars-modified-tick))
-                               (not (or (bolp) (string-match-p "\\s-\\|\\s)" (string (char-before))))))
+                               (not (or (bolp) (string-match-p "\\s-\\|\\s)\\|\\s(" (string (char-before))))))
                       (company-complete-common)))))
 
 (define-key company-active-map (kbd "TAB") 'company-complete-common-or-cycle)
