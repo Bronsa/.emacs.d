@@ -101,8 +101,7 @@
                     (call-interactively #'indent-for-tab-command)
                     (when (and (eq old-point (point))
                                (eq old-tick (buffer-chars-modified-tick))
-                               (not (or (bolp)
-                                        (string-match-p "[[:space:]]" (string (char-before))))))
+                               (not (or (bolp) (string-match-p "\\s-\\|\\s)" "1"))))
                       (company-complete-common)))))
 
 (define-key company-active-map (kbd "TAB") 'company-complete-common-or-cycle)
@@ -111,3 +110,8 @@
 (global-set-key (kbd "C-c s") 'cider-scratch)
 
 (define-key cider-clojure-interaction-mode-map (kbd "M-RET") #'cider-eval-print-last-sexp)
+
+(define-key cider-mode-map (kbd "C-c M-j") (lambda ()
+                                             (if (string-match-p "\.cljs$" (buffer-name))
+                                                 (figwheel-jack-in)
+                                               (cider-jack-in))))
