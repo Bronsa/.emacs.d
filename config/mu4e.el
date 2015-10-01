@@ -73,7 +73,7 @@
       mu4e-compose-dont-reply-to-self t
       mu4e-view-prefer-html nil
       message-kill-buffer-on-exit t
-      mu4e-html2text-command "html2text -utf8 -nobs")
+      mu4e-html2text-command 'mu4e-shr2text)
 
 (defvar total-mail 0)
 (defvar new-mail 0)

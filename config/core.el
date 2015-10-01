@@ -53,6 +53,7 @@
         magit
         mpc
         mu4e
+        mu4e-contrib
         paredit
         paren
         projectile
