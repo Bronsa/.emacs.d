@@ -77,11 +77,11 @@
 
 (setq magit-last-seen-setup-instructions "1.4.0")
 
-(defadvice with-editor-finish (after delete-window activate)
-  (magit-mode-bury-buffer))
+;; (defadvice with-editor-finish (after delete-window activate)
+;;   (magit-mode-bury-buffer))
 
-(defadvice with-editor-cancel (after delete-window activate)
-  (magit-mode-bury-buffer))
+;; (defadvice with-editor-cancel (after delete-window activate)
+;;   (magit-mode-bury-buffer))
 
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
