@@ -88,3 +88,6 @@
 [submodule "ggtags"]
 	path = libs/ggtags
 	url = https://github.com/leoliu/ggtags.git
+[submodule "libs/diff-hl"]
+	path = libs/diff-hl
+	url = https://github.com/dgutov/diff-hl.git

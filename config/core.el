@@ -14,6 +14,7 @@
         color-theme
         company
         dash ;; cider
+        diff-hl
         edn ;; clj-refactor
         epl ;; cider
         eval-sexp-fu
@@ -48,6 +49,8 @@
         clj-refactor
         color-theme
         company
+        diff-hl-flydiff
+        diff-hl-margin
         erc-services
         ggtags
         magit
