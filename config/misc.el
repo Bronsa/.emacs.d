@@ -1,5 +1,7 @@
 (fset 'yes-or-no-p 'y-or-n-p)
 
+(setq byte-compile-warnings nil)
+
 ;; use utf-8
 (set-language-environment 'utf-8)
 (prefer-coding-system 'utf-8)
@@ -65,7 +67,21 @@
 
  magit-revert-buffers 'silent
  magit-diff-unmarked-lines-keep-foreground nil
- magit-keep-region-overlay t)
+ magit-keep-region-overlay t
+ magit-branch-read-upstream-first t
+ magit-fetch-arguments '("--prune")
+ magit-log-arguments '("--graph" "--color" "--decorate" "--show-signature" "-n100")
+ magit-merge-arguments '("--no-ff")
+ magit-push-always-verify nil
+
+ projectile-cache-file (concat  dotfiles-tmp-dir "projectile-cache"))
+
+(magit-add-section-hook 'magit-status-sections-hook
+                        #'magit-insert-recent-commits
+                        #'magit-insert-unpushed-commits
+                        t)
+
+
 
 (quietly-read-abbrev-file)
 (smex-initialize)
@@ -77,12 +93,6 @@
 
 (setq magit-last-seen-setup-instructions "1.4.0")
 
-;; (defadvice with-editor-finish (after delete-window activate)
-;;   (magit-mode-bury-buffer))
-
-;; (defadvice with-editor-cancel (after delete-window activate)
-;;   (magit-mode-bury-buffer))
-
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
 (setq ggtags-split-window-function (lambda () (interactive)))
@@ -92,3 +102,18 @@
 (setq uniquify-buffer-name-style 'forward)
 
 (setq browse-url-browser-function 'eww-browse-url)
+
+(setq ns-right-alternate-modifier nil)
+
+(unless window-system
+  (require 'mouse)
+  (xterm-mouse-mode t)
+  (global-set-key [mouse-4] (lambda ()
+                              (interactive)
+                              (scroll-down 1)))
+  (global-set-key [mouse-5] (lambda ()
+                              (interactive)
+                              (scroll-up 1)))
+  (defun track-mouse (e))
+  (setq mouse-sel-mode t)
+)

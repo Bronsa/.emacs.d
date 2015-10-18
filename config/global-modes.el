@@ -22,3 +22,4 @@
 (global-company-mode)
 (projectile-global-mode)
 (global-auto-revert-mode 1)
+(global-subword-mode 1)

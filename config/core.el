@@ -52,8 +52,6 @@
         ggtags
         magit
         mpc
-        mu4e
-        mu4e-contrib
         paredit
         paren
         projectile
@@ -74,7 +72,6 @@
       '(lisp
         global-modes
         misc
-        mu4e
         erc
         mpc
         look-and-feel
@@ -82,7 +79,7 @@
         bindings
         defuns
         java
-        ))
+        superstore))
 
 (dolist (config-file config-files)
   (load-config-file (concat (symbol-name config-file) ".el")))

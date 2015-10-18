@@ -16,6 +16,8 @@
  show-paren-delay 0
  show-paren-style 'expression)
 
+(set-background-color "#232323")
+
 (defun my-theme ()
   (interactive)
   (color-theme-install
@@ -116,6 +118,7 @@
      (fg:erc-color-face2 ((t (:foreground "blue"))))
 
      (cider-debug-code-overlay-face ((t (:background "#454545"))))
+     (cider-stacktrace-face ((t (:foregroiund "#575757"))))
 
      (company-tooltip ((t (:background "#333333" :foreground "white"))))
      (company-tooltip-annotation ((t (:background "#333333" :foreground "white"))))
@@ -126,8 +129,6 @@
      (company-tooltip-common-selection ((t (:background "black" :foreground "gray80"))))
 
      (ggtags-global-line ((t (:background "#121212")))))))
-
-(my-theme)
 
 (set-face-attribute
  'erc-notice-face nil
@@ -174,16 +175,6 @@
               (propertize " ")
             ""))
 
-  "["
-  '(:eval (propertize (format "%s" new-mail)
-                      'face (if (> new-mail 0)
-                                'font-lock-warning-face
-                              'font-lock-constant-face)))
-  "/"
-  '(:eval (propertize (format "%s" total-mail)
-                      'face 'font-lock-constant-face))
-  "] "
-
   ;; the current major mode for the buffer.
   "["
 
@@ -215,3 +206,6 @@
   minor-mode-alist  ;; list of minor modes
   " %-" ;; fill with '-'
   ))
+
+
+(my-theme)

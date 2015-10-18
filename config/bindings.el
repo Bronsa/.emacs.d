@@ -50,9 +50,6 @@
 (global-set-key (kbd "M-q") 'join-line)
 (global-set-key (kbd "C-c g") 'magit-status)
 
-(global-set-key (kbd "C-x c") 'mu4e-compose-new)
-(global-set-key (kbd "C-x m") 'mu4e)
-
 (define-key mpc-songs-mode-map (kbd "RET") 'mpc-play-at-point)
 (define-key mpc-songs-mode-map (kbd "M-RET") 'mpc-play)
 (define-key mpc-mode-map (kbd "j") 'mpc-select)
@@ -74,7 +71,6 @@
 
 (global-unset-key (kbd "C-o"))
 
-(define-key mu4e-headers-mode-map (kbd "r") 'mu4e-compose-reply)
 (define-key paredit-mode-map (kbd "M-{") 'paredit-wrap-curly)
 (define-key paredit-mode-map (kbd "M-D") 'paredit-backward-kill-word)
 (define-key paredit-mode-map (kbd "S-<f9>") 'paredit-backward-kill-word)
@@ -110,3 +106,11 @@
 (global-set-key (kbd "C-c s") 'cider-scratch)
 
 (define-key cider-clojure-interaction-mode-map (kbd "M-RET") #'cider-eval-print-last-sexp)
+
+(define-key auto-highlight-symbol-mode-map (kbd "M-<left>") 'subword-left)
+(global-set-key (kbd "M-<left>") 'subword-left)
+(define-key auto-highlight-symbol-mode-map (kbd "M-<right>") 'subword-right)
+(global-set-key (kbd "M-<right>") 'subword-right)
+
+(global-set-key (kbd "s-<left>" ) 'ahs-backward)
+(global-set-key (kbd "s-<right>" ) 'ahs-forward)

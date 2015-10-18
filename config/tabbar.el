@@ -4,10 +4,12 @@
                ((memq major-mode '(shell-mode term-mode eshell-mode))
                 "Shell")
                ((or
-                 (eq major-mode 'compilation-mode)
-                 (string-match "\\*cider.*\\*" (buffer-name b))
+                 (equal "*cider-scratch*" (buffer-name b))
+                 (string-match "\\*cider-repl.*\\*" (buffer-name b))
+                 (string-match "\\*cider-error.*\\*" (buffer-name b))
                  (equal "*inferior-lisp*" (buffer-name (current-buffer)))
-                 (equal "*ielm*" (buffer-name (current-buffer))))
+                 (equal "*ielm*" (buffer-name (current-buffer)))
+                 (equal "*SQL*" (buffer-name (current-buffer))))
                 "Interaction")
                ((or (memq major-mode '(magit-mode magit-log-mode magit-commit-mode magit-key-mode magit-diff-mode
                                                   magit-wip-mode magit-wip-save-mode magit-status-mode magit-stath-mode
@@ -15,6 +17,7 @@
                                                   magit-reflog-mode))
                     (equal "*magit-process*" (buffer-name (current-buffer)))
                     (string-match "\\*Magit.*\\*" (buffer-name (current-buffer)))
+                    (string-match "\\*magit-process.*" (buffer-name (current-buffer)))
                     (equal "COMMIT_EDITMSG" (buffer-name (current-buffer))))
                 "Magit")
                ;; ((memq major-mode '(mu4e-main-mode mu4e-view-mode mu4e-compose-mode mu4e-headers-mode message-mode mail-mode))
@@ -37,10 +40,15 @@
                            ;;((eq (current-buffer) b) b)
                            ((char-equal ?\  (aref (buffer-name b) 0)) nil)
                            ((or (equal "*Messages*" (buffer-name b))
+                                (eq major-mode 'compilation-mode)
                                 (equal "*Help*" (buffer-name b))
                                 (equal "*Warnings*" (buffer-name b))
                                 (equal "*Buffer List*" (buffer-name b))
                                 (equal "*clang-complete*" (buffer-name b))
+                                (and (string-match "\\*cider-.*" (buffer-name b))
+                                     (not (equal "*cider-scratch*" (buffer-name b)))
+                                     (not (string-match "\\*cider-repl.*\\*" (buffer-name b)))
+                                     (not (string-match "\\*cider-error.*\\*" (buffer-name b))))
                                 (equal "*Shell Command Output*" (buffer-name b))
                                 (equal "*Ido Completions*" (buffer-name b))
                                 (equal "*ggtags-global*" (buffer-name b))
@@ -71,6 +79,7 @@
                                 (string-match "\\*JDEE.*\\*" (buffer-name b))
                                 (string-match "\\*emacs\\*.*" (buffer-name b))
                                 (string-match "\\*ediff\\*.*" (buffer-name b))
+                                (string-match "\\*Customize.*\\*" (buffer-name b))
                                 (memq (buffer-local-value 'major-mode b)
                                       '(mpc-mode mpc-status-mode mpc-tagbrowser-mode mpc-tagbrowser-dir-mode mpc-songs-mode))
                                 (equal "*undo-tree Diff*" (buffer-name b))) nil)
@@ -89,6 +98,7 @@
 (defun ztl-on-buffer-modification ()
   (set-buffer-modified-p t)
   (ztl-modification-state-change))
+
 (setq
  tabbar-scroll-left-help-function nil   ;don't show help information
  tabbar-scroll-right-help-function nil
