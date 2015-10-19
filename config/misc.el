@@ -74,7 +74,10 @@
  magit-merge-arguments '("--no-ff")
  magit-push-always-verify nil
 
- projectile-cache-file (concat  dotfiles-tmp-dir "projectile-cache"))
+ projectile-enable-caching t
+
+ split-height-threshold nil
+ split-width-threshold 0)
 
 (magit-add-section-hook 'magit-status-sections-hook
                         #'magit-insert-recent-commits
