@@ -76,8 +76,7 @@
 
  projectile-enable-caching t
 
- split-height-threshold nil
- split-width-threshold 0)
+ git-commit-finish-query-functions ())
 
 (magit-add-section-hook 'magit-status-sections-hook
                         #'magit-insert-recent-commits
