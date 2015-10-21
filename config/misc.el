@@ -75,7 +75,7 @@
  magit-push-always-verify nil
 
  projectile-enable-caching t
-
+ projectile-use-git-grep t
  git-commit-finish-query-functions ())
 
 (magit-add-section-hook 'magit-status-sections-hook

@@ -24,6 +24,7 @@
  '(erc-modules
    (quote
     (autojoin track completion irccontrols log netsplit match noncommands readonly stamp autoaway log scrolltobottom fill truncate ring networks move-to-prompt)))
+ '(magit-diff-section-arguments (quote ("--ignore-space-change" "--no-ext-diff")))
  '(safe-local-variable-values
    (quote
     ((eval define-clojure-indent
