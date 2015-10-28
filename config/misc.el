@@ -74,6 +74,8 @@
  magit-merge-arguments '("--no-ff")
  magit-push-always-verify nil
 
+ magit-save-repository-buffers 'dontask
+
  projectile-enable-caching t
  projectile-use-git-grep t
  git-commit-finish-query-functions ())
@@ -119,3 +121,5 @@
   (defun track-mouse (e))
   (setq mouse-sel-mode t))
 (setq ring-bell-function 'ignore)
+
+(setq css-indent-offset 2)

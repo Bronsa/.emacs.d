@@ -114,3 +114,6 @@
 
 (global-set-key (kbd "s-<left>" ) 'ahs-backward)
 (global-set-key (kbd "s-<right>" ) 'ahs-forward)
+
+(define-key cider-repl-mode-map "{" #'paredit-open-curly)
+(define-key cider-repl-mode-map "}" #'paredit-close-curly)

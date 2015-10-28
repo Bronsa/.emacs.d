@@ -24,7 +24,7 @@
  '(erc-modules
    (quote
     (autojoin track completion irccontrols log netsplit match noncommands readonly stamp autoaway log scrolltobottom fill truncate ring networks move-to-prompt)))
- '(magit-diff-section-arguments (quote ("--ignore-space-change" "--no-ext-diff")))
+ '(magit-diff-section-arguments (quote ( "--no-ext-diff")))
  '(safe-local-variable-values
    (quote
     ((eval define-clojure-indent
@@ -57,9 +57,3 @@
      (cider-refresh-after-fn . "yoyo/start!")
      (cider-refresh-before-fn . "yoyo/stop!")
      (cider-cljs-repl . "(user/cljs-repl user/foo-system)")))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
