@@ -97,9 +97,10 @@
      (diff-context ((t (:foreground "#555555"))))
 
      (smerge-refined-added ((t (:background nil :foreground "dark sea green"))))
+     (smerge-other ((t (:background nil :foreground "dark sea green"))))
      (smerge-refined-removed ((t (:background nil :foreground "brown3"))))
      (smerge-mine ((t (:background nil))))
-     (smerge-markers ((t (:background "lightgrey"))))
+     (smerge-markers ((t (:background "#555555"))))
 
      (message-header-cc ((t (:foreground "color-33"))))
      (message-header-newsgroups ((t (:foreground "color-33" :slant italic :weight bold))))
