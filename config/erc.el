@@ -117,7 +117,7 @@
 
                     (:eval (let* ((users (mapcar (lambda (user-data) (erc-server-user-nickname (car user-data)))
                                                  (erc-sort-channel-users-by-activity (erc-get-channel-user-list))))
-                                  (user-string (mapconcat #'identity (delete* nil (subseq users 0 10)) ", ")))
+                                  (user-string (mapconcat #'identity (delete* nil (subseq users 0 (min (length users) 10))) ", ")))
                              (propertize user-string 'help-echo user-string)))))))
 
 (defadvice erc-track-find-face (around erc-track-find-face-promote-query activate)
