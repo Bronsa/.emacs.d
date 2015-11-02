@@ -21,6 +21,7 @@
         ggtags
         highlight ;; yasnippet
         hydra ;; clj-refactor
+        less-css-mode
         magit/lisp
         multiple-cursors ;; clj-refactor
         paredit
@@ -53,6 +54,7 @@
         diff-hl-margin
         erc-services
         ggtags
+        less-css-mode
         magit
         mpc
         paredit

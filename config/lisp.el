@@ -28,8 +28,5 @@
       cider-lein-command "~/bin/lein"
       cljr-suppress-middleware-warnings t)
 
-;; (add-to-list 'auto-mode-alist '("\\.cljc?$" . clojure-mode))
-;; (add-to-list 'auto-mode-alist '("\\.cljs$" . clojurescript-mode))
-
 ;; enable cider even if no connection is available
 (add-hook 'clojure-mode-hook #'cider-mode)

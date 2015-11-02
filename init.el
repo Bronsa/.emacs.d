@@ -24,10 +24,12 @@
  '(erc-modules
    (quote
     (autojoin track completion irccontrols log netsplit match noncommands readonly stamp autoaway log scrolltobottom fill truncate ring networks move-to-prompt)))
- '(magit-diff-section-arguments (quote ( "--no-ext-diff")))
+ '(magit-diff-section-arguments (quote ("--no-ext-diff")))
  '(safe-local-variable-values
    (quote
-    ((eval define-clojure-indent
+    ((nameless-current-name . "cider")
+     (nameless-affect-indentation-and-filling)
+     (eval define-clojure-indent
            (assoc 1)
            (dissoc 1)
            (lazy-seq 0)

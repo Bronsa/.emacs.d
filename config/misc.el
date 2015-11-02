@@ -122,4 +122,5 @@
   (setq mouse-sel-mode t))
 (setq ring-bell-function 'ignore)
 
-(setq css-indent-offset 2)
+(setq css-indent-offset 2
+      sql-indent-offset 2)

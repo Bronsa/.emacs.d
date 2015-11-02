@@ -91,3 +91,6 @@
 [submodule "libs/diff-hl"]
 	path = libs/diff-hl
 	url = https://github.com/dgutov/diff-hl.git
+[submodule "libs/less-css-mode"]
+	path = libs/less-css-mode
+	url = https://github.com/purcell/less-css-mode.git
