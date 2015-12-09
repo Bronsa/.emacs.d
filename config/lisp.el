@@ -7,10 +7,10 @@
   (add-hook hook #'paredit-mode)
   (add-hook hook #'auto-highlight-symbol-mode))
 
-(dolist (hook '(cider-mode-hook cider-repl-mode-hook))
-  (add-hook hook (lambda ()
-                   (clj-refactor-mode 1)
-                   (cljr-add-keybindings-with-prefix "C-c r"))))
+;; (dolist (hook '(cider-mode-hook cider-repl-mode-hook))
+;;   (add-hook hook (lambda ()
+;;                    (clj-refactor-mode 1)
+;;                    (cljr-add-keybindings-with-prefix "C-c r"))))
 
 (setq nrepl-log-messages nil
       cider-mode-line nil

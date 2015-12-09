@@ -9,7 +9,8 @@
                  (string-match "\\*cider-error.*\\*" (buffer-name b))
                  (equal "*inferior-lisp*" (buffer-name (current-buffer)))
                  (equal "*ielm*" (buffer-name (current-buffer)))
-                 (equal "*SQL*" (buffer-name (current-buffer))))
+                 (string-match "\\*SQL.*\\*" (buffer-name (current-buffer)))
+                 (string-match "\\*sql.*\\*" (buffer-name (current-buffer))))
                 "Interaction")
                ((or (memq major-mode '(magit-mode magit-log-mode magit-commit-mode magit-key-mode magit-diff-mode
                                                   magit-wip-mode magit-wip-save-mode magit-status-mode magit-stath-mode
@@ -45,6 +46,7 @@
                                 (equal "*Warnings*" (buffer-name b))
                                 (equal "*Buffer List*" (buffer-name b))
                                 (equal "*clang-complete*" (buffer-name b))
+                                (string-match "\\*tramp.*" (buffer-name b))
                                 (and (string-match "\\*cider-.*" (buffer-name b))
                                      (not (equal "*cider-scratch*" (buffer-name b)))
                                      (not (string-match "\\*cider-repl.*\\*" (buffer-name b)))
