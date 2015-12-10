@@ -21,11 +21,12 @@
  '(magit-diff-section-arguments (quote ("--no-ext-diff")))
  '(safe-local-variable-values
    (quote
-    ((cider-cljs-lein-repl . "(user/cljs-repl)")
-     (eval define-clojure-indent
+    ((eval define-clojure-indent
+           (mlet 1)
            (lazy-seq 0)
            (match 1)
            (try+ 0))
+     (cider-cljs-lein-repl . "(user/cljs-repl)")
      (cider-refresh-after-fn . "bounce.core/start!")
      (cider-refresh-before-fn . "bounce.core/stop!")
      (nameless-current-name . "cider")
