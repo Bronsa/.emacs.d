@@ -86,7 +86,6 @@
                         t)
 
 
-
 (quietly-read-abbrev-file)
 (smex-initialize)
 
@@ -120,6 +119,7 @@
                               (scroll-up 1)))
   (defun track-mouse (e))
   (setq mouse-sel-mode t))
+
 (setq ring-bell-function 'ignore)
 
 (setq css-indent-offset 2

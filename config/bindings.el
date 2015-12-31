@@ -34,10 +34,10 @@
 (global-set-key (kbd "M-RET") 'newline-and-indent)
 
 ;; Navigate tabs
-(global-set-key (kbd "C-p")     'tabbar-backward-tab)
-(global-set-key (kbd "C-n")     'tabbar-forward-tab)
-(global-set-key (kbd "C-x C-p") 'tabbar-backward-group)
-(global-set-key (kbd "C-x C-n") 'tabbar-forward-group)
+(global-set-key (kbd "C-p")     'previous-line)
+(global-set-key (kbd "C-n")     'next-line)
+(global-set-key (kbd "C-x C-p") 'tabbar-backward-tab)
+(global-set-key (kbd "C-x C-n") 'tabbar-forward-tab)
 
 (global-set-key (kbd "M-x") 'smex)
 (global-set-key (kbd "M-X") 'smex-major-mode-commands)
