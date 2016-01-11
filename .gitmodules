@@ -57,7 +57,7 @@
 	url = https://github.com/dholm/tabbar.git
 [submodule "libs/color-theme"]
 	path = libs/color-theme
-	url = https://github.com/emacsattic/color-theme.git
+	url = https://github.com/haxney/color-theme.git
 [submodule "libs/clj-refactor"]
 	path = libs/clj-refactor
 	url = https://github.com/clojure-emacs/clj-refactor.el.git
