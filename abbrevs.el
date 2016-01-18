@@ -7,7 +7,9 @@
     ("mehface" "ヽ(´ｰ｀ )ﾉ")
     ("outtahere" "(╯°□°）╯︵ ┻━┻")
     ("dealwithit" "(⌐■_■)")
-    ("novaivia" "⡗⢼⣏⣹⡀⢇⡸⡮⢵⡅ ⢇⡸⡅⡮⢵")))
+    ("novaivia" "⡗⢼⣏⣹⡀⢇⡸⡮⢵⡅ ⢇⡸⡅⡮⢵")
+    ("whatever" "¯\_(ツ)_/¯")
+    ("idonteven" "¯\(°_°)/¯")))
 
 (define-abbrev-table 'global-abbrev-table
   '(;; ("lmbda" "λ")

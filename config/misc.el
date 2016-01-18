@@ -74,6 +74,8 @@
  magit-merge-arguments '("--no-ff")
  magit-push-always-verify nil
 
+ ;; buffer-save-without-query t
+
  magit-save-repository-buffers 'dontask
 
  projectile-enable-caching t

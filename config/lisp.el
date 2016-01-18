@@ -26,7 +26,9 @@
       cider-prompt-save-file-on-load 'always-save
       cider-font-lock-dynamically nil
       cider-lein-command "~/bin/lein"
-      cljr-suppress-middleware-warnings t)
+      cljr-suppress-middleware-warnings t
+      cljr-magic-requires nil
+      cljr-eagerly-build-asts-on-startup nil)
 
 ;; enable cider even if no connection is available
 (add-hook 'clojure-mode-hook #'cider-mode)
