@@ -32,3 +32,4 @@
 
 ;; enable cider even if no connection is available
 (add-hook 'clojure-mode-hook #'cider-mode)
+(add-hook 'magit-post-refresh-hook 'diff-hl-magit-post-refresh t)

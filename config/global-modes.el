@@ -24,5 +24,5 @@
 (global-auto-revert-mode 1)
 (global-subword-mode 1)
 (progn (global-diff-hl-mode)
-       (diff-hl-flydiff-mode)
+                                        ;(diff-hl-flydiff-mode)
        (diff-hl-margin-mode))
