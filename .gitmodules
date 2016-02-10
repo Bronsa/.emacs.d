@@ -94,3 +94,6 @@
 [submodule "libs/less-css-mode"]
 	path = libs/less-css-mode
 	url = https://github.com/purcell/less-css-mode.git
+[submodule "libs/with-editor"]
+	path = libs/with-editor
+	url = https://github.com/magit/with-editor.git

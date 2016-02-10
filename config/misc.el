@@ -33,6 +33,8 @@
  font-lock-maximum-decoration t
  font-lock-maximum-size nil
 
+ yas-snippet-dirs ()
+
  recentf-max-menu-items 25
 
  abbrev-mode t
@@ -126,3 +128,4 @@
 
 (setq css-indent-offset 2
       sql-indent-offset 2)
+(remove-hook 'find-file-hooks 'vc-find-file-hook)

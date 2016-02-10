@@ -105,6 +105,10 @@
 
 (global-set-key (kbd "C-c s") 'cider-scratch)
 
+(global-set-key (kbd "C-c C-p f") 'projectile-find-file)
+(global-set-key (kbd "C-c C-p C-f") 'projectile-find-file)
+(define-key cider-mode-map (kbd "C-c C-p") nil)
+
 (define-key cider-clojure-interaction-mode-map (kbd "M-RET") #'cider-eval-print-last-sexp)
 
 (define-key auto-highlight-symbol-mode-map (kbd "M-<left>") 'subword-left)
@@ -117,3 +121,11 @@
 
 (define-key cider-repl-mode-map "{" #'paredit-open-curly)
 (define-key cider-repl-mode-map "}" #'paredit-close-curly)
+
+(global-set-key [mode-line mouse-1] 'ignore)
+(global-set-key [mode-line mouse-2] 'ignore)
+(global-set-key [mode-line mouse-3] 'ignore)
+
+(global-set-key [minibuffer mouse-1] 'ignore)
+(global-set-key [minibuffer mouse-2] 'ignore)
+(global-set-key [minibuffer mouse-3] 'ignore)
