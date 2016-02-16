@@ -35,7 +35,7 @@
         spinner ;; cider
         tabbar
         undo-tree
-	with-editor
+        with-editor
         yasnippet
         ))
 

@@ -28,7 +28,9 @@
  '(magit-diff-section-arguments (quote ("--no-ext-diff")))
  '(safe-local-variable-values
    (quote
-    ((css-indent-offset . 2)
+    ((js2-basic-offset . 2)
+     (js-indent-level . 2)
+     (css-indent-offset . 2)
      (eval define-clojure-indent
            (mlet 1)
            (lazy-seq 0)
