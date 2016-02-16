@@ -129,3 +129,7 @@
 (global-set-key [minibuffer mouse-1] 'ignore)
 (global-set-key [minibuffer mouse-2] 'ignore)
 (global-set-key [minibuffer mouse-3] 'ignore)
+
+(define-key erc-mode-map (kbd "C-M-i") nil)
+
+(define-key paredit-mode-map (kbd "C-M-d") 'mark-sexp)

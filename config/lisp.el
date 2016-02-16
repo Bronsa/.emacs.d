@@ -28,7 +28,8 @@
       cider-lein-command "~/bin/lein"
       cljr-suppress-middleware-warnings t
       cljr-magic-requires nil
-      cljr-eagerly-build-asts-on-startup nil)
+      cljr-eagerly-build-asts-on-startup nil
+      cider-repl-display-help-banner nil)
 
 ;; enable cider even if no connection is available
 (add-hook 'clojure-mode-hook #'cider-mode)
