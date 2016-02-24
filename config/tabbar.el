@@ -56,6 +56,8 @@
                                 (equal "*ggtags-global*" (buffer-name b))
                                 (equal "*Completions*" (buffer-name b))
                                 (equal "*Compile-Log*" (buffer-name b))
+                                (equal "*pbcopy*" (buffer-name b))
+                                (equal "*Occur*" (buffer-name b))
                                 (equal "*vc*" (buffer-name b))
                                 (equal "*edn*" (buffer-name b))
                                 (equal "*eww*" (buffer-name b))

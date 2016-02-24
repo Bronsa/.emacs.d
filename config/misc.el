@@ -26,10 +26,12 @@
 
 ;;saveplace
 (setq-default save-place t)
+
 (setq save-place-file "~/.emacs.d/.saved-places")
 
 
 (setq-default
+
  font-lock-maximum-decoration t
  font-lock-maximum-size nil
 
@@ -129,3 +131,11 @@
 (setq css-indent-offset 2
       sql-indent-offset 2)
 (remove-hook 'find-file-hooks 'vc-find-file-hook)
+
+(advice-add 'kill-new :around
+            (lambda (k str &rest args)
+              (let ((process-connection-type nil))
+                (let ((proc (start-process "pbcopy" "*pbcopy*" "pbcopy")))
+                  (process-send-string proc str)
+                  (process-send-eof proc)))
+              (apply k str args)))

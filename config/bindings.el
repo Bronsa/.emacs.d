@@ -122,13 +122,9 @@
 (define-key cider-repl-mode-map "{" #'paredit-open-curly)
 (define-key cider-repl-mode-map "}" #'paredit-close-curly)
 
-(global-set-key [mode-line mouse-1] 'ignore)
-(global-set-key [mode-line mouse-2] 'ignore)
-(global-set-key [mode-line mouse-3] 'ignore)
-
-(global-set-key [minibuffer mouse-1] 'ignore)
-(global-set-key [minibuffer mouse-2] 'ignore)
-(global-set-key [minibuffer mouse-3] 'ignore)
+(define-key minibuffer-inactive-mode-map [mouse-1] 'ignore)
+(define-key minibuffer-inactive-mode-map [mouse-2] 'ignore)
+(define-key minibuffer-inactive-mode-map [mouse-3] 'ignore)
 
 (define-key erc-mode-map (kbd "C-M-i") nil)
 
