@@ -34,6 +34,7 @@
         smex
         spinner ;; cider
         tabbar
+        timemachine
         undo-tree
         with-editor
         yasnippet
@@ -55,6 +56,7 @@
         diff-hl-margin
         erc-services
         ggtags
+        git-timemachine
         less-css-mode
         magit
         mpc

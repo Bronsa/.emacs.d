@@ -28,7 +28,8 @@
  '(magit-diff-section-arguments (quote ("--no-ext-diff")))
  '(safe-local-variable-values
    (quote
-    ((js2-basic-offset . 2)
+    ((bug-reference-bug-regexp . "#\\(?2:[[:digit:]]+\\)")
+     (js2-basic-offset . 2)
      (js-indent-level . 2)
      (css-indent-offset . 2)
      (eval define-clojure-indent

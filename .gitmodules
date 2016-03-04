@@ -97,3 +97,6 @@
 [submodule "libs/with-editor"]
 	path = libs/with-editor
 	url = https://github.com/magit/with-editor.git
+[submodule "libs/timemachine"]
+	path = libs/timemachine
+	url = https://github.com/pidu/git-timemachine.git
