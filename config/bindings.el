@@ -129,3 +129,8 @@
 (define-key erc-mode-map (kbd "C-M-i") nil)
 
 (define-key paredit-mode-map (kbd "C-M-d") 'mark-sexp)
+
+(global-set-key (kbd "C-c <right>") 'hs-show-block)
+(global-set-key (kbd "C-c <left>")  'hs-hide-block)
+(global-set-key (kbd "C-c <up>")    'hs-hide-all)
+(global-set-key (kbd "C-c <down>")  'hs-show-all)

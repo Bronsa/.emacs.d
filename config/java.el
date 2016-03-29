@@ -29,5 +29,7 @@
 (add-hook 'java-mode-hook
           (lambda ()
             (ggtags-mode 1)
+            (hs-minor-mode t)
+            (hs-hide-all)
             (make-local-variable 'company-backends)
             (add-to-list 'company-backends '(company-gtags company-dabbrev-code company-keywords))))
