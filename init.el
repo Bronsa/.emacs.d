@@ -42,9 +42,15 @@
      (cider-refresh-before-fn . "bounce.core/stop!")
      (nameless-current-name . "cider")
      (nameless-affect-indentation-and-filling)))))
+
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(markup-complex-replacement-face ((t (:inherit markup-meta-face :foreground "purple3" :box (:line-width 2 :style released-button)))))
+ '(markup-gen-face ((t (:foreground "color-25"))))
+ '(markup-list-face ((t (:inherit markup-meta-face :foreground "color-125"))))
+ '(markup-secondary-text-face ((t (:inherit markup-gen-face :foreground "brightred" :height 0.8))))
+ '(markup-table-face ((t (:inherit markup-meta-face :foreground "royal blue"))))
+ '(markup-verbatim-face ((t nil))))

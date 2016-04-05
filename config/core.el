@@ -4,7 +4,8 @@
   (load-file (concat config-dir f)))
 
 (setq load-paths
-      '(align-cljlet
+      '(adoc-mode
+        align-cljlet
         async
         auto-highlight-symbol
         cider
@@ -13,6 +14,7 @@
         clojure-mode
         color-theme
         company
+        csv-mode
         dash ;; cider
         diff-hl
         edn ;; clj-refactor
@@ -22,6 +24,7 @@
         highlight ;; yasnippet
         hydra ;; clj-refactor
         less-css-mode
+        markup-faces
         magit/lisp
         multiple-cursors ;; clj-refactor
         paredit
@@ -44,7 +47,8 @@
   (add-lib-path (symbol-name path)))
 
 (setq required-libs
-      '(align-cljlet
+      '(adoc-mode
+        align-cljlet
         auto-highlight-symbol
         cider
         cider-eval-sexp-fu
@@ -52,6 +56,7 @@
         clj-refactor
         color-theme
         company
+        csv-mode
         diff-hl-flydiff
         diff-hl-margin
         erc-services

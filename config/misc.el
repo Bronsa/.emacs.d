@@ -151,3 +151,5 @@ Equality is defined by TESTFN if non-nil or by `equal' if nil."
           (throw 'seq--break index))
         (setq index (1+ index)))
       nil)))
+
+(add-to-list 'auto-mode-alist (cons "\\.adoc\\'" 'adoc-mode))

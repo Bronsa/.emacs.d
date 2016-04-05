@@ -100,3 +100,12 @@
 [submodule "libs/timemachine"]
 	path = libs/timemachine
 	url = https://github.com/pidu/git-timemachine.git
+[submodule "libs/csv-mode"]
+	path = libs/csv-mode
+	url = https://github.com/msherry/csv-mode
+[submodule "libs/adoc-mode"]
+	path = libs/adoc-mode
+	url = https://github.com/sensorflo/adoc-mode.git
+[submodule "libs/markup-faces"]
+	path = libs/markup-faces
+	url = https://github.com/sensorflo/markup-faces.git

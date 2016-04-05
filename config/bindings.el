@@ -111,6 +111,8 @@
 
 (define-key cider-clojure-interaction-mode-map (kbd "M-RET") #'cider-eval-print-last-sexp)
 
+(define-key cider-clojure-interaction-mode-map (kbd "M-RET") #'cider-eval-print-last-sexp)
+
 (define-key auto-highlight-symbol-mode-map (kbd "M-<left>") 'subword-left)
 (global-set-key (kbd "M-<left>") 'subword-left)
 (define-key auto-highlight-symbol-mode-map (kbd "M-<right>") 'subword-right)
@@ -134,3 +136,5 @@
 (global-set-key (kbd "C-c <left>")  'hs-hide-block)
 (global-set-key (kbd "C-c <up>")    'hs-hide-all)
 (global-set-key (kbd "C-c <down>")  'hs-show-all)
+
+(define-key cider-repl-mode-map (kbd "C-M-q") #'prog-indent-sexp)
