@@ -30,6 +30,10 @@
 (setq save-place-file "~/.emacs.d/.saved-places")
 
 
+(auto-compression-mode 1)
+
+(setq gc-cons-threshold 67108864)
+
 (setq-default
 
  font-lock-maximum-decoration t
@@ -153,3 +157,27 @@ Equality is defined by TESTFN if non-nil or by `equal' if nil."
       nil)))
 
 (add-to-list 'auto-mode-alist (cons "\\.adoc\\'" 'adoc-mode))
+
+(defun rename-current-buffer-file ()
+  (interactive)
+  (let* ((old-name (buffer-file-name))
+         (_ (unless (and old-name (file-exists-p old-name))
+              (error "Buffer '%s' is not visiting a file" (buffer-name))))
+         (new-name (read-file-name "New name: " old-name)))
+    (when (get-buffer new-name)
+      (error "A buffer named '%s' already exists" new-name))
+    (rename-file old-name new-name 1)
+    (rename-buffer new-name)
+    (set-visited-file-name new-name)
+    (set-buffer-modified-p nil)
+    (message "File '%s' successfully renamed to '%s'" old-name (file-name-nondirectory new-name))))
+
+(defun delete-current-buffer-file ()
+  (interactive)
+  (let* ((old-name (buffer-file-name)))
+    (unless (and old-name (file-exists-p old-name))
+      (error "Buffer '%s' is not visiting a file" (buffer-name)))
+    (when (yes-or-no-p "Are you sure you want to remove this file? ")
+      (delete-file (buffer-file-name))
+      (kill-buffer (current-buffer))
+      (message "File '%s' successfully removed" old-name))))
