@@ -28,11 +28,7 @@
 (setq-default save-place t)
 
 (setq save-place-file "~/.emacs.d/.saved-places")
-
-
 (auto-compression-mode 1)
-
-(setq gc-cons-threshold 67108864)
 
 (setq-default
 

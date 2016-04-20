@@ -209,4 +209,3 @@
   ))
 
 (my-theme)
-(run-at-time "10 sec" 10 #'my-theme)

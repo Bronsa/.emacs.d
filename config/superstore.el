@@ -30,7 +30,7 @@
                              ("social-beta3"
                               (sql-product 'postgres)
                               (sql-server "localhost")
-                              (sql-port 5438)
+                              (sql-port 5439)
                               (sql-database "social")
                               (sql-user "social")))
             sql-send-terminator t)

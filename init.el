@@ -26,9 +26,13 @@
    (quote
     (autojoin track completion irccontrols log netsplit match noncommands readonly stamp autoaway log scrolltobottom fill truncate ring networks move-to-prompt)))
  '(magit-diff-section-arguments (quote ("--no-ext-diff")))
+ '(magit-log-arguments
+   (quote
+    ("--graph" "--color" "--decorate" "--show-signature" "-n100")))
  '(safe-local-variable-values
    (quote
-    ((bug-reference-bug-regexp . "#\\(?2:[[:digit:]]+\\)")
+    ((checkdoc-package-keywords-flag)
+     (bug-reference-bug-regexp . "#\\(?2:[[:digit:]]+\\)")
      (js2-basic-offset . 2)
      (js-indent-level . 2)
      (css-indent-offset . 2)
