@@ -13,6 +13,7 @@
 ;;                    (cljr-add-keybindings-with-prefix "C-c r"))))
 
 (setq nrepl-log-messages nil
+      cider-pprint-fn 'fipp
       cider-mode-line nil
       cider-prompt-for-symbol nil
       nrepl-hide-special-buffers t

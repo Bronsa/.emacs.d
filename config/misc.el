@@ -35,6 +35,8 @@
  font-lock-maximum-decoration t
  font-lock-maximum-size nil
 
+ font-lock-support-mode 'jit-lock-mode
+
  yas-snippet-dirs ()
 
  recentf-max-menu-items 25
