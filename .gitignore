@@ -1,0 +1,14 @@
+.erc_password
+.saved-places
+auto-save-list/
+eshell/
+games/
+ido.last
+places
+projectile-bookmarks.eld
+projectile.cache
+recentf
+tmp/
+tramp
+tutorial/
+url/
