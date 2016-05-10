@@ -89,7 +89,10 @@
 (defun irc ()
   "Connect to ERC, or switch to last active buffer"
   (interactive)
-  (erc-tls :server "irc.freenode.net" :port 6697 :nick "Bronsa" :password (insert-file-contents "~/.emacs.d/.erc_password") :full-name "Nicola Mometto"))
+
+(erc-tls :server "irc.freenode.net" :port 6697 :nick "Bronsa" :password
+         (with-temp-buffer (insert-file-contents "~/.emacs.d/.erc_password") (car (split-string (buffer-string) "\n")))
+         :full-name "Nicola Mometto"))
 
 (add-hook 'erc-mode-hook
           (lambda ()
