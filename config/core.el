@@ -65,6 +65,7 @@
         less-css-mode
         magit
         mpc
+        multiple-cursors
         paredit
         paren
         projectile

@@ -127,6 +127,10 @@
 (define-key minibuffer-inactive-mode-map [mouse-2] 'ignore)
 (define-key minibuffer-inactive-mode-map [mouse-3] 'ignore)
 
+(global-unset-key (kbd "<menu-bar> <mouse-1>"))
+(global-unset-key (kbd "<menu-bar> <mouse-2>"))
+(global-unset-key (kbd "<menu-bar> <mouse-3>"))
+
 (define-key erc-mode-map (kbd "C-M-i") nil)
 
 (define-key paredit-mode-map (kbd "C-M-d") 'mark-sexp)

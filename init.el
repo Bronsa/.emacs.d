@@ -58,3 +58,4 @@
  '(markup-secondary-text-face ((t (:inherit markup-gen-face :foreground "brightred" :height 0.8))))
  '(markup-table-face ((t (:inherit markup-meta-face :foreground "royal blue"))))
  '(markup-verbatim-face ((t nil))))
+(put 'overwrite-mode 'disabled nil)
