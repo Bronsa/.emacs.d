@@ -26,7 +26,7 @@
 
       erc-prompt-for-nickserv-password nil
 
-      erc-autojoin-channels-alist '(("freenode.net" "#distro" "#clojure" "#metamorphism"))
+      erc-autojoin-channels-alist '(("freenode.net" "#clojure" "#metamorphism"))
 
       erc-track-exclude-types '("JOIN" "NICK" "PART" "QUIT" "MODE" "324" "329" "332" "333" "353" "477")
       erc-hide-list '()

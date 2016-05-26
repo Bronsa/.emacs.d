@@ -74,13 +74,13 @@
  magit-revert-buffers 'silent
  magit-diff-unmarked-lines-keep-foreground nil
  magit-keep-region-overlay t
- magit-branch-read-upstream-first t
  magit-fetch-arguments '("--prune")
  magit-log-arguments '("--graph" "--color" "--decorate" "--show-signature" "-n100")
  magit-merge-arguments '("--no-ff")
+ magit-rebase-arguments '("--preserve-merges")
+
  magit-push-always-verify nil
 
- ;; buffer-save-without-query t
 
  magit-save-repository-buffers 'dontask
 
