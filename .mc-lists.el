@@ -11,7 +11,9 @@
         paredit-forward-kill-word
         paredit-forward-slurp-sexp
         paredit-kill
-        paredit-splice-sexp))
+        paredit-splice-sexp
+        paredit-splice-sexp-killing-backward
+        ))
 
 (setq mc/cmds-to-run-once
       '(

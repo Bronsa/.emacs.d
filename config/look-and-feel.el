@@ -51,7 +51,7 @@
      (mode-line-buffer-id ((t (:background "#1f1f1f" :foreground "#eeeeec"))))
      (mode-line-inactive ((t (:background "#1f1f1f" :foreground "#888a85"))))
      (minibuffer-prompt ((t (:foreground "#729fcf"))))
-     (region ((t (:background "#343434"))))
+     (region ((t (:background "#464646"))))
 
      (show-paren-match-face ((t (:background nil :foreground nil :weight extra-bold))))
      (show-paren-mismatch-face ((t (:foreground "#2e3436" :background "#ef2929"))))
