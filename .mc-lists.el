@@ -17,6 +17,7 @@
 
 (setq mc/cmds-to-run-once
       '(
+        paredit-close-round
         rectangle-number-lines
         undo-tree-visualize
         ))

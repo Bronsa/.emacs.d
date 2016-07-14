@@ -53,8 +53,8 @@
      (minibuffer-prompt ((t (:foreground "#729fcf"))))
      (region ((t (:background "#464646"))))
 
-     (show-paren-match-face ((t (:background nil :foreground nil :weight extra-bold))))
-     (show-paren-mismatch-face ((t (:foreground "#2e3436" :background "#ef2929"))))
+     (show-paren-match ((t (:background nil :foreground nil :weight extra-bold))))
+     (show-paren-mismatch ((t (:foreground "#2e3436" :background "#ef2929"))))
 
      (highlight ((t (:background "#1f1f1f" :foreground nil))))
      (highlight-current-line-face ((t (:background "#1f1f1f" :foreground nil))))

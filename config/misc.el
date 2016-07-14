@@ -84,6 +84,8 @@
 
  magit-save-repository-buffers 'dontask
 
+ git-commit-fill-column nil
+
  projectile-enable-caching t
  projectile-use-git-grep t
  git-commit-finish-query-functions ())
@@ -179,3 +181,13 @@ Equality is defined by TESTFN if non-nil or by `equal' if nil."
       (delete-file (buffer-file-name))
       (kill-buffer (current-buffer))
       (message "File '%s' successfully removed" old-name))))
+
+(defun copy-buffer-name ()
+  "Copy the current buffer file name to the clipboard."
+  (interactive)
+  (let ((filename (if (equal major-mode 'dired-mode)
+                      default-directory
+                    (buffer-file-name))))
+    (when filename
+      (kill-new filename)
+      (message "Copied buffer file name '%s' to the clipboard." filename))))
