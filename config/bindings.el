@@ -111,6 +111,7 @@
 
 (define-key cider-clojure-interaction-mode-map (kbd "M-RET") #'cider-eval-print-last-sexp)
 (define-key cider-repl-mode-map (kbd "C-c C-l") #'cider-repl-clear-buffer)
+(define-key sql-interactive-mode-map (kbd "C-c C-l") #'comint-clear-buffer)
 
 (define-key auto-highlight-symbol-mode-map (kbd "M-<left>") 'subword-left)
 (global-set-key (kbd "M-<left>") 'subword-left)
