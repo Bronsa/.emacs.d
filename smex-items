@@ -1,13 +1,13 @@
 
 ;; ----- smex-history -----
 (
+ sql-connect
  git-timemachine
  magit-blame
- magit-grep
  clojure-mode
  mpc
- indent-file
- sql-connect
+ replace-string
+ cider-refresh
 )
 
 ;; ----- smex-data -----
@@ -18,7 +18,7 @@
  (replace-string . 143)
  (epa-decrypt-file . 1)
  (epa-decrypt-armor-in-region . 3)
- (sql-connect . 220)
+ (sql-connect . 223)
  (rename-buffer . 35)
  (magit-log . 1)
  (magit-grep . 1582)

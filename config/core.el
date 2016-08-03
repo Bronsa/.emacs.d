@@ -73,6 +73,7 @@
         saveplace
         smex
         smtpmail-async
+        sql
         tabbar
         undo-tree
         uniquify

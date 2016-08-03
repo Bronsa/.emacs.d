@@ -31,16 +31,17 @@
     ("--graph" "--color" "--decorate" "--show-signature" "-n100")))
  '(safe-local-variable-values
    (quote
-    ((checkdoc-package-keywords-flag)
+    ((eval define-clojure-indent
+           (lazy-seq 0)
+           (match 1)
+           (try+ 0)
+           (deftype
+               (quote defun)))
+     (checkdoc-package-keywords-flag)
      (bug-reference-bug-regexp . "#\\(?2:[[:digit:]]+\\)")
      (js2-basic-offset . 2)
      (js-indent-level . 2)
      (css-indent-offset . 2)
-     (eval define-clojure-indent
-           (mlet 1)
-           (lazy-seq 0)
-           (match 1)
-           (try+ 0))
      (cider-cljs-lein-repl . "(user/cljs-repl)")
      (cider-refresh-after-fn . "bounce.core/start!")
      (cider-refresh-before-fn . "bounce.core/stop!")
