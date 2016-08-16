@@ -1,13 +1,13 @@
 
 ;; ----- smex-history -----
 (
+ mpc
  sql-connect
- git-timemachine
+ magit-grep
  magit-blame
  clojure-mode
- mpc
+ git-timemachine
  replace-string
- cider-refresh
 )
 
 ;; ----- smex-data -----
@@ -18,11 +18,11 @@
  (replace-string . 143)
  (epa-decrypt-file . 1)
  (epa-decrypt-armor-in-region . 3)
- (sql-connect . 223)
+ (sql-connect . 227)
  (rename-buffer . 35)
  (magit-log . 1)
- (magit-grep . 1582)
- (magit-blame . 129)
+ (magit-grep . 1588)
+ (magit-blame . 131)
  (set-face-background . 1)
  (set-background-color . 1)
  (magit-checkout . 3)
@@ -50,14 +50,14 @@
  (transpose-args . 2)
  (cider-connect . 2)
  (irc . 86)
- (indent-file . 32)
+ (indent-file . 33)
  (delete-file . 28)
  (comint-clear-buffer . 4)
  (css-mode . 3)
- (clojure-mode . 40)
+ (clojure-mode . 41)
  (nopaste . 51)
  (magit-bisect-popup . 2)
- (mpc . 1516)
+ (mpc . 1540)
  (sql-send-buffer . 11)
  (sql-set-sqli-buffer . 3)
  (indent-region . 1)
