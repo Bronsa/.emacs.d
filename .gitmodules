@@ -109,3 +109,6 @@
 [submodule "libs/markup-faces"]
 	path = libs/markup-faces
 	url = https://github.com/sensorflo/markup-faces.git
+[submodule "libs/wgrep"]
+	path = libs/wgrep
+	url = https://github.com/mhayashi1120/Emacs-wgrep.git

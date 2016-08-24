@@ -39,6 +39,7 @@
         tabbar
         timemachine
         undo-tree
+        wgrep
         with-editor
         yasnippet
         ))
@@ -77,6 +78,7 @@
         tabbar
         undo-tree
         uniquify
+        wgrep
         yasnippet
         ))
 
