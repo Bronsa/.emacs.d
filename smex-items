@@ -1,28 +1,28 @@
 
 ;; ----- smex-history -----
 (
- mpc
  magit-grep
  magit-blame
  sql-connect
+ mpc
+ clojure-mode
  replace-string
- grep-mode
- grep
+ text-mode
 )
 
 ;; ----- smex-data -----
 (
- (text-mode . 11)
+ (text-mode . 12)
  (term . 1)
  (eshell . 15)
- (replace-string . 158)
+ (replace-string . 192)
  (epa-decrypt-file . 1)
  (epa-decrypt-armor-in-region . 3)
- (sql-connect . 245)
+ (sql-connect . 258)
  (rename-buffer . 35)
  (magit-log . 1)
- (magit-grep . 2011)
- (magit-blame . 167)
+ (magit-grep . 2312)
+ (magit-blame . 179)
  (set-face-background . 1)
  (set-background-color . 1)
  (magit-checkout . 3)
@@ -39,7 +39,7 @@
  (View-scroll-page-forward-set-page-size . 1)
  (ielm . 20)
  (cider-jack-in . 1)
- (sql-mode . 29)
+ (sql-mode . 30)
  (js-mode . 2)
  (paredit-mode . 20)
  (magit-diff . 6)
@@ -51,19 +51,19 @@
  (cider-connect . 2)
  (irc . 86)
  (indent-file . 34)
- (delete-file . 34)
+ (delete-file . 42)
  (comint-clear-buffer . 4)
  (css-mode . 3)
- (clojure-mode . 49)
- (nopaste . 51)
+ (clojure-mode . 56)
+ (nopaste . 52)
  (magit-bisect-popup . 2)
- (mpc . 1807)
+ (mpc . 1910)
  (sql-send-buffer . 11)
  (sql-set-sqli-buffer . 3)
  (indent-region . 1)
- (mpc-update . 25)
+ (mpc-update . 26)
  (transpose-words . 3)
- (pcomplete . 34)
+ (pcomplete . 35)
  (projectile-find-file . 1)
  (clj-refactor-mode . 3)
  (html-mode . 1)
@@ -73,15 +73,15 @@
  (cljr-clean-ns . 1)
  (search-forward . 4)
  (emacs-uptime . 2)
- (replace-regexp . 5)
+ (replace-regexp . 17)
  (delete-duplicate-lines . 16)
  (mail . 4)
  (profiler-start . 1)
  (profiler-report . 1)
- (git-timemachine . 34)
+ (git-timemachine . 42)
  (buffer-menu . 1)
  (cider-find-and-clear-repl-output . 1)
- (mc/edit-lines . 37)
+ (mc/edit-lines . 38)
  (count-lines-region . 4)
  (count-words-region . 15)
  (auto-insert-mode . 6)
@@ -93,7 +93,7 @@
  (epa-sign-region . 1)
  (epa-encrypt-region . 2)
  (magit-merge-nocommit . 2)
- (magit-revert . 7)
+ (magit-revert . 10)
  (eshell-insert-buffer-name . 2)
  (zone-mode . 2)
  (zone . 1)
@@ -118,7 +118,11 @@
  (magit-blame-mode . 1)
  (wgrep-exit . 1)
  (grep . 10)
- (wgrep-toggle-readonly-area . 2)
+ (wgrep-toggle-readonly-area . 5)
  (grep-find . 2)
- (grep-mode . 3)
+ (grep-mode . 5)
+ (clojurec-mode . 1)
+ (wgrep-change-to-wgrep-mode . 8)
+ (map-query-replace-regexp . 1)
+ (query-replace . 1)
 )

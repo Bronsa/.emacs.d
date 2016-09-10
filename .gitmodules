@@ -85,7 +85,7 @@
 [submodule "libs/projectile"]
 	path = libs/projectile
 	url = https://github.com/bbatsov/projectile.git
-[submodule "ggtags"]
+[submodule "libs/ggtags"]
 	path = libs/ggtags
 	url = https://github.com/leoliu/ggtags.git
 [submodule "libs/diff-hl"]
@@ -102,7 +102,7 @@
 	url = https://github.com/pidu/git-timemachine.git
 [submodule "libs/csv-mode"]
 	path = libs/csv-mode
-	url = https://github.com/msherry/csv-mode
+	url = https://github.com/emacsmirror/csv-mode
 [submodule "libs/adoc-mode"]
 	path = libs/adoc-mode
 	url = https://github.com/sensorflo/adoc-mode.git
