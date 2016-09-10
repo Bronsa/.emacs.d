@@ -191,3 +191,4 @@ Equality is defined by TESTFN if non-nil or by `equal' if nil."
     (when filename
       (kill-new filename)
       (message "Copied buffer file name '%s' to the clipboard." filename))))
+(setq wgrep-enable-key "r")
