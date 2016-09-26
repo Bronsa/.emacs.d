@@ -127,17 +127,19 @@
 
 (setq ns-right-alternate-modifier nil)
 
-(unless window-system
-  (require 'mouse)
-  (xterm-mouse-mode t)
-  (global-set-key [mouse-4] (lambda ()
-                              (interactive)
-                              (scroll-down 1)))
-  (global-set-key [mouse-5] (lambda ()
-                              (interactive)
-                              (scroll-up 1)))
-  (defun track-mouse (e))
-  (setq mouse-sel-mode t))
+(require 'mouse)
+
+(global-set-key [mouse-4] (lambda ()
+                            (interactive)
+                            (scroll-down 1)))
+
+(global-set-key [mouse-5] (lambda ()
+                            (interactive)
+                            (scroll-up 1)))
+
+(add-hook 'after-make-frame-functions (lambda (&optional frame) (xterm-mouse-mode t)))
+(advice-add 'save-buffers-kill-terminal :before (lambda (&optional args) (xterm-mouse-mode -1)))
+(advice-add 'save-buffers-kill-terminal :after (lambda (&optional args) (xterm-mouse-mode t)))
 
 (setq ring-bell-function 'ignore)
 
@@ -148,11 +150,10 @@
 (advice-add 'kill-new :around
             (lambda (k str &rest args)
               (let ((process-connection-type nil))
-                (let ((proc (start-process "pbcopy" "*pbcopy*" "pbcopy")))
+                (let ((proc (start-process "xclip" "*copy*" "xclip")))
                   (process-send-string proc str)
                   (process-send-eof proc)))
               (apply k str args)))
-
 
 (defun seq-position (seq elt &optional testfn)
   "Return the index of the first element in SEQ that is equal to ELT.
@@ -201,4 +202,3 @@ Equality is defined by TESTFN if non-nil or by `equal' if nil."
     (when filename
       (kill-new filename)
       (message "Copied buffer file name '%s' to the clipboard." filename))))
-(setq wgrep-enable-key "r")
