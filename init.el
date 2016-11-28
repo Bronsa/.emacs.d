@@ -30,6 +30,7 @@
  '(magit-log-arguments
    (quote
     ("--graph" "--color" "--decorate" "--show-signature" "-n100")))
+ '(magit-rebase-arguments nil)
  '(safe-local-variable-values
    (quote
     ((eval define-clojure-indent

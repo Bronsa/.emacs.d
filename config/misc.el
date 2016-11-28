@@ -32,6 +32,15 @@
 
 (setq-default
 
+ company-idle-delay nil
+ company-minimum-prefix-length 0
+ company-selection-wrap-around t
+ company-tooltip-align-annotations t
+ company-tooltip-limit 16
+ company-require-match nil
+
+ auto-revert-use-notify t
+
  font-lock-maximum-decoration t
  font-lock-maximum-size nil
 
@@ -157,6 +166,7 @@ Equality is defined by TESTFN if non-nil or by `equal' if nil."
       nil)))
 
 (add-to-list 'auto-mode-alist (cons "\\.adoc\\'" 'adoc-mode))
+(add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode))
 
 (defun rename-current-buffer-file ()
   (interactive)

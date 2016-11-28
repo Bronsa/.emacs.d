@@ -112,3 +112,6 @@
 [submodule "libs/wgrep"]
 	path = libs/wgrep
 	url = https://github.com/mhayashi1120/Emacs-wgrep.git
+[submodule "libs/yaml-mode"]
+	path = libs/yaml-mode
+	url = https://github.com/yoshiki/yaml-mode

@@ -41,6 +41,7 @@
         undo-tree
         wgrep
         with-editor
+        yaml-mode
         yasnippet
         ))
 
@@ -80,7 +81,7 @@
         uniquify
         wgrep
         yasnippet
-        ))
+        yaml-mode))
 
 (dolist (lib required-libs)
   (require lib))
