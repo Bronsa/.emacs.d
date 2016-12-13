@@ -1,31 +1,31 @@
 
 ;; ----- smex-history -----
 (
- magit-blame
- mpc
- git-timemachine
- sql-connect
- delete-duplicate-lines
- magit-revert
  replace-string
+ mpc
+ magit-blame
+ git-timemachine
+ magit-grep
+ ielm
+ term
 )
 
 ;; ----- smex-data -----
 (
  (text-mode . 14)
- (term . 1)
+ (term . 2)
  (eshell . 15)
- (replace-string . 245)
+ (replace-string . 249)
  (epa-decrypt-file . 1)
  (epa-decrypt-armor-in-region . 3)
- (sql-connect . 284)
+ (sql-connect . 285)
  (rename-buffer . 35)
  (magit-log . 1)
- (magit-grep . 2575)
- (magit-blame . 196)
+ (magit-grep . 2623)
+ (magit-blame . 204)
  (set-face-background . 1)
  (set-background-color . 1)
- (magit-checkout . 3)
+ (magit-checkout . 4)
  (cider-create-sibling-cljs-repl . 9)
  (cider-refresh . 91)
  (cider-find-and-clear-repl-buffer . 38)
@@ -37,12 +37,12 @@
  (cider-rotate-default-connection . 8)
  (cider-mode . 4)
  (View-scroll-page-forward-set-page-size . 1)
- (ielm . 21)
+ (ielm . 22)
  (cider-jack-in . 1)
  (sql-mode . 37)
  (js-mode . 2)
  (paredit-mode . 21)
- (magit-diff . 6)
+ (magit-diff . 7)
  (doctor . 3)
  (butterfly . 2)
  (magit-reset-hard . 11)
@@ -51,13 +51,13 @@
  (cider-connect . 2)
  (irc . 87)
  (indent-file . 34)
- (delete-file . 47)
+ (delete-file . 48)
  (comint-clear-buffer . 4)
  (css-mode . 3)
- (clojure-mode . 64)
+ (clojure-mode . 65)
  (nopaste . 60)
  (magit-bisect-popup . 2)
- (mpc . 1978)
+ (mpc . 2083)
  (sql-send-buffer . 11)
  (sql-set-sqli-buffer . 3)
  (indent-region . 1)
@@ -78,7 +78,7 @@
  (mail . 4)
  (profiler-start . 1)
  (profiler-report . 1)
- (git-timemachine . 52)
+ (git-timemachine . 53)
  (buffer-menu . 1)
  (cider-find-and-clear-repl-output . 1)
  (mc/edit-lines . 46)
@@ -122,10 +122,13 @@
  (grep-find . 2)
  (grep-mode . 5)
  (clojurec-mode . 1)
- (wgrep-change-to-wgrep-mode . 9)
+ (wgrep-change-to-wgrep-mode . 10)
  (map-query-replace-regexp . 2)
  (query-replace . 1)
  (version . 1)
  (rename-file . 2)
  (magit-cherry-pick . 4)
+ (paredit-convolute-sexp . 2)
+ (imenu . 1)
+ (gpm-mouse-mode . 2)
 )

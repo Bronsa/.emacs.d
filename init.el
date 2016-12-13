@@ -29,7 +29,7 @@
  '(magit-diff-section-arguments (quote ("--no-ext-diff")))
  '(magit-log-arguments
    (quote
-    ("--graph" "--color" "--decorate" "--show-signature" "-n100")))
+    ("--graph" "--color" "--decorate" "--follow" "-n50")))
  '(magit-rebase-arguments nil)
  '(safe-local-variable-values
    (quote
@@ -59,6 +59,8 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(magit-diff-base ((t (:foreground "yellow"))))
+ '(magit-diff-base-highlight ((t (:foreground "yellow"))))
  '(magit-signature-good ((t (:foreground "color-121"))))
  '(markup-complex-replacement-face ((t (:inherit markup-meta-face :foreground "purple3" :box (:line-width 2 :style released-button)))))
  '(markup-gen-face ((t (:foreground "color-25"))))
