@@ -115,3 +115,6 @@
 [submodule "libs/yaml-mode"]
 	path = libs/yaml-mode
 	url = https://github.com/yoshiki/yaml-mode
+[submodule "libs/rust-mode"]
+	path = libs/rust-mode
+	url = https://github.com/rust-lang/rust-mode.git

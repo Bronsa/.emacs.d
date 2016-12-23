@@ -168,6 +168,7 @@ Equality is defined by TESTFN if non-nil or by `equal' if nil."
 
 (add-to-list 'auto-mode-alist (cons "\\.adoc\\'" 'adoc-mode))
 (add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode))
+(add-to-list 'auto-mode-alist '("\\.rs\\'" . rust-mode))
 
 (defun rename-current-buffer-file ()
   (interactive)
