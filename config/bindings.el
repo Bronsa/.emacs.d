@@ -62,7 +62,6 @@
 (define-key mpc-mode-map (kbd "n") 'mpc-next)
 (define-key mpc-mode-map (kbd "p") 'mpc-prev)
 (define-key mpc-mode-map (kbd "l") 'mpc-playlist)
-(define-key mpc-mode-map (kbd "M-s") 'mpc-play)
 (define-key mpc-mode-map (kbd "M-a") 'mpc-jump-to-albums)
 (define-key mpc-mode-map (kbd "a") 'mpc-jump-to-artists)
 (define-key mpc-mode-map (kbd "M-s") 'mpc-jump-to-songs)
