@@ -36,6 +36,11 @@
     ((eval define-clojure-indent
            (lazy-seq 0)
            (match 1)
+           (try+ 0)
+           (pdoseq 2))
+     (eval define-clojure-indent
+           (lazy-seq 0)
+           (match 1)
            (try+ 0))
      (eval define-clojure-indent
            (lazy-seq 0)
