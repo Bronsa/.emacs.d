@@ -1,13 +1,13 @@
 
 ;; ----- smex-history -----
 (
+ magit-grep
  mpc
- ielm
- multi-occur
+ pcomplete
+ magit-blame
+ sql-connect
  replace-string
- dired
- delete-duplicate-lines
- describe-variable
+ clojure-sort-ns
 )
 
 ;; ----- smex-data -----
@@ -15,14 +15,14 @@
  (text-mode . 12)
  (term . 1)
  (eshell . 17)
- (replace-string . 198)
+ (replace-string . 200)
  (epa-decrypt-file . 1)
  (epa-decrypt-armor-in-region . 3)
- (sql-connect . 258)
+ (sql-connect . 263)
  (rename-buffer . 35)
  (magit-log . 1)
- (magit-grep . 2357)
- (magit-blame . 180)
+ (magit-grep . 2411)
+ (magit-blame . 188)
  (set-face-background . 1)
  (set-background-color . 1)
  (magit-checkout . 3)
@@ -37,7 +37,7 @@
  (cider-rotate-default-connection . 8)
  (cider-mode . 4)
  (View-scroll-page-forward-set-page-size . 1)
- (ielm . 27)
+ (ielm . 28)
  (cider-jack-in . 1)
  (sql-mode . 30)
  (js-mode . 2)
@@ -50,20 +50,20 @@
  (transpose-args . 2)
  (cider-connect . 2)
  (irc . 86)
- (indent-file . 37)
- (delete-file . 42)
+ (indent-file . 39)
+ (delete-file . 46)
  (comint-clear-buffer . 4)
  (css-mode . 3)
  (clojure-mode . 56)
- (nopaste . 58)
+ (nopaste . 59)
  (magit-bisect-popup . 2)
- (mpc . 2013)
+ (mpc . 2086)
  (sql-send-buffer . 11)
  (sql-set-sqli-buffer . 3)
  (indent-region . 1)
- (mpc-update . 42)
+ (mpc-update . 52)
  (transpose-words . 3)
- (pcomplete . 36)
+ (pcomplete . 42)
  (projectile-find-file . 1)
  (clj-refactor-mode . 3)
  (html-mode . 1)
@@ -84,7 +84,7 @@
  (mc/edit-lines . 38)
  (count-lines-region . 4)
  (count-words-region . 15)
- (auto-insert-mode . 6)
+ (auto-insert-mode . 8)
  (overwrite-mode . 6)
  (magit-log-buffer-file . 15)
  (cider-doc . 1)
@@ -93,7 +93,7 @@
  (epa-sign-region . 1)
  (epa-encrypt-region . 2)
  (magit-merge-nocommit . 2)
- (magit-revert . 11)
+ (magit-revert . 17)
  (eshell-insert-buffer-name . 2)
  (zone-mode . 2)
  (zone . 1)
@@ -138,4 +138,8 @@
  (rust-mode . 1)
  (describe-variable . 1)
  (multi-occur . 2)
+ (magit-revert-popup . 2)
+ (magit-cherry-pick . 1)
+ (mpc-quit . 1)
+ (clojure-sort-ns . 2)
 )
