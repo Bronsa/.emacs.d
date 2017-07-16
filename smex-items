@@ -1,21 +1,21 @@
 
 ;; ----- smex-history -----
 (
- magit-grep
  mpc
+ paredit-mode
+ replace-string
+ magit-revert
+ eshell
  pcomplete
  magit-blame
- sql-connect
- replace-string
- clojure-sort-ns
 )
 
 ;; ----- smex-data -----
 (
  (text-mode . 12)
  (term . 1)
- (eshell . 17)
- (replace-string . 200)
+ (eshell . 18)
+ (replace-string . 219)
  (epa-decrypt-file . 1)
  (epa-decrypt-armor-in-region . 3)
  (sql-connect . 263)
@@ -41,7 +41,7 @@
  (cider-jack-in . 1)
  (sql-mode . 30)
  (js-mode . 2)
- (paredit-mode . 20)
+ (paredit-mode . 21)
  (magit-diff . 6)
  (doctor . 3)
  (butterfly . 2)
@@ -57,13 +57,13 @@
  (clojure-mode . 56)
  (nopaste . 59)
  (magit-bisect-popup . 2)
- (mpc . 2086)
+ (mpc . 2109)
  (sql-send-buffer . 11)
  (sql-set-sqli-buffer . 3)
  (indent-region . 1)
  (mpc-update . 52)
  (transpose-words . 3)
- (pcomplete . 42)
+ (pcomplete . 43)
  (projectile-find-file . 1)
  (clj-refactor-mode . 3)
  (html-mode . 1)
@@ -93,7 +93,7 @@
  (epa-sign-region . 1)
  (epa-encrypt-region . 2)
  (magit-merge-nocommit . 2)
- (magit-revert . 17)
+ (magit-revert . 19)
  (eshell-insert-buffer-name . 2)
  (zone-mode . 2)
  (zone . 1)

@@ -15,19 +15,22 @@
 ;; backup & auto-save
 (make-directory "~/.emacs.d/tmp/.autosaves/" t)
 (make-directory "~/.emacs.d/tmp/.backups/" t)
-(setq backup-by-copying t
-      backup-directory-alist (list (cons ".*" (concat dotfiles-tmp-dir ".backups")))
-      auto-save-list-file-prefix (concat dotfiles-tmp-dir ".autosaves")
-      auto-save-file-name-transforms `((".*" ,(concat dotfiles-tmp-dir ".autosaves/\\1") t))
-      delete-old-versions t
-      kept-new-versions 6
-      kept-old-versions 2
-      version-control t)
+
+(setq-default
+ backup-by-copying t
+ backup-directory-alist (list (cons ".*" (concat dotfiles-tmp-dir ".backups")))
+ auto-save-list-file-prefix (concat dotfiles-tmp-dir ".autosaves")
+ auto-save-file-name-transforms `((".*" ,(concat dotfiles-tmp-dir ".autosaves/\\1") t))
+ delete-old-versions t
+ kept-new-versions 6
+ kept-old-versions 2
+ version-control t)
 
 ;;saveplace
-(setq-default save-place t)
+(setq-default
+ save-place t
+ save-place-file "~/.emacs.d/.saved-places")
 
-(setq save-place-file "~/.emacs.d/.saved-places")
 (auto-compression-mode 1)
 
 (setq-default
@@ -41,10 +44,10 @@
 
  auto-revert-use-notify t
 
- font-lock-maximum-decoration t
- font-lock-maximum-size nil
+ ;; font-lock-maximum-decoration t
+ ;; font-lock-maximum-size nil
 
- font-lock-support-mode 'jit-lock-mode
+ ;; font-lock-support-mode 'jit-lock-mode
 
  yas-snippet-dirs ()
 
@@ -57,7 +60,7 @@
  require-final-newline t
  next-line-add-newlines nil
 
- vc-follow-symlinks t
+ ;; vc-follow-symlinks t
 
  ido-create-new-buffer 'always
 
@@ -73,7 +76,7 @@
  display-time-24hr-format t
  display-time-day-and-date t
 
- version-control t
+ ;; version-control t
  diff-switches "-u"
 
  completion-ignore-case t
@@ -90,7 +93,6 @@
  magit-branch-read-upstream-first t
  magit-push-always-verify nil
 
-
  magit-save-repository-buffers 'dontask
 
  git-commit-fill-column nil
@@ -104,13 +106,13 @@
                         #'magit-insert-unpushed-commits
                         t)
 
-
 (quietly-read-abbrev-file)
 (smex-initialize)
 
 (defalias 'byte-compile-cl-warn 'identity)
 
 (put 'overwrite-mode 'disabled t)
+
 (add-to-list 'auto-mode-alist '("COMMIT_EDITMSG$" . git-commit-mode))
 
 (setq magit-last-seen-setup-instructions "1.4.0")
@@ -145,6 +147,7 @@
 
 (setq css-indent-offset 2
       sql-indent-offset 2)
+
 (remove-hook 'find-file-hooks 'vc-find-file-hook)
 
 (advice-add 'kill-new :around
@@ -154,17 +157,6 @@
                   (process-send-string proc str)
                   (process-send-eof proc)))
               (apply k str args)))
-
-(defun seq-position (seq elt &optional testfn)
-  "Return the index of the first element in SEQ that is equal to ELT.
-Equality is defined by TESTFN if non-nil or by `equal' if nil."
-  (let ((index 0))
-    (catch 'seq--break
-      (seq-doseq (e seq)
-        (when (funcall (or testfn #'equal) e elt)
-          (throw 'seq--break index))
-        (setq index (1+ index)))
-      nil)))
 
 (add-to-list 'auto-mode-alist (cons "\\.adoc\\'" 'adoc-mode))
 (add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode))
