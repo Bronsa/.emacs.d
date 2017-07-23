@@ -25,7 +25,7 @@
  '(erc-modules
    (quote
     (autojoin track completion irccontrols log netsplit match noncommands readonly stamp autoaway log scrolltobottom fill truncate ring networks move-to-prompt)))
- '(magit-commit-arguments (quote ("--gpg-sign=B060D6871BD5AEBC")))
+; '(magit-commit-arguments (quote ("--gpg-sign=B060D6871BD5AEBC")))
  '(magit-diff-section-arguments (quote ("--no-ext-diff")))
  '(magit-log-arguments
    (quote
@@ -33,7 +33,9 @@
  '(magit-rebase-arguments nil)
  '(safe-local-variable-values
    (quote
-    ((eval define-clojure-indent
+    ((Syntax . Common-lisp)
+     (Package . XREF)
+     (eval define-clojure-indent
            (lazy-seq 0)
            (match 1)
            (try+ 0)
