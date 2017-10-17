@@ -25,7 +25,6 @@
  '(erc-modules
    (quote
     (autojoin track completion irccontrols log netsplit match noncommands readonly stamp autoaway log scrolltobottom fill truncate ring networks move-to-prompt)))
-; '(magit-commit-arguments (quote ("--gpg-sign=B060D6871BD5AEBC")))
  '(magit-diff-section-arguments (quote ("--no-ext-diff")))
  '(magit-log-arguments
    (quote
@@ -66,6 +65,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(eshell-ls-directory ((t (:foreground "Blue"))))
  '(magit-diff-base ((t (:foreground "yellow"))))
  '(magit-diff-base-highlight ((t (:foreground "yellow"))))
  '(magit-signature-good ((t (:foreground "color-121"))))
@@ -74,4 +74,6 @@
  '(markup-list-face ((t (:inherit markup-meta-face :foreground "color-125"))))
  '(markup-secondary-text-face ((t (:inherit markup-gen-face :foreground "brightred" :height 0.8))))
  '(markup-table-face ((t (:inherit markup-meta-face :foreground "royal blue"))))
- '(markup-verbatim-face ((t nil))))
+ '(markup-verbatim-face ((t nil)))
+ '(neo-dir-link-face ((t (:foreground "color-27"))))
+ '(neo-file-link-face ((t (:foreground "white")))))

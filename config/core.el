@@ -18,8 +18,10 @@
         dash ;; cider
         diff-hl
         edn ;; clj-refactor
+        elm-mode
         epl ;; cider
         eval-sexp-fu
+        f ;; elm-mode
         ggtags
         highlight ;; yasnippet
         hydra ;; clj-refactor
@@ -61,6 +63,7 @@
         csv-mode
         diff-hl-flydiff
         diff-hl-margin
+        elm-mode
         erc-services
         ggtags
         git-timemachine

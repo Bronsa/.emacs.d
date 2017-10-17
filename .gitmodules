@@ -118,3 +118,12 @@
 [submodule "libs/rust-mode"]
 	path = libs/rust-mode
 	url = https://github.com/rust-lang/rust-mode.git
+[submodule "libs/neotree"]
+	path = libs/neotree
+	url = https://github.com/jaypei/emacs-neotree
+[submodule "libs/elm-mode"]
+	path = libs/elm-mode
+	url = https://github.com/jcollard/elm-mode
+[submodule "libs/f"]
+	path = libs/f
+	url = https://github.com/rejeep/f.el

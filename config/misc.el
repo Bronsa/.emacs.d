@@ -150,10 +150,11 @@
 
 (remove-hook 'find-file-hooks 'vc-find-file-hook)
 
+
 (advice-add 'kill-new :around
             (lambda (k str &rest args)
               (let ((process-connection-type nil))
-                (let ((proc (start-process "xclip" "*copy*" "xclip")))
+                (let ((proc (start-process "pbcopy" "*copy*" "pbcopy")))
                   (process-send-string proc str)
                   (process-send-eof proc)))
               (apply k str args)))
