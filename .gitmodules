@@ -127,3 +127,6 @@
 [submodule "libs/f"]
 	path = libs/f
 	url = https://github.com/rejeep/f.el
+[submodule "libs/tuareg"]
+	path = libs/tuareg
+	url = https://github.com/ocaml/tuareg

@@ -39,6 +39,7 @@
         smex
         spinner ;; cider
         tabbar
+        tuareg
         timemachine
         undo-tree
         wgrep
@@ -80,6 +81,7 @@
         smtpmail-async
         sql
         tabbar
+        tuareg
         undo-tree
         uniquify
         wgrep
@@ -99,8 +101,7 @@
         tabbar
         bindings
         defuns
-        java
-        superstore))
+        java))
 
 (dolist (config-file config-files)
   (load-config-file (concat (symbol-name config-file) ".el")))

@@ -83,6 +83,8 @@
 
  scroll-error-top-bottom t
 
+ magit-prefer-remote-upstream t
+ magit-push-current-set-remote-if-missing nil
  magit-revert-buffers 'silent
  magit-diff-unmarked-lines-keep-foreground nil
  magit-keep-region-overlay t
@@ -159,9 +161,11 @@
                   (process-send-eof proc)))
               (apply k str args)))
 
-(add-to-list 'auto-mode-alist (cons "\\.adoc\\'" 'adoc-mode))
+(add-to-list 'auto-mode-alist '("\\.adoc\\'"  . adoc-mode))
 (add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode))
 (add-to-list 'auto-mode-alist '("\\.rs\\'" . rust-mode))
+(add-to-list 'file-name-handler-alist '("\\.ml$" . 'tuareg-mode))
+
 
 (defun rename-current-buffer-file ()
   (interactive)
