@@ -130,3 +130,6 @@
 [submodule "libs/tuareg"]
 	path = libs/tuareg
 	url = https://github.com/ocaml/tuareg
+[submodule "libs/editorconfig-emacs"]
+	path = libs/editorconfig-emacs
+	url = https://github.com/editorconfig/editorconfig-emacs.git

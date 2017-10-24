@@ -23,3 +23,4 @@
 (global-subword-mode 1)
 (global-diff-hl-mode)
 (diff-hl-margin-mode)
+(editorconfig-mode 1)

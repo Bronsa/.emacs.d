@@ -17,6 +17,7 @@
         csv-mode
         dash ;; cider
         diff-hl
+        editorconfig-emacs
         edn ;; clj-refactor
         elm-mode
         epl ;; cider
@@ -64,6 +65,7 @@
         csv-mode
         diff-hl-flydiff
         diff-hl-margin
+        editorconfig
         elm-mode
         erc-services
         ggtags
