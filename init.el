@@ -76,4 +76,5 @@
  '(markup-table-face ((t (:inherit markup-meta-face :foreground "royal blue"))))
  '(markup-verbatim-face ((t nil)))
  '(neo-dir-link-face ((t (:foreground "color-27"))))
- '(neo-file-link-face ((t (:foreground "white")))))
+ '(neo-file-link-face ((t (:foreground "white"))))
+ '(tuareg-font-lock-operator-face ((t (:foreground "color-130")))))
