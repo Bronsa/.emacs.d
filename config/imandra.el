@@ -1,6 +1,6 @@
 (defvar imandra-cli-file-path "/usr/local/bin/imandra-cli")
 
-(defvar imandra-prompt-regexp "^#\s-")
+(defvar imandra-prompt-regexp "^# ")
 
 (defun imandra ()
   (interactive)
@@ -20,6 +20,7 @@
 
 (define-derived-mode imandra-mode comint-mode "Imandra"
   "Major mode for `imandra`" nil "Imandra"
+  (require 'tuareg)
   (tuareg-install-font-lock)
   (setq comint-prompt-regexp imandra-prompt-regexp)
   (set (make-local-variable 'comint-input-sender-no-newline) t)

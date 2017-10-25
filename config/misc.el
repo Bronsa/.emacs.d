@@ -164,7 +164,7 @@
 (add-to-list 'auto-mode-alist '("\\.adoc\\'"  . adoc-mode))
 (add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode))
 (add-to-list 'auto-mode-alist '("\\.rs\\'" . rust-mode))
-(add-to-list 'file-name-handler-alist '("\\.ml$" . 'tuareg-mode))
+(add-to-list 'auto-mode-alist '("\\.ml[ip]?\\'" . tuareg-mode))
 
 
 (defun rename-current-buffer-file ()
@@ -200,15 +200,3 @@
     (when filename
       (kill-new filename)
       (message "Copied buffer file name '%s' to the clipboard." filename))))
-
-
-(let ((opam-share (ignore-errors (car (process-lines "opam" "config" "var" "share")))))
-  (when (and opam-share (file-directory-p opam-share))
-    ;; Register Merlin
-    (add-to-list 'load-path (expand-file-name "emacs/site-lisp" opam-share))
-    (autoload 'merlin-mode "merlin" nil t nil)
-    ;; Automatically start it in OCaml buffers
-    (add-hook 'tuareg-mode-hook 'merlin-mode t)
-    (add-hook 'caml-mode-hook 'merlin-mode t)
-    ;; Use opam switch to lookup ocamlmerlin binary
-    (setq merlin-command 'opam)))
