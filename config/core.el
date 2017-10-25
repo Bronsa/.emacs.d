@@ -103,7 +103,8 @@
         tabbar
         bindings
         defuns
-        java))
+        java
+        imandra))
 
 (dolist (config-file config-files)
   (load-config-file (concat (symbol-name config-file) ".el")))
