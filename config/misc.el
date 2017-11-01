@@ -200,3 +200,6 @@
     (when filename
       (kill-new filename)
       (message "Copied buffer file name '%s' to the clipboard." filename))))
+
+(add-hook 'tuareg-mode-hook (lambda () (abbrev-mode -1)))
+(add-hook 'tuareg-interactive-mode-hook (lambda () (abbrev-mode -1)))

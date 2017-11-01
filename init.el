@@ -77,4 +77,5 @@
  '(markup-verbatim-face ((t nil)))
  '(neo-dir-link-face ((t (:foreground "color-27"))))
  '(neo-file-link-face ((t (:foreground "white"))))
+ '(tuareg-font-lock-interactive-output-face ((t (:foreground "color-153"))))
  '(tuareg-font-lock-operator-face ((t (:foreground "color-130")))))
