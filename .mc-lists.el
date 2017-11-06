@@ -15,6 +15,7 @@
         paredit-splice-sexp-killing-backward
         paredit-wrap-round
         smex
+        tuareg-electric-rp
         ))
 
 (setq mc/cmds-to-run-once

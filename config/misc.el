@@ -203,3 +203,6 @@
 
 (add-hook 'tuareg-mode-hook (lambda () (abbrev-mode -1)))
 (add-hook 'tuareg-interactive-mode-hook (lambda () (abbrev-mode -1)))
+
+(setq tuareg-indent-align-with-first-arg t)
+(setq tuareg-match-patterns-aligned t)
