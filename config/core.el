@@ -24,6 +24,7 @@
         eval-sexp-fu
         f ;; elm-mode
         ggtags
+        haskell-mode
         highlight ;; yasnippet
         hydra ;; clj-refactor
         less-css-mode
@@ -70,6 +71,7 @@
         erc-services
         ggtags
         git-timemachine
+        haskell-mode
         less-css-mode
         magit
         mpc

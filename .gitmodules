@@ -133,3 +133,6 @@
 [submodule "libs/editorconfig-emacs"]
 	path = libs/editorconfig-emacs
 	url = https://github.com/editorconfig/editorconfig-emacs.git
+[submodule "libs/haskell-mode"]
+	path = libs/haskell-mode
+	url = https://github.com/haskell/haskell-mode
