@@ -124,3 +124,12 @@
 
 (global-set-key (kbd "C-c +") 'increment-number-at-point)
 (global-set-key (kbd "C-c -") 'decrement-number-at-point)
+
+ (defun tuareg-run-imandra ()
+   (interactive)
+   (minibuffer-with-setup-hook
+       (lambda ()
+         (kill-whole-line)
+         (insert "/usr/local/bin/imandra-cli"))
+
+     (call-interactively #'tuareg-run-ocaml)))

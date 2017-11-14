@@ -148,4 +148,4 @@
 
 (define-key tuareg-mode-map (kbd "M-q") 'join-line)
 (define-key tuareg-mode-map (kbd "C-c C-k") 'tuareg-eval-buffer)
-(define-key tuareg-mode-map (kbd "C-c M-j") 'tuareg-run-ocaml)
+(define-key tuareg-mode-map (kbd "C-c M-j") 'tuareg-run-imandra)
