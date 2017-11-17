@@ -44,8 +44,8 @@
 
  auto-revert-use-notify t
 
- ;; font-lock-maximum-decoration t
- ;; font-lock-maximum-size nil
+ font-lock-maximum-decoration t
+ font-lock-maximum-size nil
 
  ;; font-lock-support-mode 'jit-lock-mode
 
@@ -148,6 +148,8 @@
 (setq ring-bell-function 'ignore)
 
 (setq css-indent-offset 2
+      js-indent-level 2
+      c-basic-offset 2
       sql-indent-offset 2)
 
 (remove-hook 'find-file-hooks 'vc-find-file-hook)
