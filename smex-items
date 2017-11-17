@@ -1,13 +1,13 @@
 
 ;; ----- smex-history -----
 (
- java-mode
  magit-grep
  indent-file
+ tuareg-mode
+ java-mode
+ replace-string
  mpc
  paredit-mode
- abbrev-mode
- eshell
 )
 
 ;; ----- smex-data -----
@@ -15,13 +15,13 @@
  (text-mode . 12)
  (term . 1)
  (eshell . 22)
- (replace-string . 227)
+ (replace-string . 230)
  (epa-decrypt-file . 1)
  (epa-decrypt-armor-in-region . 3)
  (sql-connect . 265)
  (rename-buffer . 35)
  (magit-log . 1)
- (magit-grep . 2499)
+ (magit-grep . 2511)
  (magit-blame . 193)
  (set-face-background . 1)
  (set-background-color . 1)
@@ -50,7 +50,7 @@
  (transpose-args . 2)
  (cider-connect . 2)
  (irc . 86)
- (indent-file . 40)
+ (indent-file . 41)
  (delete-file . 55)
  (comint-clear-buffer . 5)
  (css-mode . 3)
@@ -97,7 +97,7 @@
  (eshell-insert-buffer-name . 2)
  (zone-mode . 2)
  (zone . 1)
- (java-mode . 3)
+ (java-mode . 4)
  (magit-tag-prune . 1)
  (diff . 1)
  (count-words . 1)
@@ -142,7 +142,7 @@
  (magit-cherry-pick . 1)
  (mpc-quit . 1)
  (clojure-sort-ns . 2)
- (tuareg-mode . 11)
+ (tuareg-mode . 12)
  (sql-mysql . 12)
  (eww . 5)
  (browse-url-w3 . 1)

@@ -206,3 +206,6 @@
 
 (setq tuareg-indent-align-with-first-arg t)
 (setq tuareg-match-patterns-aligned t)
+(setq elm-format-on-save t)
+(setq elm-tags-on-save t)
+(add-to-list 'company-backends 'company-elm)
