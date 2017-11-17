@@ -2,6 +2,8 @@
 
 (setq byte-compile-warnings nil)
 
+(setq create-lockfiles nil)
+
 ;; use utf-8
 (set-language-environment 'utf-8)
 (prefer-coding-system 'utf-8)
