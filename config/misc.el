@@ -18,9 +18,8 @@
 
 (setq-default
  backup-by-copying t
- backup-directory-alist (list (cons ".*" (concat dotfiles-tmp-dir ".backups")))
- auto-save-list-file-prefix (concat dotfiles-tmp-dir ".autosaves")
- auto-save-file-name-transforms `((".*" ,(concat dotfiles-tmp-dir ".autosaves/\\1") t))
+ backup-directory-alist '(("" . "~/.emacs.d/tmp/.backups/"))
+ auto-save-file-name-transforms `((".*"  "~/.emacs.d/tmp/.autosaves//\\1" t))
  delete-old-versions t
  kept-new-versions 6
  kept-old-versions 2
