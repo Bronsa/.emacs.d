@@ -136,3 +136,6 @@
 [submodule "libs/haskell-mode"]
 	path = libs/haskell-mode
 	url = https://github.com/haskell/haskell-mode
+[submodule "libs/string-inflection"]
+	path = libs/string-inflection
+	url = https://github.com/akicho8/string-inflection

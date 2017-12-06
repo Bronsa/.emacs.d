@@ -39,6 +39,7 @@
         queue ;; cider
         s ;; clj-refactor
         smex
+        string-inflection
         spinner ;; cider
         tabbar
         tuareg
@@ -83,6 +84,7 @@
         saveplace
         smex
         smtpmail-async
+        string-inflection
         sql
         tabbar
         tuareg
