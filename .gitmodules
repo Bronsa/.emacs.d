@@ -136,6 +136,18 @@
 [submodule "libs/haskell-mode"]
 	path = libs/haskell-mode
 	url = https://github.com/haskell/haskell-mode
+[submodule "libs/magit-popup"]
+	path = libs/magit-popup
+	url = https://github.com/magit/magit-popup
+[submodule "config/libs/ghub"]
+	path = config/libs/ghub
+	url = https://github.com/magit/ghub
+[submodule "libs/ghub"]
+	path = libs/ghub
+	url = https://github.com/magit/ghub
 [submodule "libs/string-inflection"]
 	path = libs/string-inflection
 	url = https://github.com/akicho8/string-inflection
+[submodule "libs/shen-mode"]
+	path = libs/shen-mode
+	url = https://github.com/eschulte/shen-mode

@@ -24,11 +24,13 @@
         eval-sexp-fu
         f ;; elm-mode
         ggtags
+        ghub
         haskell-mode
         highlight ;; yasnippet
         hydra ;; clj-refactor
         less-css-mode
         markup-faces
+        magit-popup
         magit/lisp
         multiple-cursors ;; clj-refactor
         paredit
@@ -38,6 +40,7 @@
         popwin
         queue ;; cider
         s ;; clj-refactor
+        shen-mode
         smex
         string-inflection
         spinner ;; cider

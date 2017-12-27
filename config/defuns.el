@@ -130,6 +130,6 @@
    (minibuffer-with-setup-hook
        (lambda ()
          (kill-whole-line)
-         (insert "/usr/local/bin/imandra-cli"))
+         (insert "ocaml"))
 
      (call-interactively #'tuareg-run-ocaml)))
