@@ -76,6 +76,7 @@
         ggtags
         git-timemachine
         haskell-mode
+        inf-shen
         less-css-mode
         magit
         mpc
@@ -85,6 +86,7 @@
         projectile
         popwin
         saveplace
+        shen-mode
         smex
         smtpmail-async
         string-inflection
