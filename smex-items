@@ -1,10 +1,10 @@
 
 ;; ----- smex-history -----
 (
+ magit-grep
+ magit
  mpc
- nopaste
  java-mode
- indent-file
  clojure-mode
  mc/edit-lines
  replace-string
@@ -21,7 +21,7 @@
  (sql-connect . 265)
  (rename-buffer . 35)
  (magit-log . 1)
- (magit-grep . 2513)
+ (magit-grep . 2520)
  (magit-blame . 194)
  (set-face-background . 1)
  (set-background-color . 1)
@@ -152,4 +152,5 @@
  (paredit-backward . 2)
  (rename-file . 2)
  (magit-init . 1)
+ (magit . 1)
 )

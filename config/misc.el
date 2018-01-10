@@ -212,3 +212,7 @@
 (setq elm-format-on-save t)
 (setq elm-tags-on-save t)
 (add-to-list 'company-backends 'company-elm)
+
+(add-hook 'tuareg-mode-hook 'merlin-mode t)
+(add-hook 'caml-mode-hook 'merlin-mode t)
+(setq merlin-command 'opam)

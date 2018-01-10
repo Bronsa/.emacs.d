@@ -151,3 +151,6 @@
 [submodule "libs/shen-mode"]
 	path = libs/shen-mode
 	url = https://github.com/eschulte/shen-mode
+[submodule "libs/merlin"]
+	path = libs/merlin
+	url = https://github.com/ocaml/merlin

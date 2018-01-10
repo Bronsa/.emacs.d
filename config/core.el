@@ -32,6 +32,7 @@
         markup-faces
         magit-popup
         magit/lisp
+        merlin/emacs
         multiple-cursors ;; clj-refactor
         paredit
         peg ;; clj-refactor
@@ -79,6 +80,8 @@
         inf-shen
         less-css-mode
         magit
+        merlin
+        merlin-company
         mpc
         multiple-cursors
         paredit
