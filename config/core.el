@@ -36,6 +36,7 @@
         multiple-cursors ;; clj-refactor
         paredit
         peg ;; clj-refactor
+        prettier
         projectile
         pkg-info ;; cider
         popwin
@@ -49,6 +50,7 @@
         tuareg
         timemachine
         undo-tree
+        web-mode
         wgrep
         with-editor
         yaml-mode
@@ -86,6 +88,7 @@
         multiple-cursors
         paredit
         paren
+        prettier-js
         projectile
         popwin
         saveplace
@@ -98,6 +101,7 @@
         tuareg
         undo-tree
         uniquify
+        web-mode
         wgrep
         yasnippet
         yaml-mode))

@@ -154,3 +154,9 @@
 [submodule "libs/merlin"]
 	path = libs/merlin
 	url = https://github.com/ocaml/merlin
+[submodule "libs/prettier"]
+	path = libs/prettier
+	url = https://github.com/prettier/prettier-emacs
+[submodule "libs/web-mode"]
+	path = libs/web-mode
+	url = https://github.com/fxbois/web-mode
