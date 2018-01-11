@@ -1,4 +1,5 @@
 (dolist (hook '(cider-mode-hook
+                inf-clojure-mode-hook
                 cider-repl-mode-hook
                 lisp-mode-hook
                 lisp-interaction-mode-hook
@@ -32,6 +33,8 @@
       cljr-eagerly-build-asts-on-startup nil
       cider-repl-display-help-banner nil)
 
-;; enable cider even if no connection is available
-(add-hook 'clojure-mode-hook #'cider-mode)
+(add-hook 'clojure-mode-hook #'inf-clojure-minor-mode)
 (add-hook 'magit-post-refresh-hook 'diff-hl-magit-post-refresh t)
+
+(setq inf-clojure-generic-cmd "clojure"
+      inf-clojure-project-type "tools.deps")

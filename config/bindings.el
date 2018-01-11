@@ -102,7 +102,6 @@
 (define-key company-active-map (kbd "TAB") 'company-complete-common-or-cycle)
 (define-key company-active-map (kbd "<backtab>") 'company-select-previous-or-abort)
 
-(global-set-key (kbd "C-c s") 'cider-scratch)
 
 (global-set-key (kbd "C-c C-p f") 'projectile-find-file)
 (global-set-key (kbd "C-c C-p C-f") 'projectile-find-file)
@@ -121,8 +120,8 @@
 (global-set-key (kbd "s-<left>" ) 'ahs-backward)
 (global-set-key (kbd "s-<right>" ) 'ahs-forward)
 
-(define-key cider-repl-mode-map "{" #'paredit-open-curly)
-(define-key cider-repl-mode-map "}" #'paredit-close-curly)
+(define-key clojure-mode-map "{" #'paredit-open-curly)
+(define-key clojure-mode-map "}" #'paredit-close-curly)
 
 (define-key minibuffer-inactive-mode-map [mouse-1] 'ignore)
 (define-key minibuffer-inactive-mode-map [mouse-2] 'ignore)

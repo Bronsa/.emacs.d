@@ -28,6 +28,7 @@
         haskell-mode
         highlight ;; yasnippet
         hydra ;; clj-refactor
+        inf-clojure
         less-css-mode
         markup-faces
         magit-popup
@@ -80,6 +81,7 @@
         git-timemachine
         haskell-mode
         inf-shen
+        inf-clojure
         less-css-mode
         magit
         merlin

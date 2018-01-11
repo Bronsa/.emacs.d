@@ -160,3 +160,6 @@
 [submodule "libs/web-mode"]
 	path = libs/web-mode
 	url = https://github.com/fxbois/web-mode
+[submodule "libs/inf-clojure"]
+	path = libs/inf-clojure
+	url = https://github.com/clojure-emacs/inf-clojure
