@@ -48,6 +48,7 @@
 (define-key erc-mode-map (kbd "C-<down>") 'erc-next-command)
 
 (global-set-key (kbd "M-q") 'join-line)
+(global-set-key (kbd "ESC <up>") 'paredit-splice-sexp-killing-backward)
 (global-set-key (kbd "C-c g") 'magit-status)
 
 (define-key mpc-songs-mode-map (kbd "RET") 'mpc-play-at-point)

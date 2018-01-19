@@ -35,6 +35,7 @@
         magit/lisp
         merlin/emacs
         multiple-cursors ;; clj-refactor
+        ocp-indent/tools
         paredit
         peg ;; clj-refactor
         prettier

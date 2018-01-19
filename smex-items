@@ -2,27 +2,27 @@
 ;; ----- smex-history -----
 (
  magit-grep
+ ielm
+ magit-blame
  magit
- mpc
- java-mode
- clojure-mode
- mc/edit-lines
- replace-string
+ eshell
+ indent-file
+ javascript-mode
 )
 
 ;; ----- smex-data -----
 (
  (text-mode . 12)
  (term . 1)
- (eshell . 23)
+ (eshell . 24)
  (replace-string . 245)
  (epa-decrypt-file . 1)
  (epa-decrypt-armor-in-region . 3)
  (sql-connect . 265)
  (rename-buffer . 35)
  (magit-log . 1)
- (magit-grep . 2520)
- (magit-blame . 194)
+ (magit-grep . 2575)
+ (magit-blame . 200)
  (set-face-background . 1)
  (set-background-color . 1)
  (magit-checkout . 3)
@@ -37,7 +37,7 @@
  (cider-rotate-default-connection . 9)
  (cider-mode . 4)
  (View-scroll-page-forward-set-page-size . 1)
- (ielm . 33)
+ (ielm . 34)
  (cider-jack-in . 1)
  (sql-mode . 30)
  (js-mode . 2)
@@ -50,11 +50,11 @@
  (transpose-args . 2)
  (cider-connect . 2)
  (irc . 86)
- (indent-file . 48)
+ (indent-file . 49)
  (delete-file . 55)
  (comint-clear-buffer . 5)
  (css-mode . 3)
- (clojure-mode . 61)
+ (clojure-mode . 62)
  (nopaste . 61)
  (magit-bisect-popup . 2)
  (mpc . 2142)
@@ -103,7 +103,7 @@
  (count-words . 1)
  (company-semantic . 3)
  (snmpv2-mode . 1)
- (javascript-mode . 1)
+ (javascript-mode . 2)
  (emacs-version . 3)
  (toggle-word-wrap . 7)
  (visual-line-mode . 3)
@@ -152,5 +152,5 @@
  (paredit-backward . 2)
  (rename-file . 2)
  (magit-init . 1)
- (magit . 1)
+ (magit . 7)
 )

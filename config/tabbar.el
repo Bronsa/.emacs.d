@@ -71,6 +71,8 @@
                                 (equal "*Directory*" (buffer-name b))
                                 (equal "*Process List*" (buffer-name b))
                                 (equal "*Disabled Command*" (buffer-name b))
+                                (equal "*Warning*" (buffer-name b))
+                                (equal "*merlin-types*" (buffer-name b))
                                 (and (eq major-mode 'erc-mode)
                                      (or (string-match ".*:.*" (buffer-name b))
                                          (equal "freenode" (buffer-name b))

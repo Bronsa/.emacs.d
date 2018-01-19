@@ -163,3 +163,6 @@
 [submodule "libs/inf-clojure"]
 	path = libs/inf-clojure
 	url = https://github.com/clojure-emacs/inf-clojure
+[submodule "libs/ocp-indent"]
+	path = libs/ocp-indent
+	url = https://github.com/OCamlPro/ocp-indent
