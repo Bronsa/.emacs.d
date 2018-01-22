@@ -1,27 +1,27 @@
 
 ;; ----- smex-history -----
 (
- magit-grep
- ielm
- magit-blame
- magit
- eshell
+ mpc
+ replace-string
  indent-file
- javascript-mode
+ magit-grep
+ magit
+ paredit-mode
+ buffer-menu
 )
 
 ;; ----- smex-data -----
 (
  (text-mode . 12)
  (term . 1)
- (eshell . 24)
- (replace-string . 245)
+ (eshell . 25)
+ (replace-string . 261)
  (epa-decrypt-file . 1)
  (epa-decrypt-armor-in-region . 3)
  (sql-connect . 265)
  (rename-buffer . 35)
  (magit-log . 1)
- (magit-grep . 2575)
+ (magit-grep . 2586)
  (magit-blame . 200)
  (set-face-background . 1)
  (set-background-color . 1)
@@ -41,7 +41,7 @@
  (cider-jack-in . 1)
  (sql-mode . 30)
  (js-mode . 2)
- (paredit-mode . 22)
+ (paredit-mode . 25)
  (magit-diff . 6)
  (doctor . 3)
  (butterfly . 2)
@@ -50,14 +50,14 @@
  (transpose-args . 2)
  (cider-connect . 2)
  (irc . 86)
- (indent-file . 49)
+ (indent-file . 52)
  (delete-file . 55)
  (comint-clear-buffer . 5)
  (css-mode . 3)
  (clojure-mode . 62)
  (nopaste . 61)
  (magit-bisect-popup . 2)
- (mpc . 2142)
+ (mpc . 2143)
  (sql-send-buffer . 11)
  (sql-set-sqli-buffer . 3)
  (indent-region . 1)
@@ -79,9 +79,9 @@
  (profiler-start . 1)
  (profiler-report . 1)
  (git-timemachine . 49)
- (buffer-menu . 2)
+ (buffer-menu . 3)
  (cider-find-and-clear-repl-output . 1)
- (mc/edit-lines . 40)
+ (mc/edit-lines . 47)
  (count-lines-region . 4)
  (count-words-region . 15)
  (auto-insert-mode . 8)
@@ -142,7 +142,7 @@
  (magit-cherry-pick . 1)
  (mpc-quit . 1)
  (clojure-sort-ns . 2)
- (tuareg-mode . 12)
+ (tuareg-mode . 13)
  (sql-mysql . 12)
  (eww . 5)
  (browse-url-w3 . 1)
@@ -152,5 +152,8 @@
  (paredit-backward . 2)
  (rename-file . 2)
  (magit-init . 1)
- (magit . 7)
+ (magit . 11)
+ (merlin-jump . 1)
+ (paredit-raise-sexp . 1)
+ (paredit-convolute-sexp . 1)
 )
