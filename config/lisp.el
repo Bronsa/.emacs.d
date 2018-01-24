@@ -5,9 +5,9 @@
                 lisp-mode-hook
                 lisp-interaction-mode-hook
                 emacs-lisp-mode-hook))
-  (add-hook hook #'eldoc-mode)
-  (add-hook hook #'paredit-mode)
-  (add-hook hook #'auto-highlight-symbol-mode))
+  (add-hook hook (lambda () (eldoc-mode 1)))
+  (add-hook hook (lambda () (paredit-mode 1)))
+  (add-hook hook (lambda () (auto-highlight-symbol-mode 1))))
 
 ;; (dolist (hook '(cider-mode-hook cider-repl-mode-hook))
 ;;   (add-hook hook (lambda ()
