@@ -4,6 +4,7 @@
 (setq mc/cmds-to-run-for-all
       '(
         beginning-of-visual-line
+        electric-newline-and-maybe-indent
         end-of-visual-line
         kill-visual-line
         paredit-doublequote
@@ -14,6 +15,7 @@
         paredit-splice-sexp
         paredit-splice-sexp-killing-backward
         paredit-wrap-round
+        reindent-then-newline-and-indent
         smex
         tuareg-electric-rp
         ))

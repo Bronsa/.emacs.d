@@ -1,27 +1,27 @@
 
 ;; ----- smex-history -----
 (
- mpc
  replace-string
- indent-file
+ eshell
+ mc/edit-lines
  magit-grep
+ mpc
  magit
  paredit-mode
- buffer-menu
 )
 
 ;; ----- smex-data -----
 (
  (text-mode . 12)
  (term . 1)
- (eshell . 25)
- (replace-string . 261)
+ (eshell . 26)
+ (replace-string . 269)
  (epa-decrypt-file . 1)
  (epa-decrypt-armor-in-region . 3)
  (sql-connect . 265)
  (rename-buffer . 35)
  (magit-log . 1)
- (magit-grep . 2586)
+ (magit-grep . 2590)
  (magit-blame . 200)
  (set-face-background . 1)
  (set-background-color . 1)
@@ -81,7 +81,7 @@
  (git-timemachine . 49)
  (buffer-menu . 3)
  (cider-find-and-clear-repl-output . 1)
- (mc/edit-lines . 47)
+ (mc/edit-lines . 53)
  (count-lines-region . 4)
  (count-words-region . 15)
  (auto-insert-mode . 8)
