@@ -1,12 +1,12 @@
 (dolist (hook '(cider-mode-hook
                 inf-clojure-mode-hook
-                clojure-mode
+                clojure-mode-hook
                 cider-repl-mode-hook
                 lisp-mode-hook
                 lisp-interaction-mode-hook
                 emacs-lisp-mode-hook))
   (add-hook hook (lambda () (eldoc-mode 1)))
-  (add-hook hook (lambda () (paredit-mode 1)))
+  (add-hook hook (lambda () (enable-paredit-mode)))
   (add-hook hook (lambda () (auto-highlight-symbol-mode 1))))
 
 ;; (dolist (hook '(cider-mode-hook cider-repl-mode-hook))
