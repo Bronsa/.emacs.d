@@ -166,3 +166,6 @@
 [submodule "libs/ocp-indent"]
 	path = libs/ocp-indent
 	url = https://github.com/OCamlPro/ocp-indent
+[submodule "libs/pg"]
+	path = libs/pg
+	url = https://github.com/ProofGeneral/PG/

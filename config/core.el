@@ -38,6 +38,7 @@
         ocp-indent/tools
         paredit
         peg ;; clj-refactor
+        pg/generic
         prettier
         projectile
         pkg-info ;; cider
@@ -93,6 +94,7 @@
         paren
         prettier-js
         projectile
+        proof-site
         popwin
         saveplace
         shen-mode
