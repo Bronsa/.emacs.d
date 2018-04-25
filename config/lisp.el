@@ -1,9 +1,6 @@
-(dolist (hook '(cider-mode-hook
-                inf-clojure-mode-hook
-                clojure-mode-hook
-                cider-repl-mode-hook
+(dolist (hook '(clojure-mode-hook
                 lisp-mode-hook
-                lisp-interaction-mode-hook
+                scheme-mode-hook
                 emacs-lisp-mode-hook))
   (add-hook hook (lambda () (eldoc-mode 1)))
   (add-hook hook (lambda () (enable-paredit-mode)))
@@ -34,7 +31,6 @@
       cljr-eagerly-build-asts-on-startup nil
       cider-repl-display-help-banner nil)
 
-(add-hook 'clojure-mode-hook #'inf-clojure-minor-mode)
 (add-hook 'magit-post-refresh-hook 'diff-hl-magit-post-refresh t)
 
 (setq inf-clojure-generic-cmd "clojure"

@@ -169,3 +169,6 @@
 [submodule "libs/dockerfile-mode"]
 	path = libs/dockerfile-mode
 	url = https://github.com/spotify/dockerfile-mode
+[submodule "libs/pg"]
+	path = libs/pg
+	url = https://github.com/ProofGeneral/PG/
