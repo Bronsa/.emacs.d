@@ -6,6 +6,7 @@
         beginning-of-visual-line
         electric-newline-and-maybe-indent
         end-of-visual-line
+        isearch-forward-regexp
         kill-visual-line
         paredit-doublequote
         paredit-forward-delete

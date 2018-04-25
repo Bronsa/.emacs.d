@@ -166,3 +166,6 @@
 [submodule "libs/ocp-indent"]
 	path = libs/ocp-indent
 	url = https://github.com/OCamlPro/ocp-indent
+[submodule "libs/dockerfile-mode"]
+	path = libs/dockerfile-mode
+	url = https://github.com/spotify/dockerfile-mode

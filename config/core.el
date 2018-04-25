@@ -89,6 +89,7 @@
         merlin-company
         mpc
         multiple-cursors
+        ocp-indent
         paredit
         paren
         prettier-js
