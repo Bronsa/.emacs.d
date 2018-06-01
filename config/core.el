@@ -90,12 +90,12 @@
         merlin-company
         mpc
         multiple-cursors
-        ocp-indent
+        ;; ocp-indent
         paredit
         paren
         prettier-js
         projectile
-        proof-site
+                                        ;proof-site
         popwin
         saveplace
         shen-mode

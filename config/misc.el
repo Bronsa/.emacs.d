@@ -167,7 +167,7 @@
 (add-to-list 'auto-mode-alist '("\\.adoc\\'"  . adoc-mode))
 (add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode))
 (add-to-list 'auto-mode-alist '("\\.rs\\'" . rust-mode))
-(add-to-list 'auto-mode-alist '("\\.ml[ip]?\\'" . tuareg-mode))
+(add-to-list 'auto-mode-alist '("\\.[i]?ml[ip]?\\'" . tuareg-mode))
 
 
 (defun rename-current-buffer-file ()
@@ -204,7 +204,8 @@
       (kill-new filename)
       (message "Copied buffer file name '%s' to the clipboard." filename))))
 
-(add-hook 'tuareg-mode-hook (lambda () (abbrev-mode -1) (ocp-setup-indent)))
+(add-hook 'tuareg-mode-hook (lambda () (abbrev-mode -1) ;; (ocp-setup-indent)
+                              ))
 (add-hook 'tuareg-interactive-mode-hook (lambda () (abbrev-mode -1)))
 
 (setq tuareg-indent-align-with-first-arg t)
@@ -220,3 +221,4 @@
 (add-hook 'js2-mode-hook 'prettier-js-mode)
 (add-hook 'web-mode-hook 'prettier-js-mode)
 (setq org-src-fontify-natively t)
+(setq magit-diff-refine-hunk t)

@@ -32,7 +32,10 @@
  '(magit-rebase-arguments nil)
  '(safe-local-variable-values
    (quote
-    ((Syntax . Common-lisp)
+    ((eval tuareg-opam-update-env
+           (projectile-project-root))
+     (projectile-project-type . "make")
+     (Syntax . Common-lisp)
      (Package . XREF)
      (eval define-clojure-indent
            (lazy-seq 0)
