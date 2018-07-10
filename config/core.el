@@ -6,6 +6,7 @@
 (setq load-paths
       '(adoc-mode
         align-cljlet
+        apiwrap
         async
         auto-highlight-symbol
         cider
@@ -25,13 +26,17 @@
         f ;; elm-mode
         ggtags
         ghub
+        ghub-plus
         haskell-mode
         highlight ;; yasnippet
         hydra ;; clj-refactor
+        iedit
         inf-clojure
         less-css-mode
+        markdown-mode
         markup-faces
         magit-popup
+        magithub
         magit/lisp
         merlin/emacs
         multiple-cursors ;; clj-refactor
@@ -45,6 +50,7 @@
         popwin
         queue ;; cider
         s ;; clj-refactor
+        sesman
         shen-mode
         smex
         string-inflection
@@ -82,10 +88,12 @@
         ggtags
         git-timemachine
         haskell-mode
+        iedit
         inf-shen
         inf-clojure
         less-css-mode
         magit
+        magithub
         merlin
         merlin-company
         mpc
@@ -99,6 +107,7 @@
         popwin
         saveplace
         shen-mode
+
         smex
         smtpmail-async
         string-inflection

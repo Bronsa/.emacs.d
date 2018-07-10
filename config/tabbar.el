@@ -17,6 +17,7 @@
                ((or (memq major-mode '(magit-mode magit-log-mode magit-commit-mode magit-key-mode magit-diff-mode
                                                   magit-wip-mode magit-wip-save-mode magit-status-mode magit-stath-mode
                                                   magit-log-edit-mode magit-branch-manager-mode magit-wazzup-mode
+                                                  magit-revision-mode magit-refs-mode magit-process-mode
                                                   magit-reflog-mode))
                     (equal "*magit-process*" (buffer-name (current-buffer)))
                     (string-match "\\*magit." (buffer-name (current-buffer)))

@@ -18,7 +18,7 @@
 (popwin-mode 1)
 (recentf-mode 1)
 (global-company-mode)
-(projectile-global-mode)
+(projectile-mode)
 (global-auto-revert-mode 1)
 (global-subword-mode 1)
 (global-diff-hl-mode)

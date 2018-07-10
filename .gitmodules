@@ -172,3 +172,21 @@
 [submodule "libs/pg"]
 	path = libs/pg
 	url = https://github.com/ProofGeneral/PG/
+[submodule "libs/magithub"]
+	path = libs/magithub
+	url = https://github.com/vermiculus/magithub/
+[submodule "libs/sesman"]
+	path = libs/sesman
+	url = https://github.com/vspinu/sesman
+[submodule "libs/ghub-plus"]
+	path = libs/ghub-plus
+	url = https://github.com/vermiculus/ghub-plus
+[submodule "libs/apiwrap"]
+	path = libs/apiwrap
+	url = https://github.com/vermiculus/apiwrap.el
+[submodule "libs/markdown-mode"]
+	path = libs/markdown-mode
+	url = https://github.com/jrblevin/markdown-mode
+[submodule "libs/iedit"]
+	path = libs/iedit
+	url = https://github.com/victorhge/iedit

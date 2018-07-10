@@ -222,3 +222,6 @@
 (add-hook 'web-mode-hook 'prettier-js-mode)
 (setq org-src-fontify-natively t)
 (setq magit-diff-refine-hunk t)
+
+;;; (magithub-feature-autoinject t)
+(setq magithub-clone-default-directory "~/github")
