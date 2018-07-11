@@ -61,7 +61,6 @@
     (with-current-buffer (generate-new-buffer "*Magit Grep*")
       (setq default-directory (magit-toplevel))
       (insert magit-git-executable " "
-              (mapconcat 'identity magit-git-standard-options " ")
               " grep -n "
               (shell-quote-argument pattern) "\n\n")
       (magit-git-insert (list "grep" "--line-number" pattern))
@@ -125,11 +124,16 @@
 (global-set-key (kbd "C-c +") 'increment-number-at-point)
 (global-set-key (kbd "C-c -") 'decrement-number-at-point)
 
- (defun tuareg-run-imandra ()
-   (interactive)
-   (minibuffer-with-setup-hook
-       (lambda ()
-         (kill-whole-line)
-         (insert "ocaml"))
-
-     (call-interactively #'tuareg-run-ocaml)))
+(defun merlin/call (command &rest args)
+  "Execute a command and parse output: return an sexp on success or throw an error"
+  (let ((result (merlin--call-merlin command args)))
+    (condition-case err
+        (setq result (car (read-from-string result)))
+      (error ()))
+    (let ((notifications (cdr-safe (assoc 'notifications result)))
+          (class (cdr-safe (assoc 'class result)))
+          (value (cdr-safe (assoc 'value result))))
+      (dolist (notification notifications)
+        (message "(merlin) %s" notification))
+      (cond ((string-equal class "return") value)
+            (t ())))))
