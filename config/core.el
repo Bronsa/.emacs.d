@@ -40,6 +40,7 @@
         magit/lisp
         merlin/emacs
         multiple-cursors ;; clj-refactor
+        olivetti
         ocp-indent/tools
         paredit
         peg ;; clj-refactor
@@ -98,6 +99,7 @@
         merlin-company
         mpc
         multiple-cursors
+        olivetti
         ;; ocp-indent
         paredit
         paren

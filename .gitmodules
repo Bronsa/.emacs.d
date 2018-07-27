@@ -190,3 +190,6 @@
 [submodule "libs/iedit"]
 	path = libs/iedit
 	url = https://github.com/victorhge/iedit
+[submodule "libs/olivetti"]
+	path = libs/olivetti
+	url = https://github.com/rnkn/olivetti
