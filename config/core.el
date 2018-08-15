@@ -17,6 +17,7 @@
         company
         csv-mode
         dash ;; cider
+        dockerfile-mode
         diff-hl
         editorconfig-emacs
         edn ;; clj-refactor
@@ -83,6 +84,7 @@
         csv-mode
         diff-hl-flydiff
         diff-hl-margin
+        dockerfile-mode
         editorconfig
         elm-mode
         erc-services
@@ -94,7 +96,7 @@
         inf-clojure
         less-css-mode
         magit
-        magithub
+        ;;magithub
         merlin
         merlin-company
         mpc

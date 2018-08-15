@@ -1,20 +1,20 @@
 
 ;; ----- smex-history -----
 (
- sort-lines
  magit-grep
- replace-string
- tuareg-mode
- magit-blame
- merlin-mode
+ magit-revert
  indent-file
+ sort-lines
+ irc
+ tuareg-mode
+ replace-string
 )
 
 ;; ----- smex-data -----
 (
  (mpc . 14)
  (inf-clojure . 4)
- (indent-file . 32)
+ (indent-file . 33)
  (clojure-mode . 5)
  (comint-clear-buffer . 1)
  (scheme-mode . 1)
@@ -26,10 +26,10 @@
  (paredit-mode . 5)
  (nopaste . 3)
  (eshell . 1)
- (magit-grep . 14)
+ (magit-grep . 44)
  (javascript-mode . 1)
  (git-timemachine . 3)
- (irc . 11)
+ (irc . 13)
  (run-scheme . 1)
  (cider-mode . 1)
  (text-mode . 1)
@@ -40,12 +40,12 @@
  (merlin-mode . 18)
  (mc/edit-lines . 1)
  (tuareg-help . 2)
- (tuareg-mode . 2)
+ (tuareg-mode . 3)
  (ielm . 2)
- (magit-revert . 1)
+ (magit-revert . 2)
  (customize-face . 2)
  (merlin-destruct . 4)
  (merlin-setup . 1)
  (merlin-flags . 3)
- (sort-lines . 1)
+ (sort-lines . 2)
 )

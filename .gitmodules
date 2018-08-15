@@ -166,9 +166,6 @@
 [submodule "libs/ocp-indent"]
 	path = libs/ocp-indent
 	url = https://github.com/OCamlPro/ocp-indent
-[submodule "libs/dockerfile-mode"]
-	path = libs/dockerfile-mode
-	url = https://github.com/spotify/dockerfile-mode
 [submodule "libs/pg"]
 	path = libs/pg
 	url = https://github.com/ProofGeneral/PG/
@@ -193,3 +190,6 @@
 [submodule "libs/olivetti"]
 	path = libs/olivetti
 	url = https://github.com/rnkn/olivetti
+[submodule "libs/dockerfile-mode"]
+	path = libs/dockerfile-mode
+	url = https://github.com/spotify/dockerfile-mode
