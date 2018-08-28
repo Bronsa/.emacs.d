@@ -97,6 +97,7 @@
         less-css-mode
         magit
         ;;magithub
+        markdown-mode
         merlin
         merlin-company
         mpc
