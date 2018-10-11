@@ -99,7 +99,7 @@
 	url = https://github.com/magit/with-editor.git
 [submodule "libs/timemachine"]
 	path = libs/timemachine
-	url = https://github.com/pidu/git-timemachine.git
+	url = https://github.com/emacsmirror/git-timemachine.git
 [submodule "libs/csv-mode"]
 	path = libs/csv-mode
 	url = https://github.com/emacsmirror/csv-mode
@@ -193,3 +193,9 @@
 [submodule "libs/dockerfile-mode"]
 	path = libs/dockerfile-mode
 	url = https://github.com/spotify/dockerfile-mode
+[submodule "libs/graphql"]
+	path = libs/graphql
+	url = https://github.com/vermiculus/graphql.el
+[submodule "libs/treepy"]
+	path = libs/treepy
+	url = https://github.com/volrath/treepy.el

@@ -28,6 +28,7 @@
         ggtags
         ghub
         ghub-plus
+        graphql
         haskell-mode
         highlight ;; yasnippet
         hydra ;; clj-refactor
@@ -57,6 +58,7 @@
         smex
         string-inflection
         spinner ;; cider
+        treepy
         tabbar
         tuareg
         timemachine
