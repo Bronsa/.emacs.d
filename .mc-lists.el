@@ -6,7 +6,9 @@
         beginning-of-visual-line
         electric-newline-and-maybe-indent
         end-of-visual-line
+        isearch-exit
         isearch-forward-regexp
+        isearch-printing-char
         kill-visual-line
         paredit-doublequote
         paredit-forward-delete
@@ -23,6 +25,8 @@
 
 (setq mc/cmds-to-run-once
       '(
+        iedit-switch-to-mc-mode
+        isearch-abort
         paredit-backward-kill-word
         paredit-close-round
         rectangle-number-lines

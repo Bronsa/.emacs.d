@@ -52,6 +52,7 @@
         pkg-info ;; cider
         popwin
         queue ;; cider
+        reason-mode
         s ;; clj-refactor
         sesman
         shen-mode
@@ -105,13 +106,14 @@
         mpc
         multiple-cursors
         olivetti
-        ;; ocp-indent
+        ocp-indent
         paredit
         paren
         prettier-js
         projectile
                                         ;proof-site
         popwin
+        reason-mode
         saveplace
         shen-mode
 
@@ -141,8 +143,7 @@
         tabbar
         bindings
         defuns
-        java
-        imandra))
+        java))
 
 (dolist (config-file config-files)
   (load-config-file (concat (symbol-name config-file) ".el")))

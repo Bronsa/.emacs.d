@@ -199,3 +199,6 @@
 [submodule "libs/treepy"]
 	path = libs/treepy
 	url = https://github.com/volrath/treepy.el
+[submodule "libs/reason-mode"]
+	path = libs/reason-mode
+	url = https://github.com/reasonml-editor/reason-mode
