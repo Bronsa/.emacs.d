@@ -204,8 +204,7 @@
       (kill-new filename)
       (message "Copied buffer file name '%s' to the clipboard." filename))))
 
-(add-hook 'tuareg-mode-hook (lambda () (abbrev-mode -1) ;; (ocp-setup-indent)
-                              ))
+(add-hook 'tuareg-mode-hook (lambda () (abbrev-mode -1)  (ocp-setup-indent)))
 (add-hook 'tuareg-interactive-mode-hook (lambda () (abbrev-mode -1)))
 
 (setq tuareg-indent-align-with-first-arg t)
@@ -265,3 +264,14 @@
           (lambda ()
             (when (string-match "\\.iml\\'" buffer-file-name)
               (setq-local merlin-buffer-flags "-reader imandra -package imandra-prelude -open Imandra_prelude"))))
+
+(add-to-list 'safe-local-variable-values '(merlin-command . esy))
+(add-to-list 'safe-local-variable-values '(refmt-command . esy))
+
+(with-eval-after-load 'merlin
+  (defun merlin-jump-to-type-definition ()
+    (interactive)
+    (let ((data (elt merlin-enclosing-types merlin-enclosing-offset)))
+      (when (cddr data)
+        (setq data (merlin--type-enclosing-text data))
+        (merlin-locate-ident data)))))
