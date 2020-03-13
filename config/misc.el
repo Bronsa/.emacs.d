@@ -159,7 +159,7 @@
 (advice-add 'kill-new :around
             (lambda (k str &rest args)
               (let ((process-connection-type nil))
-                (let ((proc (start-process "xclip" "*copy*" "xclip")))
+                (let ((proc (start-process "clip.exe" "*copy*" "clip.exe")))
                   (process-send-string proc str)
                   (process-send-eof proc)))
               (apply k str args)))

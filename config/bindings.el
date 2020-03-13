@@ -104,6 +104,7 @@
 (define-key company-active-map (kbd "<backtab>") 'company-select-previous-or-abort)
 
 
+(global-set-key (kbd "C-c p f") 'projectile-find-file)
 (global-set-key (kbd "C-c C-p f") 'projectile-find-file)
 (global-set-key (kbd "C-c C-p C-f") 'projectile-find-file)
 (define-key cider-mode-map (kbd "C-c C-p") nil)
