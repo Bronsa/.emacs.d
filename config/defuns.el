@@ -59,13 +59,17 @@
   (let ((pattern (or pattern
                      (read-string "git grep: " ""))))
     (with-current-buffer (generate-new-buffer "*Magit Grep*")
-      (setq default-directory (magit-toplevel))
-      (insert magit-git-executable " "
-              " grep -n "
-              (shell-quote-argument pattern) "\n\n")
-      (magit-git-insert (list "grep" "--line-number" pattern))
-      (grep-mode)
-      (pop-to-buffer (current-buffer)))))
+      (let ((dir (magit-toplevel)))
+        (if dir
+            (progn
+              (setq default-directory dir)
+              (insert magit-git-executable " "
+                      " grep -n "
+                      (shell-quote-argument pattern) "\n\n")
+              (magit-git-insert (list "grep" "--line-number" pattern))
+              (grep-mode)
+              (pop-to-buffer (current-buffer)))
+          (message "not in a git directory"))))))
 
 (defun calculate-stops ()
   (save-excursion
