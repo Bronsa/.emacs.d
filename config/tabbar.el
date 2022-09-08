@@ -18,7 +18,7 @@
                                                   magit-wip-mode magit-wip-save-mode magit-status-mode magit-stath-mode
                                                   magit-log-edit-mode magit-branch-manager-mode magit-wazzup-mode
                                                   magit-revision-mode magit-refs-mode magit-process-mode
-                                                  magit-reflog-mode))
+                                                  magit-reflog-mode magit-stash-mode))
                     (equal "*magit-process*" (buffer-name (current-buffer)))
                     (string-match "\\*magit." (buffer-name (current-buffer)))
                     (string-match "\\*Magit." (buffer-name (current-buffer)))
