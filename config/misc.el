@@ -104,9 +104,13 @@
  projectile-use-git-grep t
  git-commit-finish-query-functions ())
 
+(defun recent-commits ()
+  (when (magit-git-success "rev-parse" "@{upstream}")
+    (magit-insert-recent-commits)))
+
 (magit-add-section-hook 'magit-status-sections-hook
-                        #'magit-insert-recent-commits
-                        #'magit-insert-unpushed-commits
+                        #'recent-commits
+                        nil
                         t)
 
 (quietly-read-abbrev-file)

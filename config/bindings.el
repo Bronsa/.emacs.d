@@ -152,3 +152,4 @@
 (define-key tuareg-mode-map (kbd "C-c M-j") 'tuareg-run-ocaml)
 
 (define-key merlin-mode-map (kbd "M-.") 'merlin-locate)
+(define-key merlin-mode-map (kbd "M-,") 'merlin-pop-stack)

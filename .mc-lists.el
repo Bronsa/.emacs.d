@@ -9,7 +9,10 @@
         isearch-exit
         isearch-forward-regexp
         isearch-printing-char
+        kill-region
         kill-visual-line
+        org-cycle
+        org-self-insert-command
         paredit-doublequote
         paredit-forward-delete
         paredit-forward-kill-word
@@ -20,6 +23,7 @@
         paredit-wrap-round
         reindent-then-newline-and-indent
         smex
+        subword-right
         tuareg-electric-rp
         ))
 
