@@ -1,48 +1,48 @@
 
 ;; ----- smex-history -----
 (
- customize-face
- magit-grep
- merlin-mode
+ byte-recompile-directory
  replace-string
- json-pretty-print
- ocp-indent-buffer
- comint-clear-buffer
+ magit-gitignore
+ emacs-version
+ magit-blame
+ javascript-mode
+ merlin-mode
 )
 
 ;; ----- smex-data -----
 (
  (mpc . 15)
  (inf-clojure . 4)
- (indent-file . 134)
+ (indent-file . 143)
  (clojure-mode . 7)
  (comint-clear-buffer . 1)
  (scheme-mode . 1)
  (repeat . 1)
  (replace-amp . 1)
- (replace-string . 396)
+ (replace-string . 474)
  (lisp-mode . 11)
  (paredit-kill . 1)
  (paredit-mode . 7)
- (nopaste . 11)
+ (nopaste . 12)
  (eshell . 2)
- (magit-grep . 859)
- (javascript-mode . 10)
- (git-timemachine . 32)
+ (magit-grep . 954)
+ (javascript-mode . 12)
+ (git-timemachine . 34)
  (irc . 21)
  (run-scheme . 1)
  (cider-mode . 1)
  (text-mode . 11)
- (java-mode . 1)
- (magit-blame . 37)
+ (java-mode . 2)
+ (magit-blame . 44)
  (run-python . 2)
  (merlin-use . 3)
  (merlin-mode . 51)
- (mc/edit-lines . 30)
+ (mc/edit-lines . 34)
  (tuareg-help . 2)
- (tuareg-mode . 32)
+ (tuareg-mode . 35)
  (ielm . 16)
- (magit-revert . 24)
+ (magit-revert . 29)
  (customize-face . 9)
  (merlin-destruct . 4)
  (merlin-setup . 2)
@@ -67,7 +67,7 @@
  (term . 2)
  (ansi-term . 2)
  (refmt-before-save . 6)
- (cd . 7)
+ (cd . 8)
  (whitespace-mode . 2)
  (rename-buffer . 1)
  (markdown . 2)
@@ -76,18 +76,18 @@
  (abbrev-mode . 1)
  (ocp-indent-region . 7)
  (ocp-indent-buffer . 1)
- (byte-recompile-directory . 6)
+ (byte-recompile-directory . 8)
  (forward-whitespace . 28)
  (merlin-restart-process . 3)
  (merlin-stop-server . 7)
  (merlin-locate . 1)
- (merlin-version . 2)
+ (merlin-version . 3)
  (smex . 1)
  (magit-reset-hard . 3)
  (magit-cherry . 3)
- (magit-cherry-pick . 5)
+ (magit-cherry-pick . 6)
  (telega . 2)
- (replace-regexp . 8)
+ (replace-regexp . 40)
  (mouse-set-secondary . 6)
  (mouse-kill-secondary . 4)
  (csv-menu . 1)
@@ -106,4 +106,10 @@
  (magit-mergetool\.writeToTemp . 1)
  (vc-git-grep . 1)
  (magit-show-commit . 3)
+ (font-lock-mode . 1)
+ (magit-checkout . 1)
+ (magit-gitignore . 3)
+ (shell-command-on-region . 7)
+ (emacs-version . 1)
+ (ipl-mode . 1)
 )

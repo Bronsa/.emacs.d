@@ -23,6 +23,7 @@
         paredit-wrap-round
         reindent-then-newline-and-indent
         smex
+        subword-left
         subword-right
         tuareg-electric-rp
         ))

@@ -272,7 +272,7 @@
 (add-hook 'tuareg-mode-hook
           (lambda ()
             (when (string-match "\\.iml\\'" buffer-file-name)
-              (setq-local merlin-buffer-flags "-reader imandra -package imandra-prelude -open Imandra_prelude"))))
+              (setq-local merlin-buffer-flags "-reader imandra -open Imandra_prelude"))))
 
 (add-to-list 'safe-local-variable-values '(merlin-command . esy))
 (add-to-list 'safe-local-variable-values '(refmt-command . esy))
@@ -286,3 +286,5 @@
         (merlin-locate-ident data)))))
 
 (add-hook 'tuareg-mode-hook (lambda () (auto-highlight-symbol-mode)))
+
+(add-to-list 'auto-mode-alist '("\\.ipl\\'" . ipl-mode))

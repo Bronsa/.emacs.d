@@ -192,6 +192,7 @@ See the docstrings of `defalias' and `make-obsolete' for more details."
 (setq config-files
       '(;; lisp
         global-modes
+        ipl-mode
         misc
         ;; erc
         ;; mpc
