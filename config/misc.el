@@ -84,6 +84,8 @@
 
  scroll-error-top-bottom t
 
+ show-paren-style 'parenthesis
+
  magit-prefer-remote-upstream t
  magit-push-current-set-remote-if-missing nil
  magit-revert-buffers 'silent
@@ -102,7 +104,10 @@
 
  projectile-enable-caching t
  projectile-use-git-grep t
- git-commit-finish-query-functions ())
+ git-commit-finish-query-functions ()
+
+ tuareg-highlight-all-operators t
+ )
 
 (defun recent-commits ()
   (when (magit-git-success "rev-parse" "@{upstream}")
@@ -213,9 +218,9 @@
 
 (setq tuareg-indent-align-with-first-arg t)
 (setq tuareg-match-patterns-aligned t)
-(setq elm-format-on-save t)
-(setq elm-tags-on-save t)
-(add-to-list 'company-backends 'company-elm)
+;; (setq elm-format-on-save t)
+;; (setq elm-tags-on-save t)
+;; (add-to-list 'company-backends 'company-elm)
 
 (add-hook 'tuareg-mode-hook 'merlin-mode t)
 (add-hook 'caml-mode-hook 'merlin-mode t)
@@ -279,3 +284,5 @@
       (when (cddr data)
         (setq data (merlin--type-enclosing-text data))
         (merlin-locate-ident data)))))
+
+(add-hook 'tuareg-mode-hook (lambda () (auto-highlight-symbol-mode)))

@@ -14,7 +14,8 @@
  truncate-lines t
 
  show-paren-delay 0
- show-paren-style 'expression)
+ ;;show-paren-style 'expression
+ )
 
 (set-background-color "#232323")
 
@@ -53,7 +54,8 @@
      (minibuffer-prompt ((t (:foreground "#729fcf"))))
      (region ((t (:background "#464646"))))
 
-     (show-paren-match ((t (:background nil :foreground nil :weight extra-bold))))
+     (show-paren-match ((t (:background "#2f2f2f" :foreground nil :weight bold))))
+     (show-paren-match-expression ((t (:background nil :foreground nil :weight bold))))
      (show-paren-mismatch ((t (:foreground "#2e3436" :background "#ef2929"))))
 
      (highlight ((t (:background "#1f1f1f" :foreground nil))))
@@ -109,17 +111,17 @@
      (apropos-symbol-face ((t (:background nil))))
      (match ((t (:background nil :foreground "red"))))
 
-     (erc-default-face ((t (:foreground "white"))))
-     (erc-input-face ((t (:foreground "white"))))
-     (erc-prompt-face ((t (:foreground "gray80" :weight bold))))
-     (erc-nick-default-face ((t (:foreground "green"))))
-     (erc-my-nick-face ((t (:foreground "white"))))
-     (erc-current-nick-face ((t (:foreground "yellow"))))
-     (fg:erc-color-face12 ((t (:foreground "brightblue"))))
-     (fg:erc-color-face2 ((t (:foreground "blue"))))
+     ;; (erc-default-face ((t (:foreground "white"))))
+     ;; (erc-input-face ((t (:foreground "white"))))
+     ;; (erc-prompt-face ((t (:foreground "gray80" :weight bold))))
+     ;; (erc-nick-default-face ((t (:foreground "green"))))
+     ;; (erc-my-nick-face ((t (:foreground "white"))))
+     ;; (erc-current-nick-face ((t (:foreground "yellow"))))
+     ;; (fg:erc-color-face12 ((t (:foreground "brightblue"))))
+     ;; (fg:erc-color-face2 ((t (:foreground "blue"))))
 
-     (cider-debug-code-overlay-face ((t (:background "#454545"))))
-     (cider-stacktrace-face ((t (:foregroiund "#575757"))))
+     ;; (cider-debug-code-overlay-face ((t (:background "#454545"))))
+     ;; (cider-stacktrace-face ((t (:foregroiund "#575757"))))
 
      (company-tooltip ((t (:background "#333333" :foreground "white"))))
      (company-tooltip-annotation ((t (:background "#333333" :foreground "white"))))
@@ -129,21 +131,24 @@
      (company-tooltip-common ((t (:background "black" :foreground "gray50"))))
      (company-tooltip-common-selection ((t (:background "black" :foreground "gray80"))))
 
-     (ggtags-global-line ((t (:background "#121212")))))))
+     ;;
+     ;; (aggtags-global-line ((t (:background "#121212"))))
+     )
+   ))
 
-(set-face-attribute
- 'erc-notice-face nil
- :foreground "gray60")
+;; (set-face-attribute
+;;  'erc-notice-face nil
+;;  :foreground "gray60")
 
-(set-face-attribute
- 'erc-prompt-face nil
- :foreground "gray60"
- :weight 'bold)
+;; (set-face-attribute
+;;  'erc-prompt-face nil
+;;  :foreground "gray60"
+;;  :weight 'bold)
 
-(set-face-attribute
- 'erc-timestamp-face nil
- :foreground "gray40"
- :weight 'normal)
+;; (set-face-attribute
+;;  'erc-timestamp-face nil
+;;  :foreground "gray40"
+;;  :weight 'normal)
 
 (setq-default
  mode-line-format
@@ -170,11 +175,11 @@
   '(:eval (propertize "%p" 'face 'font-lock-constant-face)) ;; % above top
   "] "
 
-  '(:eval (or erc-modified-channels-object ""))
+  ;; '(:eval (or erc-modified-channels-object ""))
 
-  '(:eval (if (not (string= erc-modified-channels-object ""))
-              (propertize " ")
-            ""))
+  ;; '(:eval (if (not (string= erc-modified-channels-object ""))
+  ;;             (propertize " ")
+  ;;           ""))
 
   ;; the current major mode for the buffer.
   "["

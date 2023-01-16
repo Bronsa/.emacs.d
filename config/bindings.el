@@ -44,28 +44,28 @@
 
 (global-set-key (kbd "C-x C-b") 'ido-switch-buffer)
 
-(define-key erc-mode-map (kbd "C-<up>") 'erc-previous-command)
-(define-key erc-mode-map (kbd "C-<down>") 'erc-next-command)
+;; (define-key erc-mode-map (kbd "C-<up>") 'erc-previous-command)
+;; (define-key erc-mode-map (kbd "C-<down>") 'erc-next-command)
 
 (global-set-key (kbd "M-q") 'join-line)
 (global-set-key (kbd "ESC <up>") 'paredit-splice-sexp-killing-backward)
 (global-set-key (kbd "C-c g") 'magit-status)
 
-(define-key mpc-songs-mode-map (kbd "RET") 'mpc-play-at-point)
-(define-key mpc-songs-mode-map (kbd "M-RET") 'mpc-play)
-(define-key mpc-mode-map (kbd "j") 'mpc-select)
-(define-key mpc-mode-map (kbd "s") 'mpc-songs-search)
-(define-key mpc-mode-map (kbd "y") 'mpc-playlist-add)
-(define-key mpc-mode-map (kbd "k") 'mpc-playlist-delete)
-(define-key mpc-mode-map (kbd "SPC") 'mpc-toggle-pause)
-(define-key mpc-mode-map (kbd "m") 'mpc-select-toggle)
-(define-key mpc-mode-map (kbd "S-SPC") 'mpc-select-extend)
-(define-key mpc-mode-map (kbd "n") 'mpc-next)
-(define-key mpc-mode-map (kbd "p") 'mpc-prev)
-(define-key mpc-mode-map (kbd "l") 'mpc-playlist)
-(define-key mpc-mode-map (kbd "M-a") 'mpc-jump-to-albums)
-(define-key mpc-mode-map (kbd "a") 'mpc-jump-to-artists)
-(define-key mpc-mode-map (kbd "M-s") 'mpc-jump-to-songs)
+;; (define-key mpc-songs-mode-map (kbd "RET") 'mpc-play-at-point)
+;; (define-key mpc-songs-mode-map (kbd "M-RET") 'mpc-play)
+;; (define-key mpc-mode-map (kbd "j") 'mpc-select)
+;; (define-key mpc-mode-map (kbd "s") 'mpc-songs-search)
+;; (define-key mpc-mode-map (kbd "y") 'mpc-playlist-add)
+;; (define-key mpc-mode-map (kbd "k") 'mpc-playlist-delete)
+;; (define-key mpc-mode-map (kbd "SPC") 'mpc-toggle-pause)
+;; (define-key mpc-mode-map (kbd "m") 'mpc-select-toggle)
+;; (define-key mpc-mode-map (kbd "S-SPC") 'mpc-select-extend)
+;; (define-key mpc-mode-map (kbd "n") 'mpc-next)
+;; (define-key mpc-mode-map (kbd "p") 'mpc-prev)
+;; (define-key mpc-mode-map (kbd "l") 'mpc-playlist)
+;; (define-key mpc-mode-map (kbd "M-a") 'mpc-jump-to-albums)
+;; (define-key mpc-mode-map (kbd "a") 'mpc-jump-to-artists)
+;; (define-key mpc-mode-map (kbd "M-s") 'mpc-jump-to-songs)
 
 (global-set-key (kbd "C-x l") 'toggle-input-method)
 
@@ -107,10 +107,10 @@
 (global-set-key (kbd "C-c p f") 'projectile-find-file)
 (global-set-key (kbd "C-c C-p f") 'projectile-find-file)
 (global-set-key (kbd "C-c C-p C-f") 'projectile-find-file)
-(define-key cider-mode-map (kbd "C-c C-p") nil)
+;; (define-key cider-mode-map (kbd "C-c C-p") nil)
 
-(define-key cider-clojure-interaction-mode-map (kbd "M-RET") #'cider-eval-print-last-sexp)
-(define-key cider-repl-mode-map (kbd "C-c C-l") #'cider-repl-clear-buffer)
+;; (define-key cider-clojure-interaction-mode-map (kbd "M-RET") #'cider-eval-print-last-sexp)
+;; (define-key cider-repl-mode-map (kbd "C-c C-l") #'cider-repl-clear-buffer)
 (define-key sql-interactive-mode-map (kbd "C-c C-l") #'comint-clear-buffer)
 (define-key tuareg-interactive-mode-map (kbd "C-c C-l") #'comint-clear-buffer)
 
@@ -119,11 +119,11 @@
 (define-key auto-highlight-symbol-mode-map (kbd "M-<right>") 'subword-right)
 (global-set-key (kbd "M-<right>") 'subword-right)
 
-(global-set-key (kbd "s-<left>" ) 'ahs-backward)
-(global-set-key (kbd "s-<right>" ) 'ahs-forward)
+(global-set-key (kbd "C-<left>" ) 'ahs-backward)
+(global-set-key (kbd "C-<right>" ) 'ahs-forward)
 
-(define-key clojure-mode-map "{" #'paredit-open-curly)
-(define-key clojure-mode-map "}" #'paredit-close-curly)
+;; (define-key clojure-mode-map "{" #'paredit-open-curly)
+;; (define-key clojure-mode-map "}" #'paredit-close-curly)
 
 (define-key minibuffer-inactive-mode-map [mouse-1] 'ignore)
 (define-key minibuffer-inactive-mode-map [mouse-2] 'ignore)
@@ -132,8 +132,9 @@
 (global-unset-key (kbd "<menu-bar> <mouse-1>"))
 (global-unset-key (kbd "<menu-bar> <mouse-2>"))
 (global-unset-key (kbd "<menu-bar> <mouse-3>"))
+(global-unset-key (kbd "<M-drag-mouse-1>"))
 
-(define-key erc-mode-map (kbd "C-M-i") nil)
+;; (define-key erc-mode-map (kbd "C-M-i") nil)
 
 (define-key paredit-mode-map (kbd "C-M-d") 'mark-sexp)
 
@@ -142,7 +143,7 @@
 (global-set-key (kbd "C-c <up>")    'hs-hide-all)
 (global-set-key (kbd "C-c <down>")  'hs-show-all)
 
-(define-key cider-repl-mode-map (kbd "C-M-q") #'prog-indent-sexp)
+;; (define-key cider-repl-mode-map (kbd "C-M-q") #'prog-indent-sexp)
 
 (global-set-key (kbd "C-x j") 'ido-switch-buffer)
 (global-set-key (kbd "C-x C-j") 'ido-switch-buffer)

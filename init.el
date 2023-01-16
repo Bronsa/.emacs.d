@@ -70,6 +70,8 @@
  ;; If there is more than one, they won't work right.
  '(diff-refine-added ((t (:inherit diff-refine-change :background "color-22"))))
  '(diff-refine-removed ((t (:inherit diff-refine-change :background "color-52"))))
+ '(ediff-even-diff-C ((t (:background "color-238"))))
+ '(ediff-odd-diff-C ((t (:background "color-239"))))
  '(eshell-ls-directory ((t (:foreground "Blue"))))
  '(highlight ((t (:background "#1f1f1f"))))
  '(magit-diff-base ((t (:foreground "yellow"))))

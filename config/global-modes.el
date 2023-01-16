@@ -11,7 +11,7 @@
 (global-undo-tree-mode 1)
 (tabbar-mode 1)
 (auto-compression-mode t)
-(turn-on-eval-sexp-fu-flash-mode)
+;; (turn-on-eval-sexp-fu-flash-mode)
 (show-paren-mode t)
 (global-auto-highlight-symbol-mode t)
 (yas-global-mode 1)
@@ -23,4 +23,3 @@
 (global-subword-mode 1)
 (global-diff-hl-mode)
 (diff-hl-margin-mode)
-(editorconfig-mode 1)
