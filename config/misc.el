@@ -288,3 +288,6 @@
 (add-hook 'tuareg-mode-hook (lambda () (auto-highlight-symbol-mode)))
 
 (add-to-list 'auto-mode-alist '("\\.ipl\\'" . ipl-mode))
+
+
+(setq csv-separators '("," ";"))

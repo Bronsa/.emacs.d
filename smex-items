@@ -1,12 +1,12 @@
 
 ;; ----- smex-history -----
 (
- byte-recompile-directory
- replace-string
- magit-gitignore
- emacs-version
+ magit-grep
  magit-blame
- javascript-mode
+ replace-string
+ lisp-mode
+ wgrep-change-to-wgrep-mode
+ delete-file
  merlin-mode
 )
 
@@ -20,13 +20,13 @@
  (scheme-mode . 1)
  (repeat . 1)
  (replace-amp . 1)
- (replace-string . 474)
- (lisp-mode . 11)
+ (replace-string . 486)
+ (lisp-mode . 12)
  (paredit-kill . 1)
  (paredit-mode . 7)
  (nopaste . 12)
  (eshell . 2)
- (magit-grep . 954)
+ (magit-grep . 975)
  (javascript-mode . 12)
  (git-timemachine . 34)
  (irc . 21)
@@ -34,10 +34,10 @@
  (cider-mode . 1)
  (text-mode . 11)
  (java-mode . 2)
- (magit-blame . 44)
+ (magit-blame . 45)
  (run-python . 2)
  (merlin-use . 3)
- (merlin-mode . 51)
+ (merlin-mode . 52)
  (mc/edit-lines . 34)
  (tuareg-help . 2)
  (tuareg-mode . 35)
@@ -52,7 +52,7 @@
  (magit . 4)
  (magit-diff . 3)
  (yaml-mode . 3)
- (delete-file . 31)
+ (delete-file . 32)
  (time-stamp . 1)
  (debug-on-entry . 1)
  (olivetti-mode . 2)
@@ -72,7 +72,7 @@
  (rename-buffer . 1)
  (markdown . 2)
  (markdown-mode . 2)
- (wgrep-change-to-wgrep-mode . 16)
+ (wgrep-change-to-wgrep-mode . 19)
  (abbrev-mode . 1)
  (ocp-indent-region . 7)
  (ocp-indent-buffer . 1)
@@ -91,7 +91,7 @@
  (mouse-set-secondary . 6)
  (mouse-kill-secondary . 4)
  (csv-menu . 1)
- (csv-mode . 1)
+ (csv-mode . 3)
  (ocamlformat . 3)
  (ocamlformat-line . 3)
  (ocamlformat-setup-indent . 1)
@@ -108,8 +108,9 @@
  (magit-show-commit . 3)
  (font-lock-mode . 1)
  (magit-checkout . 1)
- (magit-gitignore . 3)
+ (magit-gitignore . 4)
  (shell-command-on-region . 7)
  (emacs-version . 1)
  (ipl-mode . 1)
+ (csv-align-fields . 1)
 )

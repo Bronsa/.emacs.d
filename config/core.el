@@ -68,7 +68,7 @@ See the docstrings of `defalias' and `make-obsolete' for more details."
         ;; cider
         ;; cider-eval-sexp-fu
         ;; clj-refactor
-        ;; clojure-mode
+        clojure-mode
         color-theme
         company
         csv-mode
@@ -132,12 +132,13 @@ See the docstrings of `defalias' and `make-obsolete' for more details."
 
 (setq required-libs
       '(adoc-mode
-        ;; align-cljlet
+        align-cljlet
         auto-highlight-symbol
         ;; cider
         ;; cider-eval-sexp-fu
         ;; cider-scratch
         ;; clj-refactor
+        clojure-mode
         color-theme
         company
         csv-mode

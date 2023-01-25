@@ -3,6 +3,7 @@
 
 (setq mc/cmds-to-run-for-all
       '(
+        *table--cell-self-insert-command
         beginning-of-visual-line
         electric-newline-and-maybe-indent
         end-of-visual-line

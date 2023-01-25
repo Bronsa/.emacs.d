@@ -92,6 +92,7 @@
                                 (string-match "\\*JDEE.*\\*" (buffer-name b))
                                 (string-match "\\*emacs\\*.*" (buffer-name b))
                                 (string-match "\\*ediff\\*.*" (buffer-name b))
+                                (string-match "\\Ediff\\*.*" (buffer-name b))
                                 (string-match "\\*Customize.*\\*" (buffer-name b))
                                 (memq (buffer-local-value 'major-mode b)
                                       '(mpc-mode mpc-status-mode mpc-tagbrowser-mode mpc-tagbrowser-dir-mode mpc-songs-mode))
