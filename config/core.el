@@ -92,7 +92,6 @@ See the docstrings of `defalias' and `make-obsolete' for more details."
         less-css-mode
         markdown-mode
         markup-faces
-        magit-popup
         magithub
         magit/lisp
         merlin/emacs

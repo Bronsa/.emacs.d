@@ -133,9 +133,6 @@
 [submodule "libs/haskell-mode"]
 	path = libs/haskell-mode
 	url = https://github.com/haskell/haskell-mode
-[submodule "libs/magit-popup"]
-	path = libs/magit-popup
-	url = https://github.com/magit/magit-popup
 [submodule "config/libs/ghub"]
 	path = config/libs/ghub
 	url = https://github.com/magit/ghub
