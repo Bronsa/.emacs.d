@@ -99,6 +99,7 @@ See the docstrings of `defalias' and `make-obsolete' for more details."
         merlin/emacs
         multiple-cursors ;; clj-refactor
         olivetti
+        opam-switch-mode
         ocp-indent/tools
         paredit
         peg ;; clj-refactor
@@ -163,6 +164,7 @@ See the docstrings of `defalias' and `make-obsolete' for more details."
         ;; mpc
         multiple-cursors
         olivetti
+        opam-switch-mode
         ocp-indent
         paredit
         paren

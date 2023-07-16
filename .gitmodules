@@ -202,3 +202,6 @@
 [submodule "libs/reason-mode"]
 	path = libs/reason-mode
 	url = https://github.com/reasonml-editor/reason-mode
+[submodule "libs/opam-switch-mode"]
+	path = libs/opam-switch-mode
+	url = https://github.com/ProofGeneral/opam-switch-mode

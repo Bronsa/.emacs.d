@@ -14,3 +14,7 @@ tutorial/
 url/
 *.elc
 magithub/cache
+elpa/
+ido.last~
+transient
+smex-items

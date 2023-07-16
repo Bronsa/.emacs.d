@@ -272,3 +272,18 @@
 (add-hook 'magit-post-refresh-hook 'diff-hl-magit-post-refresh t)
 
 (setq undo-tree-history-directory-alist '(("." . "~/.emacs.d./tmp/.undo-tree")))
+
+(defadvice completing-read
+    (around foo activate)
+  (if (boundp 'ido-cur-list)
+      ad-do-it
+    (setq ad-return-value
+          (ido-completing-read
+           prompt
+           (all-completions "" collection predicate)
+           nil require-match initial-input hist def))))
+
+(defun merlin-restart ()
+  (interactive)
+  (call-interactively 'opam-switch-set-switch)
+  (merlin-stop-server))
