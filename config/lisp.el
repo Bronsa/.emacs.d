@@ -31,8 +31,6 @@
       cljr-eagerly-build-asts-on-startup nil
       cider-repl-display-help-banner nil)
 
-(add-hook 'magit-post-refresh-hook 'diff-hl-magit-post-refresh t)
-
 (setq inf-clojure-generic-cmd "clojure"
       inf-clojure-tools-deps-cmd "clojure"
       inf-clojure-project-type "tools.deps")

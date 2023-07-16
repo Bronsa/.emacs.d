@@ -133,6 +133,10 @@
 (global-unset-key (kbd "<menu-bar> <mouse-2>"))
 (global-unset-key (kbd "<menu-bar> <mouse-3>"))
 (global-unset-key (kbd "<M-drag-mouse-1>"))
+(global-unset-key (kbd "<M-mouse-1>"))
+(global-unset-key (kbd "<M-down-mouse-1>"))
+(global-unset-key (kbd "<M-mouse-3>"))
+(global-unset-key (kbd "<M-mouse-2>"))
 
 ;; (define-key erc-mode-map (kbd "C-M-i") nil)
 

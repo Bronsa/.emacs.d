@@ -17,6 +17,7 @@
 ;; backup & auto-save
 (make-directory "~/.emacs.d/tmp/.autosaves/" t)
 (make-directory "~/.emacs.d/tmp/.backups/" t)
+(make-directory "~/.emacs.d/tmp/.undo-tree/" t)
 
 (setq-default
  backup-by-copying t
@@ -31,6 +32,8 @@
 (setq-default
  save-place t
  save-place-file "~/.emacs.d/.saved-places")
+
+(setq initial-major-mode 'text-mode)
 
 (auto-compression-mode 1)
 
@@ -236,58 +239,36 @@
 
 (setq olivetti-body-width 86)
 
-
 (defun shell-cmd (cmd)
   "Returns the stdout output of a shell command or nil if the command returned
    an error"
   (car (ignore-errors (apply 'process-lines (split-string cmd)))))
 
-(defun reason-cmd-where (cmd)
-  (let ((where (shell-cmd cmd)))
-    (if (not (string-equal "unknown flag ----where" where))
-      where)))
-
-(let* ((refmt-bin (or (reason-cmd-where "refmt ----where")
-                      (shell-cmd "which refmt")))
-       (merlin-bin (or (reason-cmd-where "ocamlmerlin ----where")
-                       (shell-cmd "which ocamlmerlin")))
-       (merlin-base-dir (when merlin-bin
-                          (replace-regexp-in-string "bin/ocamlmerlin$" "" merlin-bin))))
-  ;; Add merlin.el to the emacs load path and tell emacs where to find ocamlmerlin
-  (when merlin-bin
-    (add-to-list 'load-path (concat merlin-base-dir "share/emacs/site-lisp/"))
-    (setq merlin-command merlin-bin))
-
-  (when refmt-bin
-    (setq refmt-command refmt-bin)))
-
-(require 'reason-mode)
 (require 'merlin)
-(add-hook 'reason-mode-hook (lambda ()
-                              (add-hook 'before-save-hook 'refmt-before-save)
-                              (merlin-mode)))
 
-(setq merlin-ac-setup t)
 
 (add-hook 'tuareg-mode-hook
           (lambda ()
-            (when (string-match "\\.iml\\'" buffer-file-name)
-              (setq-local merlin-buffer-flags "-reader imandra -open Imandra_prelude"))))
+            (let* ((merlin-bin (with-temp-buffer
+                                 (if (eq (call-process-shell-command "opam var bin" nil (current-buffer) nil) 0)
+                                     (let ((bin-path (replace-regexp-in-string "\n$" "" (buffer-string))))
+                                       (concat bin-path "/ocamlmerlin"))
+                                   (shell-cmd "which ocamlmerlin")))))
+              (when merlin-bin
+                (setq-local merlin-command merlin-bin)))
+
+            (if (string-match "\\.iml\\'" buffer-file-name)
+                (setq-local merlin-buffer-flags "-reader imandra -open Imandra_prelude -addsuffix .iml:.imli -assocsuffix .iml:imandra")
+              (setq-local merlin-buffer-flags "-addsuffix .iml:.imli -assocsuffix .iml:imandra"))))
 
 (add-to-list 'safe-local-variable-values '(merlin-command . esy))
-(add-to-list 'safe-local-variable-values '(refmt-command . esy))
-
-(with-eval-after-load 'merlin
-  (defun merlin-jump-to-type-definition ()
-    (interactive)
-    (let ((data (elt merlin-enclosing-types merlin-enclosing-offset)))
-      (when (cddr data)
-        (setq data (merlin--type-enclosing-text data))
-        (merlin-locate-ident data)))))
 
 (add-hook 'tuareg-mode-hook (lambda () (auto-highlight-symbol-mode)))
 
 (add-to-list 'auto-mode-alist '("\\.ipl\\'" . ipl-mode))
 
-
 (setq csv-separators '("," ";"))
+
+(add-hook 'magit-post-refresh-hook 'diff-hl-magit-post-refresh t)
+
+(setq undo-tree-history-directory-alist '(("." . "~/.emacs.d./tmp/.undo-tree")))
