@@ -289,3 +289,7 @@
   (merlin-stop-server))
 
 (add-hook 'before-save-hook 'ocamlformat-before-save)
+
+(setq transient-show-common-commands nil)
+(setq transient-default-level 1)
+(setq transient-show-popup 1)
