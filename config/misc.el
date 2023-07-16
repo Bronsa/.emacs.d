@@ -112,14 +112,14 @@
  tuareg-highlight-all-operators t
  )
 
-(defun recent-commits ()
-  (when (magit-git-success "rev-parse" "@{upstream}")
-    (magit-insert-recent-commits)))
+;; (defun recent-commits ()
+;;   (when (magit-git-success "rev-parse" "@{upstream}")
+;;     (magit-insert-recent-commits)))
 
-(magit-add-section-hook 'magit-status-sections-hook
-                        #'recent-commits
-                        nil
-                        t)
+;; (magit-add-section-hook 'magit-status-sections-hook
+;;                         #'recent-commits
+;;                         nil
+;;                         t)
 
 (quietly-read-abbrev-file)
 (smex-initialize)
