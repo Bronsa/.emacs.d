@@ -95,6 +95,7 @@ See the docstrings of `defalias' and `make-obsolete' for more details."
         magithub
         magit/lisp
         merlin/emacs
+        merlin-eldoc
         multiple-cursors ;; clj-refactor
         neotree
         ocamlformat/emacs
@@ -162,6 +163,7 @@ See the docstrings of `defalias' and `make-obsolete' for more details."
         markdown-mode
         merlin
         merlin-company
+        merlin-eldoc
         ;; mpc
         multiple-cursors
         neotree

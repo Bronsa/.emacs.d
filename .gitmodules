@@ -202,3 +202,6 @@
 [submodule "libs/compat"]
 	path = libs/compat
 	url = https://github.com/emacs-compat/compat
+[submodule "libs/merlin-eldoc"]
+	path = libs/merlin-eldoc
+	url = https://github.com/Khady/merlin-eldoc
