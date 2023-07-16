@@ -98,6 +98,7 @@ See the docstrings of `defalias' and `make-obsolete' for more details."
         magit/lisp
         merlin/emacs
         multiple-cursors ;; clj-refactor
+        ocamlformat/emacs
         olivetti
         opam-switch-mode
         ocp-indent/tools
@@ -163,6 +164,7 @@ See the docstrings of `defalias' and `make-obsolete' for more details."
         merlin-company
         ;; mpc
         multiple-cursors
+        ocamlformat
         olivetti
         opam-switch-mode
         ocp-indent

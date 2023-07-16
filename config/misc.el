@@ -287,3 +287,5 @@
   (interactive)
   (call-interactively 'opam-switch-set-switch)
   (merlin-stop-server))
+
+(add-hook 'before-save-hook 'ocamlformat-before-save)

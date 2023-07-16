@@ -158,3 +158,4 @@
 
 (define-key merlin-mode-map (kbd "M-.") 'merlin-locate)
 (define-key merlin-mode-map (kbd "M-,") 'merlin-pop-stack)
+(define-key merlin-mode-map (kbd "C-c m") 'merlin-restart)

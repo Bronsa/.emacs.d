@@ -205,3 +205,6 @@
 [submodule "libs/opam-switch-mode"]
 	path = libs/opam-switch-mode
 	url = https://github.com/ProofGeneral/opam-switch-mode
+[submodule "libs/ocamlformat"]
+	path = libs/ocamlformat
+	url = https://github.com/ocaml-ppx/ocamlformat

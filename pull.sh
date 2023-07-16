@@ -1,1 +1,1 @@
-git pull origin master || git pull origin main
+git fetch origin && (git reset --hard origin/master || git reset --hard origin/main)
