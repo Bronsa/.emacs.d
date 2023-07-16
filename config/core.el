@@ -71,6 +71,7 @@ See the docstrings of `defalias' and `make-obsolete' for more details."
         clojure-mode
         color-theme
         company
+        compat
         csv-mode
         dash ;; cider
         dockerfile-mode
@@ -88,6 +89,7 @@ See the docstrings of `defalias' and `make-obsolete' for more details."
         haskell-mode
         highlight ;; yasnippet
         hydra ;; clj-refactor
+        ht
         iedit
         inf-clojure
         less-css-mode
@@ -117,6 +119,7 @@ See the docstrings of `defalias' and `make-obsolete' for more details."
         smex
         string-inflection
         spinner ;; cider
+        transient/lisp
         treepy
         tabbar
         tuareg
@@ -124,7 +127,7 @@ See the docstrings of `defalias' and `make-obsolete' for more details."
         undo-tree
         web-mode
         wgrep
-        with-editor
+        with-editor/lisp
         yaml-mode
         yasnippet
         ))
@@ -195,7 +198,7 @@ See the docstrings of `defalias' and `make-obsolete' for more details."
   (require lib))
 
 (setq config-files
-      '(;; lisp
+      '(lisp
         global-modes
         ipl-mode
         misc
