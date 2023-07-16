@@ -300,3 +300,6 @@
                               (merlin-mode)))
 
 (add-hook 'tuareg-mode-hook 'merlin-eldoc-setup)
+
+(setq eldoc-echo-area-use-multiline-p nil) ;'truncate-sym-name-if-fit
+(setq eldoc-idle-delay 0.2)
