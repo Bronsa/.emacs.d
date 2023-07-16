@@ -78,10 +78,9 @@ See the docstrings of `defalias' and `make-obsolete' for more details."
         diff-hl
         editorconfig-emacs
         edn ;; clj-refactor
-        elm-mode
         epl ;; cider
         eval-sexp-fu
-        f ;; elm-mode
+        f
         ggtags
         ghub
         ghub-plus
@@ -151,7 +150,6 @@ See the docstrings of `defalias' and `make-obsolete' for more details."
         diff-hl-margin
         dockerfile-mode
         ;; editorconfig
-        ;; elm-mode
         ;; erc-services
         ;; ggtags
         git-timemachine
