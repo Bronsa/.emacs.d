@@ -96,6 +96,7 @@ See the docstrings of `defalias' and `make-obsolete' for more details."
         magit/lisp
         merlin/emacs
         multiple-cursors ;; clj-refactor
+        neotree
         ocamlformat/emacs
         olivetti
         opam-switch-mode
@@ -109,6 +110,7 @@ See the docstrings of `defalias' and `make-obsolete' for more details."
         popwin
         queue ;; cider
         reason-mode
+        rust-mode
         s ;; clj-refactor
         sesman
         shen-mode
@@ -162,6 +164,7 @@ See the docstrings of `defalias' and `make-obsolete' for more details."
         merlin-company
         ;; mpc
         multiple-cursors
+        neotree
         ocamlformat
         olivetti
         opam-switch-mode
@@ -173,6 +176,7 @@ See the docstrings of `defalias' and `make-obsolete' for more details."
                                         ;proof-site
         popwin
         reason-mode
+        rust-mode
         saveplace
         ;; shen-mode
 

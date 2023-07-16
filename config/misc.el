@@ -293,3 +293,8 @@
 (setq transient-show-common-commands nil)
 (setq transient-default-level 1)
 (setq transient-show-popup 1)
+
+
+(add-hook 'reason-mode-hook (lambda ()
+                              ;; (add-hook 'before-save-hook 'refmt-before-save)
+                              (merlin-mode)))
