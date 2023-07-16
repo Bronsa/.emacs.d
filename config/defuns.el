@@ -63,7 +63,7 @@
         (if dir
             (progn
               (setq default-directory dir)
-              (insert magit-git-executable " "
+              (insert "-*- mode: grep; default-directory \"" default-directory "\" -*-\n\n" magit-git-executable
                       " grep -n "
                       (shell-quote-argument pattern) "\n\n")
               (magit-git-insert (list "grep" "--line-number" pattern))
