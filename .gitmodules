@@ -96,7 +96,7 @@
 	url = https://github.com/purcell/less-css-mode.git
 [submodule "libs/with-editor"]
 	path = libs/with-editor
-	url = https://github.com/magit/with-editor.git
+	url = https://github.com/magit/with-editor
 [submodule "libs/timemachine"]
 	path = libs/timemachine
 	url = https://github.com/emacsmirror/git-timemachine.git
@@ -208,3 +208,12 @@
 [submodule "libs/ocamlformat"]
 	path = libs/ocamlformat
 	url = https://github.com/ocaml-ppx/ocamlformat
+[submodule "libs/ht"]
+	path = libs/ht
+	url = https://github.com/Wilfred/ht.el
+[submodule "libs/transient"]
+	path = libs/transient
+	url = https://github.com/magit/transient
+[submodule "libs/compat"]
+	path = libs/compat
+	url = https://github.com/emacs-compat/compat
