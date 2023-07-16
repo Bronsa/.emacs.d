@@ -82,8 +82,6 @@ See the docstrings of `defalias' and `make-obsolete' for more details."
         eval-sexp-fu
         f
         ggtags
-        ghub
-        ghub-plus
         graphql
         haskell-mode
         highlight ;; yasnippet

@@ -139,9 +139,6 @@
 [submodule "config/libs/ghub"]
 	path = config/libs/ghub
 	url = https://github.com/magit/ghub
-[submodule "libs/ghub"]
-	path = libs/ghub
-	url = https://github.com/magit/ghub
 [submodule "libs/string-inflection"]
 	path = libs/string-inflection
 	url = https://github.com/akicho8/string-inflection
@@ -172,9 +169,6 @@
 [submodule "libs/sesman"]
 	path = libs/sesman
 	url = https://github.com/vspinu/sesman
-[submodule "libs/ghub-plus"]
-	path = libs/ghub-plus
-	url = https://github.com/vermiculus/ghub-plus
 [submodule "libs/apiwrap"]
 	path = libs/apiwrap
 	url = https://github.com/vermiculus/apiwrap.el
@@ -190,9 +184,6 @@
 [submodule "libs/dockerfile-mode"]
 	path = libs/dockerfile-mode
 	url = https://github.com/spotify/dockerfile-mode
-[submodule "libs/graphql"]
-	path = libs/graphql
-	url = https://github.com/vermiculus/graphql.el
 [submodule "libs/treepy"]
 	path = libs/treepy
 	url = https://github.com/volrath/treepy.el
