@@ -28,8 +28,8 @@
  '(magit-diff-section-arguments (quote ("--no-ext-diff")))
  '(magit-log-arguments
    (quote
-    ("--graph" "--color" "--decorate" "--follow" "-n50")))
- '(magit-rebase-arguments nil)
+    ("--graph" "--color" "--decorate" "--follow" "-n50")) t)
+ '(magit-rebase-arguments nil t)
  '(safe-local-variable-values
    (quote
     ((eval tuareg-opam-update-env
@@ -58,10 +58,11 @@
      (js-indent-level . 2)
      (css-indent-offset . 2)
      (cider-cljs-lein-repl . "(user/cljs-repl)")
-     (cider-refresh-after-fn . "bounce.core/start!")
-     (cider-refresh-before-fn . "bounce.core/stop!")
      (nameless-current-name . "cider")
      (nameless-affect-indentation-and-filling)))))
+
+(customize-set-variable 'magit-ellipsis '((t (nil . " …"))))
+(customize-set-variable 'magit-section-visibility-indicator '(" …" t))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -74,6 +75,8 @@
  '(ediff-odd-diff-C ((t (:background "color-239"))))
  '(eshell-ls-directory ((t (:foreground "Blue"))))
  '(highlight ((t (:background "#1f1f1f"))))
+ '(magit-branch-current ((t (:inherit magit-branch-local))))
+ '(magit-branch-remote-head ((t (:inherit magit-branch-remote :underline "color-23"))))
  '(magit-diff-base ((t (:foreground "yellow"))))
  '(magit-diff-base-highlight ((t (:foreground "yellow"))))
  '(magit-signature-good ((t (:foreground "color-121"))))
