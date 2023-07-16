@@ -103,16 +103,16 @@ See the docstrings of `defalias' and `make-obsolete' for more details."
         opam-switch-mode
         ocp-indent/tools
         paredit
-        peg ;; clj-refactor
-        pg/generic
+        ;; peg ;; clj-refactor
+        ;; pg/generic
         prettier
         projectile
         pkg-info ;; cider
         popwin
-        queue ;; cider
+        queue
         reason-mode
         rust-mode
-        s ;; clj-refactor
+        ;; s ;; clj-refactor
         sesman
         shen-mode
         smex
@@ -145,7 +145,7 @@ See the docstrings of `defalias' and `make-obsolete' for more details."
         clojure-mode
         color-theme
         company
-        csv-mode
+        ;; csv-mode
         diff-hl-flydiff
         diff-hl-margin
         dockerfile-mode
@@ -175,13 +175,12 @@ See the docstrings of `defalias' and `make-obsolete' for more details."
         paren
         prettier-js
         projectile
-                                        ;proof-site
+        ;;proof-site
         popwin
         reason-mode
-        rust-mode
+        ;;rust-mode
         saveplace
         ;; shen-mode
-
         smex
         ;; smtpmail-async
         string-inflection
@@ -196,6 +195,7 @@ See the docstrings of `defalias' and `make-obsolete' for more details."
         yaml-mode))
 
 (dolist (lib required-libs)
+  (message "loading %s" lib)
   (require lib))
 
 (setq config-files
