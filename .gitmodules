@@ -208,3 +208,6 @@
 [submodule "libs/imandra-mode"]
 	path = libs/imandra-mode
 	url = https://github.com/imandra-ai/imandra-mode
+[submodule "libs/ido-completing-read-plus"]
+	path = libs/ido-completing-read-plus
+	url = https://github.com/DarwinAwardWinner/ido-completing-read-plus

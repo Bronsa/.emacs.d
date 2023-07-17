@@ -87,6 +87,7 @@ See the docstrings of `defalias' and `make-obsolete' for more details."
         highlight ;; yasnippet
         hydra ;; clj-refactor
         ht
+        ido-completing-read-plus
         iedit
         imandra-mode
         inf-clojure
@@ -156,6 +157,7 @@ See the docstrings of `defalias' and `make-obsolete' for more details."
         ;; ggtags
         git-timemachine
         ;; haskell-mode
+        ido-completing-read+
         iedit
         imandra-mode
         imandra-mode-merlin

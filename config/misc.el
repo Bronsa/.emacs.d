@@ -271,13 +271,3 @@
 
 (add-hook 'before-save-hook 'ocamlformat-before-save)
 (add-hook 'tuareg-mode-hook 'merlin-eldoc-setup)
-
-;; (defadvice completing-read
-;;     (around foo activate)
-;;   (if (boundp 'ido-cur-list)
-;;       ad-do-it
-;;     (setq ad-return-value
-;;           (ido-completing-read
-;;            prompt
-;;            (all-completions "" collection predicate)
-;;            nil require-match initial-input hist def))))
