@@ -216,7 +216,7 @@
       (kill-new filename)
       (message "Copied buffer file name '%s' to the clipboard." filename))))
 
-(add-hook 'tuareg-mode-hook (lambda () (abbrev-mode -1)  (ocp-setup-indent)))
+(add-hook 'tuareg-mode-hook (lambda () (abbrev-mode -1) (ocp-setup-indent)))
 (add-hook 'tuareg-interactive-mode-hook (lambda () (abbrev-mode -1)))
 
 (setq tuareg-indent-align-with-first-arg t)
@@ -227,7 +227,6 @@
 
 (add-hook 'tuareg-mode-hook 'merlin-mode t)
 (add-hook 'caml-mode-hook 'merlin-mode t)
-(setq merlin-command 'opam)
 
 (add-hook 'js2-mode-hook 'prettier-js-mode)
 (add-hook 'web-mode-hook 'prettier-js-mode)
@@ -239,13 +238,7 @@
 
 (setq olivetti-body-width 86)
 
-(defun shell-cmd (cmd)
-  "Returns the stdout output of a shell command or nil if the command returned
-   an error"
-  (car (ignore-errors (apply 'process-lines (split-string cmd)))))
-
 (require 'merlin)
-
 
 (add-hook 'tuareg-mode-hook
           (lambda ()
@@ -253,13 +246,15 @@
                                  (if (eq (call-process-shell-command "opam var bin" nil (current-buffer) nil) 0)
                                      (let ((bin-path (replace-regexp-in-string "\n$" "" (buffer-string))))
                                        (concat bin-path "/ocamlmerlin"))
-                                   (shell-cmd "which ocamlmerlin")))))
+                                   (car (ignore-errors (process-lines "which" "ocamlmerlin")))))))
               (when merlin-bin
-                (setq-local merlin-command merlin-bin)))
+                (setq-local merlin-command merlin-bin)))))
 
-            (if (string-match "\\.iml\\'" buffer-file-name)
-                (setq-local merlin-buffer-flags "-reader imandra -open Imandra_prelude -addsuffix .iml:.imli -assocsuffix .iml:imandra")
-              (setq-local merlin-buffer-flags "-addsuffix .iml:.imli -assocsuffix .iml:imandra"))))
+(add-hook 'tuareg-mode-hook
+          (lambda ()
+            (let* ((flags "-addsuffix .iml:.imli -assocsuffix .iml:imandra")
+                   (flags (if (string-match "\\.iml\\'" buffer-file-name) (concat "-open Imandra_prelude " flags) flags)))
+              (setq-local merlin-buffer-flags flags))))
 
 (add-to-list 'safe-local-variable-values '(merlin-command . esy))
 
@@ -273,15 +268,15 @@
 
 (setq undo-tree-history-directory-alist '(("." . "~/.emacs.d./tmp/.undo-tree")))
 
-(defadvice completing-read
-    (around foo activate)
-  (if (boundp 'ido-cur-list)
-      ad-do-it
-    (setq ad-return-value
-          (ido-completing-read
-           prompt
-           (all-completions "" collection predicate)
-           nil require-match initial-input hist def))))
+;; (defadvice completing-read
+;;     (around foo activate)
+;;   (if (boundp 'ido-cur-list)
+;;       ad-do-it
+;;     (setq ad-return-value
+;;           (ido-completing-read
+;;            prompt
+;;            (all-completions "" collection predicate)
+;;            nil require-match initial-input hist def))))
 
 (defun merlin-restart ()
   (interactive)
@@ -302,4 +297,4 @@
 (add-hook 'tuareg-mode-hook 'merlin-eldoc-setup)
 
 (setq eldoc-echo-area-use-multiline-p nil) ;'truncate-sym-name-if-fit
-(setq eldoc-idle-delay 0.2)
+(setq eldoc-idle-delay 0.5)
