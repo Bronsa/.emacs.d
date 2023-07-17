@@ -88,6 +88,7 @@ See the docstrings of `defalias' and `make-obsolete' for more details."
         hydra ;; clj-refactor
         ht
         iedit
+        imandra-mode
         inf-clojure
         less-css-mode
         markdown-mode
@@ -156,6 +157,9 @@ See the docstrings of `defalias' and `make-obsolete' for more details."
         git-timemachine
         ;; haskell-mode
         iedit
+        imandra-mode
+        imandra-mode-merlin
+        imandra-mode-ocamlformat
         ;; inf-shen
         ;; inf-clojure
         ;; less-css-mode

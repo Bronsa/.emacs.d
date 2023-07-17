@@ -9,13 +9,6 @@
 ;;
 ;;; License: GPLv3
 
-;; (require 'lsp-mode)
-
-;; (defcustom ipl-path-to-language-server "ipl-server"
-;;   "Path to the IPL language server binary.")
-;; (defcustom ipl-java-home nil
-;;   "Path to Java home")
-
 (defconst ipl-keywords
   '("None"
     "Some"
@@ -116,21 +109,5 @@
           `(("//.+" . font-lock-comment-face)
             (,(regexp-opt ipl-keywords 'words) . font-lock-keyword-face)))
     (setq font-lock-defaults '(ipl-highlights))))
-
-;; (add-to-list 'lsp-language-id-configuration '(ipl-mode . "IPL"))
-
-;; (lsp-register-client
-;;  (make-lsp-client
-;;   :new-connection
-;;   (lsp-stdio-connection
-;;    (lambda () ipl-path-to-language-server))
-;;   :major-modes '(ipl-mode)
-;;   :server-id 'imandra-ipl-lsp
-;;   :environment-fn (lambda ()
-;;                     (if ipl-java-home
-;;                         '(("JAVA_HOME" . ipl-java-home))
-;;                       '()))))
-
-;; (add-to-list 'ipl-mode-hook #'lsp-mode)
 
 (provide 'ipl-mode)

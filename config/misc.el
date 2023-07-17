@@ -179,8 +179,8 @@
 (add-to-list 'auto-mode-alist '("\\.adoc\\'"  . adoc-mode))
 (add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode))
 (add-to-list 'auto-mode-alist '("\\.rs\\'" . rust-mode))
-(add-to-list 'auto-mode-alist '("\\.[i]?ml[ip]?\\'" . tuareg-mode))
-
+(add-to-list 'auto-mode-alist '("\\.ml[ip]?\\'" . tuareg-mode))
+(add-to-list 'auto-mode-alist '("\\.iml[i]?\\'" . imandra-mode))
 
 (defun rename-current-buffer-file ()
   (interactive)
@@ -216,11 +216,6 @@
       (kill-new filename)
       (message "Copied buffer file name '%s' to the clipboard." filename))))
 
-(add-hook 'tuareg-mode-hook (lambda () (abbrev-mode -1) (ocp-setup-indent)))
-(add-hook 'tuareg-interactive-mode-hook (lambda () (abbrev-mode -1)))
-
-(setq tuareg-indent-align-with-first-arg t)
-(setq tuareg-match-patterns-aligned t)
 ;; (setq elm-format-on-save t)
 ;; (setq elm-tags-on-save t)
 ;; (add-to-list 'company-backends 'company-elm)
@@ -238,27 +233,6 @@
 
 (setq olivetti-body-width 86)
 
-(require 'merlin)
-
-(add-hook 'tuareg-mode-hook
-          (lambda ()
-            (let* ((merlin-bin (with-temp-buffer
-                                 (if (eq (call-process-shell-command "opam var bin" nil (current-buffer) nil) 0)
-                                     (let ((bin-path (replace-regexp-in-string "\n$" "" (buffer-string))))
-                                       (concat bin-path "/ocamlmerlin"))
-                                   (car (ignore-errors (process-lines "which" "ocamlmerlin")))))))
-              (when merlin-bin
-                (setq-local merlin-command merlin-bin)))))
-
-(add-hook 'tuareg-mode-hook
-          (lambda ()
-            (let* ((flags "-addsuffix .iml:.imli -assocsuffix .iml:imandra")
-                   (flags (if (string-match "\\.iml\\'" buffer-file-name) (concat "-open Imandra_prelude " flags) flags)))
-              (setq-local merlin-buffer-flags flags))))
-
-(add-to-list 'safe-local-variable-values '(merlin-command . esy))
-
-(add-hook 'tuareg-mode-hook (lambda () (auto-highlight-symbol-mode)))
 
 (add-to-list 'auto-mode-alist '("\\.ipl\\'" . ipl-mode))
 
@@ -267,6 +241,36 @@
 (add-hook 'magit-post-refresh-hook 'diff-hl-magit-post-refresh t)
 
 (setq undo-tree-history-directory-alist '(("." . "~/.emacs.d./tmp/.undo-tree")))
+
+(setq transient-show-common-commands nil)
+(setq transient-default-level 1)
+(setq transient-show-popup 1)
+
+
+(setq tuareg-indent-align-with-first-arg t)
+(setq tuareg-match-patterns-aligned t)
+
+(add-hook 'tuareg-mode-hook
+          (lambda ()
+            (setq-local merlin-command (imandra--find-merlin))))
+
+(add-hook 'tuareg-mode-hook (lambda () (abbrev-mode -1) (ocp-setup-indent)))
+(add-hook 'tuareg-interactive-mode-hook (lambda () (abbrev-mode -1)))
+
+(add-hook 'reason-mode-hook (lambda ()
+                              ;; (add-hook 'before-save-hook 'refmt-before-save)
+                              (merlin-mode)))
+
+(add-hook 'tuareg-mode-hook (lambda () (auto-highlight-symbol-mode)))
+
+(imandra-merlin-setup-eldoc)
+
+(defun merlin-restart ()
+  (interactive)
+  (call-interactively 'imandra--merlin-restart))
+
+(add-hook 'before-save-hook 'ocamlformat-before-save)
+(add-hook 'tuareg-mode-hook 'merlin-eldoc-setup)
 
 ;; (defadvice completing-read
 ;;     (around foo activate)
@@ -277,24 +281,3 @@
 ;;            prompt
 ;;            (all-completions "" collection predicate)
 ;;            nil require-match initial-input hist def))))
-
-(defun merlin-restart ()
-  (interactive)
-  (call-interactively 'opam-switch-set-switch)
-  (merlin-stop-server))
-
-(add-hook 'before-save-hook 'ocamlformat-before-save)
-
-(setq transient-show-common-commands nil)
-(setq transient-default-level 1)
-(setq transient-show-popup 1)
-
-
-(add-hook 'reason-mode-hook (lambda ()
-                              ;; (add-hook 'before-save-hook 'refmt-before-save)
-                              (merlin-mode)))
-
-(add-hook 'tuareg-mode-hook 'merlin-eldoc-setup)
-
-(setq eldoc-echo-area-use-multiline-p nil) ;'truncate-sym-name-if-fit
-(setq eldoc-idle-delay 0.5)

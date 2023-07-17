@@ -205,3 +205,6 @@
 [submodule "libs/merlin-eldoc"]
 	path = libs/merlin-eldoc
 	url = https://github.com/Khady/merlin-eldoc
+[submodule "libs/imandra-mode"]
+	path = libs/imandra-mode
+	url = https://github.com/imandra-ai/imandra-mode
