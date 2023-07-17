@@ -136,6 +136,7 @@ See the docstrings of `defalias' and `make-obsolete' for more details."
 
 (setq required-libs
       '(adoc-mode
+        async
         align-cljlet
         auto-highlight-symbol
         ;; cider
@@ -195,7 +196,7 @@ See the docstrings of `defalias' and `make-obsolete' for more details."
         yaml-mode))
 
 (dolist (lib required-libs)
-  (message "loading %s" lib)
+  (message "Loading %s" lib)
   (require lib))
 
 (setq config-files
