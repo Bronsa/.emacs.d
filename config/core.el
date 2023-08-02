@@ -100,6 +100,7 @@ See the docstrings of `defalias' and `make-obsolete' for more details."
         merlin-eldoc
         multiple-cursors ;; clj-refactor
         neotree
+        nix-mode
         ocamlformat/emacs
         olivetti
         opam-switch-mode
@@ -174,6 +175,7 @@ See the docstrings of `defalias' and `make-obsolete' for more details."
         ;; mpc
         multiple-cursors
         neotree
+        nix-mode
         ocamlformat
         olivetti
         opam-switch-mode

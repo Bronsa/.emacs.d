@@ -263,11 +263,12 @@
 
 (add-hook 'tuareg-mode-hook (lambda () (auto-highlight-symbol-mode)))
 
-(imandra-merlin-setup-eldoc)
+;; (imandra-merlin-setup-eldoc)
 
 (defun merlin-restart ()
   (interactive)
   (call-interactively 'imandra--merlin-restart))
 
 (add-hook 'before-save-hook 'ocamlformat-before-save)
-(add-hook 'tuareg-mode-hook 'merlin-eldoc-setup)
+;; (add-hook 'tuareg-mode-hook 'merlin-eldoc-setup)
+(add-to-list 'auto-mode-alist '("\\.nix\\'" . nix-mode))

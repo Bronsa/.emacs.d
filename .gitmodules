@@ -211,3 +211,6 @@
 [submodule "libs/ido-completing-read-plus"]
 	path = libs/ido-completing-read-plus
 	url = https://github.com/DarwinAwardWinner/ido-completing-read-plus
+[submodule "libs/nix-mode"]
+	path = libs/nix-mode
+	url = https://github.com/NixOS/nix-mode
