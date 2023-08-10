@@ -9,14 +9,40 @@
 ;;
 ;;; License: GPLv3
 
-(defconst ipl-keywords
+(defconst ipl-builtins-extra
   '("None"
     "Some"
+    "add"
+    "abs"
+    "delete"
+    "get"
+    "getDefault"
+    "insert"
+    "intOfString"
+    "mapAdd"
+    "remove"
+    "strLen"
+    "subset"
+    "toFloat"
+    "toInt"
+    "truncate"))
+
+(defconst ipl-builtins
+  '("false"
+    "true"
+    "||"
+    "&&"
+    "!"
+    "="
+    ">"
+    "<"
+    ";"))
+
+(defconst ipl-keywords
+  '(
     "TimeStampPrecisions"
     "VerificationPacks"
-    "abs"
     "action"
-    "add"
     "alias"
     "anonymous"
     "assignFrom"
@@ -27,26 +53,20 @@
     "datatype"
     "declare"
     "default"
-    "delete"
     "description"
     "else"
     "enum"
     "events"
     "extend"
-    "false"
     "for"
     "forall"
     "function"
-    "get"
-    "getDefault"
     "if"
     "ign"
     "ignore"
     "imandramarkets"
     "import"
     "in"
-    "insert"
-    "intOfString"
     "interLibraryCheck"
     "internal"
     "invalid"
@@ -54,16 +74,13 @@
     "let"
     "library"
     "libraryMarker"
-    "list"
-    "map"
-    "mapAdd"
     "message"
+    "messageFlows"
     "micro"
     "milli"
     "missingfield"
     "name"
     "opt"
-    "option"
     "optional"
     "outbound"
     "overloadFunction"
@@ -73,7 +90,6 @@
     "receive"
     "record"
     "reject"
-    "remove"
     "repeating"
     "repeatingGroup"
     "req"
@@ -82,22 +98,15 @@
     "scenario"
     "send"
     "service"
-    "set"
-    "strLen"
-    "subset"
+    "template"
     "testfile"
     "then"
-    "toFloat"
-    "toInt"
-    "true"
-    "truncate"
     "unique"
+    "using"
     "valid"
     "validate"
     "when"
-    "with"
-    ))
-
+    "with"))
 
 (define-derived-mode ipl-mode
   text-mode "IPL"
@@ -107,7 +116,28 @@
     (setq comment-start-skip "//\\s *")
     (setq ipl-highlights
           `(("//.+" . font-lock-comment-face)
-            (,(regexp-opt ipl-keywords 'words) . font-lock-keyword-face)))
+            ("/\\*.+\\*/" . font-lock-comment-face)
+            ("@+[A-Za-z.]+:?" . font-lock-preprocessor-face)
+            ("function +\\([a-zA-Z0-9]+\\)" . ((1 font-lock-function-name-face)))
+            ("\\(:\\) +\\([A-Za-z0-9. ]+\\)"
+             . ((1 font-lock-builtin-face)
+                ;; (2 font-lock-type-face)
+                ;; conflicts with case syntax :/
+                ;; we need to use a function to do this properly,
+                ;; as emacs doesn't support look-behind
+                ))
+            ("\\(:[*?]\\) +\\([A-Za-z0-9. ]+\\)"
+             . ((1 font-lock-builtin-face)
+                (2 font-lock-type-face)
+                ))
+            ("\"[0-9]+\" +\\(:\\) +\\([A-Za-z0-9. ]+\\)"
+             . ((1 font-lock-builtin-face)
+                (2 font-lock-type-face)
+                ))
+            ("\"[^\"]+\"" . font-lock-string-face)
+            ("[^A-Za-z0-9.]\\([A-Z][A-Za-z0-9.]+\\)\\." . ((1 font-lock-reference-face)))
+            (,(regexp-opt ipl-keywords 'words) . font-lock-keyword-face)
+            (,(regexp-opt ipl-builtins ) . font-lock-builtin-face)))
     (setq font-lock-defaults '(ipl-highlights))))
 
 (provide 'ipl-mode)
