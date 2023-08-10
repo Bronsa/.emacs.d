@@ -91,6 +91,7 @@ See the docstrings of `defalias' and `make-obsolete' for more details."
         iedit
         imandra-mode
         inf-clojure
+        ipl-mode
         less-css-mode
         markdown-mode
         markup-faces
@@ -163,6 +164,7 @@ See the docstrings of `defalias' and `make-obsolete' for more details."
         imandra-mode
         imandra-mode-merlin
         imandra-mode-ocamlformat
+        ipl-mode
         ;; inf-shen
         ;; inf-clojure
         ;; less-css-mode
@@ -210,7 +212,6 @@ See the docstrings of `defalias' and `make-obsolete' for more details."
 (setq config-files
       '(lisp
         global-modes
-        ipl-mode
         misc
         ;; erc
         ;; mpc
