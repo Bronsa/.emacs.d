@@ -272,3 +272,5 @@
 (add-hook 'before-save-hook 'ocamlformat-before-save)
 ;; (add-hook 'tuareg-mode-hook 'merlin-eldoc-setup)
 (add-to-list 'auto-mode-alist '("\\.nix\\'" . nix-mode))
+
+(setq ocamlformat-enable 'enable-outside-detected-project)
