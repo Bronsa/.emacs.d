@@ -274,3 +274,4 @@
 (add-to-list 'auto-mode-alist '("\\.nix\\'" . nix-mode))
 
 (setq ocamlformat-enable 'enable-outside-detected-project)
+(add-to-list 'recentf-exclude "/tmp/ocamlformat.*")

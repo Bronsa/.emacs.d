@@ -3,38 +3,8 @@
 
 (setq mc/cmds-to-run-for-all
       '(
-        *table--cell-self-insert-command
-        beginning-of-visual-line
-        electric-newline-and-maybe-indent
-        end-of-visual-line
-        isearch-exit
-        isearch-forward-regexp
-        isearch-printing-char
-        kill-region
-        kill-visual-line
-        org-cycle
-        org-self-insert-command
-        paredit-doublequote
-        paredit-forward-delete
-        paredit-forward-kill-word
-        paredit-forward-slurp-sexp
-        paredit-kill
-        paredit-splice-sexp
-        paredit-splice-sexp-killing-backward
-        paredit-wrap-round
-        reindent-then-newline-and-indent
-        smex
-        subword-left
-        subword-right
-        tuareg-electric-rp
         ))
 
 (setq mc/cmds-to-run-once
       '(
-        iedit-switch-to-mc-mode
-        isearch-abort
-        paredit-backward-kill-word
-        paredit-close-round
-        rectangle-number-lines
-        undo-tree-visualize
         ))
