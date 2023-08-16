@@ -275,3 +275,26 @@
 
 (setq ocamlformat-enable 'enable-outside-detected-project)
 (add-to-list 'recentf-exclude "/tmp/ocamlformat.*")
+
+(defun generate-mli ()
+  (interactive)
+  (let ((root-dir nil)
+        (relative-path nil)
+        (file-name (buffer-file-name)))
+    (with-temp-buffer
+      (if (eq (call-process-shell-command "opam var bin" nil (current-buffer) nil) 0)
+          (progn
+            (setq root-dir (replace-regexp-in-string "_opam/bin\n$" "" (buffer-string)))
+            (setq relative-path (substring file-name (length root-dir))))
+        (message "can't find opam root")))
+    (when relative-path
+      (let* ((mli-file-name (concat file-name "i"))
+             (buffer (get-file-buffer mli-file-name)))
+        (progn
+          (cond
+           (buffer (switch-to-buffer buffer))
+           (t (find-file mli-file-name)))
+          (let ((default-directory root-dir))
+            (call-process-shell-command
+             (concat "opam exec -- dune exec ocaml-print-intf " relative-path)
+             nil (current-buffer) nil)))))))
