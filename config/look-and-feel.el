@@ -166,6 +166,16 @@
   ;; line and column
   " (" ;; '%02' to set to 2 chars at least; prevents flickering
   '(:eval (propertize "%l" 'face 'font-lock-type-face))
+
+  ;; current active region line length
+  '(:eval
+    (if (region-active-p)
+        (format "[%s]"
+                (propertize
+                 (format "%d" (count-lines (region-beginning) (region-end)))
+                 'face 'font-lock-type-face))))
+
+
   ","
   '(:eval (propertize "%02c" 'face 'font-lock-type-face))
   ") "
