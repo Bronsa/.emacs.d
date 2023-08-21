@@ -94,10 +94,9 @@
  magit-revert-buffers 'silent
  magit-diff-unmarked-lines-keep-foreground nil
  magit-keep-region-overlay t
- magit-fetch-arguments '("--prune")
- magit-log-arguments '("--graph" "--color" "--decorate" "--show-signature" "-n100")
- magit-merge-arguments '("--no-ff")
- magit-rebase-arguments '("--preserve-merges")
+
+
+ transient-values-file "~/.emacs.d/.transient_values"
  magit-branch-read-upstream-first t
  magit-push-always-verify nil
 
