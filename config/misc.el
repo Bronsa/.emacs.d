@@ -118,7 +118,7 @@
 (magit-add-section-hook 'magit-status-sections-hook
                         #'recent-commits
                         #'magit-insert-unpushed-to-upstream-or-recent
-                        nil)
+                        t)
 
 (magit-add-section-hook 'magit-status-sections-hook
                         #'magit-insert-unpushed-to-upstream
