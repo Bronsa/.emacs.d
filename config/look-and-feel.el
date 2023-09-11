@@ -31,7 +31,7 @@
      (font-lock-comment-face ((t (:foreground "#61635e"))))
      (font-lock-comment-delimiter-face ((t (:foreground "#61635e"))))
      (font-lock-doc-face ((t (:foreground "#77507b"))))
-     (font-lock-doc-string-face ((t (:foreground "#77507b"))))
+     (font-lock-doc-string-face ((t (:foreground "#af5f00"))))
      (font-lock-string-face ((t (:foreground "#77507b"))))
      (font-lock-keyword-face ((t (:foreground "#729fcf"))))
      (font-lock-builtin-face ((t (:foreground "#855c1b"))))
