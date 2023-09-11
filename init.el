@@ -90,6 +90,7 @@
  '(neo-file-link-face ((t (:foreground "white"))))
  '(org-block ((t (:inherit shadow :foreground "color-252"))))
  '(shadow ((t (:foreground "color-242"))))
+ '(transient-active-infix ((t (:underline t :weight ultra-bold))))
  '(tuareg-font-lock-interactive-output-face ((t (:foreground "color-153"))))
  '(tuareg-font-lock-operator-face ((t (:foreground "color-130"))))
  '(undo-tree-visualizer-active-branch-face ((t (:foreground "color-250" :weight bold)))))
