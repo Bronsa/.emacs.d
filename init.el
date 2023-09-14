@@ -99,3 +99,4 @@
  '(undo-tree-visualizer-active-branch-face ((t (:foreground "color-250" :weight bold)))))
 
 (byte-recompile-directory (expand-file-name "~/.emacs.d") 0)
+(delete-file (expand-file-name "~/.emacs.d/init.elc"))
