@@ -91,6 +91,7 @@
  '(neo-dir-link-face ((t (:foreground "color-27"))))
  '(neo-file-link-face ((t (:foreground "white"))))
  '(org-block ((t (:inherit shadow :foreground "color-252"))))
+ '(secondary-selection ((t (:underline t))))
  '(shadow ((t (:foreground "color-242"))))
  '(transient-active-infix ((t (:underline t :weight ultra-bold))))
  '(tuareg-font-lock-interactive-output-face ((t (:foreground "color-153"))))
