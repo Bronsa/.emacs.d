@@ -4,6 +4,8 @@
 (setq mc/cmds-to-run-for-all
       '(
         end-of-visual-line
+        isearch-abort
+        paredit-forward-kill-word
         ))
 
 (setq mc/cmds-to-run-once
