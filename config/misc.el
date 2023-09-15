@@ -311,7 +311,13 @@
       (if buffer (switch-to-buffer buffer))
       (let ((root-dir (opam-root-dir)))
         (with-current-buffer tuareg-compilation-buffer
-          (when (not (string-equal root-dir (buffer-string)))
+          (when (or (not buffer)
+                    (not (string-equal root-dir (buffer-string))))
             (erase-buffer)
             (insert root-dir)
             (compile (concat "make -C " root-dir " watch"))))))))
+
+(advice-add 'ocamlformat--process-errors :filter-args
+            (lambda (args)
+              (let ((buffer (get-buffer-create "*ocamlformat*")))
+                (append (butlast args) (list buffer)))))

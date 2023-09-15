@@ -45,6 +45,7 @@
                            ((char-equal ?\  (aref (buffer-name b) 0)) nil)
                            ((or (equal "*Messages*" (buffer-name b))
                                 (eq major-mode 'compilation-mode)
+                                (equal "*ocamlformat*" (buffer-name b))
                                 (equal "*Help*" (buffer-name b))
                                 (equal "*Warnings*" (buffer-name b))
                                 (equal "*Buffer List*" (buffer-name b))
