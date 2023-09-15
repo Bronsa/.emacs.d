@@ -280,17 +280,17 @@
 (setq ocamlformat-enable 'enable-outside-detected-project)
 (add-to-list 'recentf-exclude "/tmp/ocamlformat.*")
 
+(defun opam-root-dir ()
+  (with-temp-buffer
+    (if (eq (call-process-shell-command "opam var bin" nil (current-buffer) nil) 0)
+        (replace-regexp-in-string "_opam/bin\n$" "" (buffer-string))
+      (message "can't find opam root"))))
+
 (defun generate-mli ()
   (interactive)
-  (let ((root-dir nil)
-        (relative-path nil)
-        (file-name (buffer-file-name)))
-    (with-temp-buffer
-      (if (eq (call-process-shell-command "opam var bin" nil (current-buffer) nil) 0)
-          (progn
-            (setq root-dir (replace-regexp-in-string "_opam/bin\n$" "" (buffer-string)))
-            (setq relative-path (substring file-name (length root-dir))))
-        (message "can't find opam root")))
+  (let* ((root-dir (opam-root-dir))
+         (file-name (buffer-file-name))
+         (relative-path (substring file-name (length root-dir))))
     (when relative-path
       (let* ((mli-file-name (concat file-name "i"))
              (buffer (get-file-buffer mli-file-name)))
@@ -302,3 +302,16 @@
             (call-process-shell-command
              (concat "opam exec -- dune exec ocaml-print-intf " relative-path)
              nil (current-buffer) nil)))))))
+
+(defun tuareg-compile ()
+  (interactive)
+  (let ((buffer (get-buffer "*compilation*"))
+        (tuareg-compilation-buffer (get-buffer-create "*tuareg-compilation*")))
+    (progn
+      (if buffer (switch-to-buffer buffer))
+      (let ((root-dir (opam-root-dir)))
+        (with-current-buffer tuareg-compilation-buffer
+          (when (not (string-equal root-dir (buffer-string)))
+            (erase-buffer)
+            (insert root-dir)
+            (compile (concat "make -C " root-dir " watch"))))))))

@@ -49,6 +49,7 @@
                                 (equal "*Warnings*" (buffer-name b))
                                 (equal "*Buffer List*" (buffer-name b))
                                 (equal "*clang-complete*" (buffer-name b))
+                                (equal "*tuareg-compilation*" (buffer-name b))
                                 (equal "*elm-format errors*" (buffer-name b))
                                 (equal "elm-oracle" (buffer-name b))
                                 (string-match "\\*tramp.*" (buffer-name b))
