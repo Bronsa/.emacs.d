@@ -43,62 +43,65 @@
                            ;; Always include the current buffer.
                            ;;((eq (current-buffer) b) b)
                            ((char-equal ?\  (aref (buffer-name b) 0)) nil)
-                           ((or (equal "*Messages*" (buffer-name b))
-                                (eq major-mode 'compilation-mode)
-                                (equal "*ocamlformat*" (buffer-name b))
-                                (equal "*Help*" (buffer-name b))
-                                (equal "*Warnings*" (buffer-name b))
-                                (equal "*Buffer List*" (buffer-name b))
-                                (equal "*clang-complete*" (buffer-name b))
-                                (equal "*tuareg-compilation*" (buffer-name b))
-                                (equal "*elm-format errors*" (buffer-name b))
-                                (equal "elm-oracle" (buffer-name b))
-                                (string-match "\\*tramp.*" (buffer-name b))
-                                (and (string-match "\\*cider-.*" (buffer-name b))
-                                     (not (equal "*cider-scratch*" (buffer-name b)))
-                                     (not (string-match "\\*cider-repl.*\\*" (buffer-name b)))
-                                     (not (string-match "\\*cider-error.*\\*" (buffer-name b))))
-                                (equal "*Shell Command Output*" (buffer-name b))
-                                (equal "*Ido Completions*" (buffer-name b))
-                                (equal "*ggtags-global*" (buffer-name b))
-                                (equal "*Completions*" (buffer-name b))
-                                (equal "*Compile-Log*" (buffer-name b))
-                                (equal "*compilation*" (buffer-name b))
-                                (equal "*copy*" (buffer-name b))
-                                (equal "*Occur*" (buffer-name b))
-                                (equal "*vc*" (buffer-name b))
-                                (equal "*edn*" (buffer-name b))
-                                (equal "*eww*" (buffer-name b))
-                                (equal "*clang-complete*" (buffer-name b))
-                                (equal "*grep*" (buffer-name b))
-                                (equal "*Open Recent*" (buffer-name b))
-                                (equal "*ERC Accidental Paste Overflow*" (buffer-name b))
-                                (equal "*Directory*" (buffer-name b))
-                                (equal "*Process List*" (buffer-name b))
-                                (equal "*Disabled Command*" (buffer-name b))
-                                (equal "*Warning*" (buffer-name b))
-                                (equal "*merlin-types*" (buffer-name b))
-                                (equal "*merlin-errors*" (buffer-name b))
-                                (and (eq major-mode 'erc-mode)
-                                     (or (string-match ".*:.*" (buffer-name b))
-                                         (equal "freenode" (buffer-name b))
-                                         (equal "nil" (buffer-name b))))
-                                (equal "*Backtrace*" (buffer-name b))
-                                (equal "*Quail Completions*" (buffer-name b))
-                                (equal "*trace of SMTP session to smtp.gmail.com*" (buffer-name b))
-                                (equal "mu4e-update" (buffer-name b))
-                                (equal "TAGS" (buffer-name b))
-                                (memq (buffer-local-value 'major-mode b)
-                                      '(mu4e-main-mode mu4e-view-mode mu4e-compose-mode mu4e-headers-mode message-mode mail-mode))
-                                (string-match "\\*draft\\*.*" (buffer-name b))
-                                (string-match "\\*JDEE.*\\*" (buffer-name b))
-                                (string-match "\\*emacs\\*.*" (buffer-name b))
-                                (string-match "\\*ediff\\*.*" (buffer-name b))
-                                (string-match "\\Ediff\\*.*" (buffer-name b))
-                                (string-match "\\*Customize.*\\*" (buffer-name b))
-                                (memq (buffer-local-value 'major-mode b)
-                                      '(mpc-mode mpc-status-mode mpc-tagbrowser-mode mpc-tagbrowser-dir-mode mpc-songs-mode))
-                                (equal "*undo-tree Diff*" (buffer-name b))) nil)
+                           ((or
+                             (eq major-mode 'compilation-mode)
+                             (string-match "\\*tramp.*" (buffer-name b))
+                             (and (string-match "\\*cider-.*" (buffer-name b))
+                                  (not (equal "*cider-scratch*" (buffer-name b)))
+                                  (not (string-match "\\*cider-repl.*\\*" (buffer-name b)))
+                                  (not (string-match "\\*cider-error.*\\*" (buffer-name b))))
+                             (member (buffer-name b)
+                                     (list
+                                      "*Messages*"
+                                      "*ocamlformat*"
+                                      "*Help*"
+                                      "*Warnings*"
+                                      "*Buffer List*"
+                                      "*clang-complete*"
+                                      "*tuareg-compilation*"
+                                      "*elm-format errors*"
+                                      "elm-oracle"
+                                      "*Shell Command Output*"
+                                      "*Ido Completions*"
+                                      "*ggtags-global*"
+                                      "*Completions*"
+                                      "*Compile-Log*"
+                                      "*compilation*"
+                                      "*copy*"
+                                      "*Occur*"
+                                      "*vc*"
+                                      "*edn*"
+                                      "*eww*"
+                                      "*clang-complete*"
+                                      "*grep*"
+                                      "*Open Recent*"
+                                      "*ERC Accidental Paste Overflow*"
+                                      "*Directory*"
+                                      "*Process List*"
+                                      "*Disabled Command*"
+                                      "*Warning*"
+                                      "*merlin-types*"
+                                      "*merlin-errors*"
+                                      "*Backtrace*"
+                                      "*Quail Completions*"
+                                      "*trace of SMTP session to smtp.gmail.com*"
+                                      "mu4e-update"
+                                      "TAGS"
+                                      "*undo-tree Diff*" ))
+                             (and (eq major-mode 'erc-mode)
+                                  (or (string-match ".*:.*" (buffer-name b))
+                                      (equal "freenode" (buffer-name b))
+                                      (equal "nil" (buffer-name b))))
+                             (memq (buffer-local-value 'major-mode b)
+                                   '(mu4e-main-mode mu4e-view-mode mu4e-compose-mode mu4e-headers-mode message-mode mail-mode))
+                             (string-match "\\*draft\\*.*" (buffer-name b))
+                             (string-match "\\*JDEE.*\\*" (buffer-name b))
+                             (string-match "\\*emacs\\*.*" (buffer-name b))
+                             (string-match "\\*ediff\\*.*" (buffer-name b))
+                             (string-match "\\Ediff\\*.*" (buffer-name b))
+                             (string-match "\\*Customize.*\\*" (buffer-name b))
+                             (memq (buffer-local-value 'major-mode b)
+                                   '(mpc-mode mpc-status-mode mpc-tagbrowser-mode mpc-tagbrowser-dir-mode mpc-songs-mode))) nil)
                            ((buffer-file-name b) b)
                            ((buffer-live-p b) b)))
                       (buffer-list)))))
