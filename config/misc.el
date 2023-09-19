@@ -244,7 +244,7 @@
 
 (add-hook 'magit-post-refresh-hook 'diff-hl-magit-post-refresh t)
 
-(setq undo-tree-history-directory-alist '(("." . "~/.emacs.d./tmp/.undo-tree")))
+(setq undo-tree-history-directory-alist '(("." . "~/.emacs.d/tmp/.undo-tree")))
 
 (setq transient-show-common-commands nil)
 (setq transient-default-level 1)
