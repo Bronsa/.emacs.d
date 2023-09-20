@@ -163,6 +163,8 @@
 
   '(vc-mode vc-mode)
 
+  '(:eval (if (eq 'compilation-mode major-mode) compilation-mode-line-errors))
+
   ;; line and column
   " (" ;; '%02' to set to 2 chars at least; prevents flickering
   '(:eval (propertize "%l" 'face 'font-lock-type-face))
