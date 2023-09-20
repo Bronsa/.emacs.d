@@ -303,12 +303,15 @@
              (concat "opam exec -- dune exec ocaml-print-intf " relative-path)
              nil (current-buffer) nil)))))))
 
+(defun popup-buffer (buffer)
+  (setq outwin (display-buffer buffer '(nil (allow-no-window . t)))))
+
 (defun tuareg-compile ()
   (interactive)
   (let ((buffer (get-buffer "*compilation*"))
         (tuareg-compilation-buffer (get-buffer-create "*tuareg-compilation*")))
     (progn
-      (if buffer (switch-to-buffer buffer))
+      (if buffer (popup-buffer buffer))
       (let ((root-dir (opam-root-dir)))
         (with-current-buffer tuareg-compilation-buffer
           (when (or (not buffer)
@@ -321,3 +324,5 @@
             (lambda (args)
               (let ((buffer (get-buffer-create "*ocamlformat*")))
                 (append (butlast args) (list buffer)))))
+
+(setq-default compilation-always-kill t)
