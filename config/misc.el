@@ -95,8 +95,6 @@
  magit-diff-unmarked-lines-keep-foreground nil
  magit-keep-region-overlay t
 
-
- transient-values-file "~/.emacs.d/.transient_values"
  magit-branch-read-upstream-first t
  magit-push-always-verify nil
 
