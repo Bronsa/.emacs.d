@@ -25,11 +25,6 @@
  '(erc-modules
    (quote
     (autojoin track completion irccontrols log netsplit match noncommands readonly stamp autoaway log scrolltobottom fill truncate ring networks move-to-prompt)))
- '(magit-diff-section-arguments (quote ("--no-ext-diff")))
- '(magit-log-arguments
-   (quote
-    ("--graph" "--color" "--decorate" "--follow" "-n50")) t)
- '(magit-rebase-arguments nil t)
  '(safe-local-variable-values
    (quote
     ((eval tuareg-opam-update-env

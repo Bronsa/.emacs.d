@@ -156,6 +156,8 @@
 (define-key tuareg-mode-map (kbd "C-c C-k") 'tuareg-eval-buffer)
 (define-key tuareg-mode-map (kbd "C-c M-j") 'tuareg-run-ocaml)
 (define-key tuareg-mode-map (kbd "C-c C-c") 'tuareg-compile)
+(define-key tuareg-mode-map (kbd "C-c C-n") 'merlin-phrase-next)
+(define-key tuareg-mode-map (kbd "C-c C-p") 'merlin-phrase-prev)
 
 (define-key merlin-mode-map (kbd "M-.") 'merlin-locate)
 (define-key merlin-mode-map (kbd "M-,") 'merlin-pop-stack)
