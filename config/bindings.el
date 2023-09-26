@@ -166,3 +166,4 @@
 (global-set-key (kbd "C-c n") 'neotree)
 
 (define-key merlin-mode-map (kbd "C-c l") 'flycheck-list-errors)
+(define-key merlin-mode-map (kbd "C-c C-l") 'flycheck-list-errors)
