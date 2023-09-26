@@ -221,9 +221,8 @@
                           'face 'font-lock-type-face
                           'help-echo "Buffer is read-only")
             ""))
-  " -- "
 
-  minor-mode-alist  ;; list of minor modes
+  ;; minor-mode-alist  ;; list of minor modes
   " %-" ;; fill with '-'
   ))
 
