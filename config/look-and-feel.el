@@ -163,6 +163,8 @@
 
   '(vc-mode vc-mode)
 
+  '(:eval (if (symbol-value 'flycheck-mode) flycheck-mode-line))
+
   '(:eval (if (eq 'compilation-mode major-mode) compilation-mode-line-errors))
 
   ;; line and column

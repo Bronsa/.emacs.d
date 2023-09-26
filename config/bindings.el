@@ -119,8 +119,8 @@
 (define-key auto-highlight-symbol-mode-map (kbd "M-<right>") 'subword-right)
 (global-set-key (kbd "M-<right>") 'subword-right)
 
-(global-set-key (kbd "C-<left>" ) 'ahs-backward)
-(global-set-key (kbd "C-<right>" ) 'ahs-forward)
+(global-set-key (kbd "S-<left>" ) 'ahs-backward)
+(global-set-key (kbd "S-<right>" ) 'ahs-forward)
 
 ;; (define-key clojure-mode-map "{" #'paredit-open-curly)
 ;; (define-key clojure-mode-map "}" #'paredit-close-curly)
@@ -164,3 +164,5 @@
 (define-key merlin-mode-map (kbd "C-c m") 'merlin-restart)
 
 (global-set-key (kbd "C-c n") 'neotree)
+
+(define-key merlin-mode-map (kbd "C-c l") 'flycheck-list-errors)
