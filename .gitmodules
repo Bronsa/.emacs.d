@@ -217,3 +217,9 @@
 [submodule "libs/ipl-mode"]
 	path = libs/ipl-mode
 	url = https://github.com/imandra-ai/ipl-mode
+[submodule "libs/flycheck-ocaml"]
+	path = libs/flycheck-ocaml
+	url = https://github.com/flycheck/flycheck-ocaml.git
+[submodule "libs/flycheck"]
+	path = libs/flycheck
+	url = https://github.com/flycheck/flycheck.git

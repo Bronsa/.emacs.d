@@ -81,6 +81,8 @@ See the docstrings of `defalias' and `make-obsolete' for more details."
         epl ;; cider
         eval-sexp-fu
         f
+        flycheck
+        flycheck-ocaml
         ggtags
         graphql
         haskell-mode
@@ -156,6 +158,7 @@ See the docstrings of `defalias' and `make-obsolete' for more details."
         dockerfile-mode
         ;; editorconfig
         ;; erc-services
+        flycheck-ocaml
         ;; ggtags
         git-timemachine
         ;; haskell-mode

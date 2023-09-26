@@ -324,3 +324,19 @@
                 (append (butlast args) (list buffer)))))
 
 (setq-default compilation-always-kill t)
+
+(setq-local merlin-error-after-save t)
+
+(add-hook 'tuareg-mode-hook
+          (lambda ()
+            (flycheck-mode t)
+            (flycheck-ocaml-setup)))
+
+(flycheck-define-generic-checker 'imandra-merlin
+  "A syntax checker for Imandra using Merlin Mode."
+  :start #'flycheck-ocaml-merlin-start
+  :verify #'flycheck-verify-ocaml-merlin
+  :modes '(imandra-mode tuareg-mode)
+  :predicate (lambda () merlin-mode))
+
+(add-to-list 'flycheck-checkers 'imandra-merlin)

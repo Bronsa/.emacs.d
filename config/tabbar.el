@@ -52,6 +52,7 @@
                                   (not (string-match "\\*cider-error.*\\*" (buffer-name b))))
                              (member (buffer-name b)
                                      (list
+                                      "*Flycheck errors*"
                                       "*xref*"
                                       "*Messages*"
                                       "*ocamlformat*"
