@@ -351,3 +351,13 @@
 
 (setq projectile-mode-line-function
       #'(lambda () projectile-mode-line-prefix))
+
+(defun flycheck-list-errors-or-hide ()
+  (interactive)
+  (let* ((buf (get-buffer flycheck-error-list-buffer))
+         (win (get-buffer-window buf)))
+    (if win
+        (condition-case nil
+            (while (setq win (get-buffer-window buf)) (delete-window win))
+          (error (switch-to-buffer (other-buffer buf))))
+      (flycheck-list-errors))))
