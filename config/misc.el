@@ -348,3 +348,6 @@
                (side            . bottom)
                (reusable-frames . visible)
                (window-height   . 0.33)))
+
+(setq projectile-mode-line-function
+      #'(lambda () projectile-mode-line-prefix))
