@@ -371,3 +371,5 @@
       (lambda (buf)
         (not (provided-mode-derived-p (buffer-local-value 'major-mode buf) 'magit-mode)))
       (buffer-list))))
+
+(setq-default resize-mini-windows t)
