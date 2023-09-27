@@ -92,6 +92,7 @@ See the docstrings of `defalias' and `make-obsolete' for more details."
         ido-completing-read-plus
         iedit
         imandra-mode
+        imenu-anywhere
         inf-clojure
         ipl-mode
         less-css-mode
@@ -167,6 +168,7 @@ See the docstrings of `defalias' and `make-obsolete' for more details."
         imandra-mode
         imandra-mode-merlin
         imandra-mode-ocamlformat
+        imenu-anywhere
         ipl-mode
         ;; inf-shen
         ;; inf-clojure

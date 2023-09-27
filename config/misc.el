@@ -361,3 +361,13 @@
             (while (setq win (get-buffer-window buf)) (delete-window win))
           (error (switch-to-buffer (other-buffer buf))))
       (flycheck-list-errors))))
+
+(add-to-list 'imenu-anywhere-friendly-modes '(tuareg-mode imandra-mode))
+
+(setq-default
+ imenu-anywhere-buffer-list-function
+ #'(lambda ()
+     (seq-filter
+      (lambda (buf)
+        (not (provided-mode-derived-p (buffer-local-value 'major-mode buf) 'magit-mode)))
+      (buffer-list))))

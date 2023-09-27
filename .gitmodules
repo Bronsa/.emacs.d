@@ -223,3 +223,6 @@
 [submodule "libs/flycheck"]
 	path = libs/flycheck
 	url = https://github.com/flycheck/flycheck.git
+[submodule "libs/imenu-anywhere"]
+	path = libs/imenu-anywhere
+	url = https://github.com/vspinu/imenu-anywhere.git
