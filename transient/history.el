@@ -16,10 +16,10 @@
   ("--no-ff"))
  (magit-pull nil)
  (magit-push
-  ("--force-with-lease"))
- (magit-rebase
-  ("--preserve-merges" "--autostash")
+  ("--force-with-lease")
   nil)
+ (magit-rebase nil
+               ("--preserve-merges" "--autostash"))
  (magit-revert
   ("--edit"))
  (magit-run nil)
