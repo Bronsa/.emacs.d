@@ -373,3 +373,5 @@
       (buffer-list))))
 
 (setq-default resize-mini-windows t)
+
+(advice-add 'imandra--merlin-restart :after #'flycheck-buffer)
