@@ -226,3 +226,9 @@
 [submodule "libs/imenu-anywhere"]
 	path = libs/imenu-anywhere
 	url = https://github.com/vspinu/imenu-anywhere.git
+[submodule "libs/flycheck-popup-tip"]
+	path = libs/flycheck-popup-tip
+	url = https://github.com/flycheck/flycheck-popup-tip.git
+[submodule "libs/popup"]
+	path = libs/popup
+	url = https://github.com/auto-complete/popup-el

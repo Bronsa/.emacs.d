@@ -25,6 +25,7 @@
  '(erc-modules
    (quote
     (autojoin track completion irccontrols log netsplit match noncommands readonly stamp autoaway log scrolltobottom fill truncate ring networks move-to-prompt)))
+ '(flycheck-popup-tip-error-prefix "! ")
  '(safe-local-variable-values
    (quote
     ((eval tuareg-opam-update-env
@@ -54,7 +55,8 @@
      (css-indent-offset . 2)
      (cider-cljs-lein-repl . "(user/cljs-repl)")
      (nameless-current-name . "cider")
-     (nameless-affect-indentation-and-filling)))))
+     (nameless-affect-indentation-and-filling))))
+ '(transient-show-popup 1))
 
 (customize-set-variable 'magit-ellipsis '((t (nil . " …"))))
 (customize-set-variable 'magit-section-visibility-indicator '(" …" t))
@@ -86,6 +88,7 @@
  '(neo-dir-link-face ((t (:foreground "color-27"))))
  '(neo-file-link-face ((t (:foreground "white"))))
  '(org-block ((t (:inherit shadow :foreground "color-252"))))
+ '(popup-tip-face ((t (:background "brightblack" :foreground "white"))))
  '(secondary-selection ((t (:underline t))))
  '(shadow ((t (:foreground "color-242"))))
  '(transient-active-infix ((t (:underline t :weight ultra-bold))))

@@ -83,6 +83,7 @@ See the docstrings of `defalias' and `make-obsolete' for more details."
         f
         flycheck
         flycheck-ocaml
+        flycheck-popup-tip
         ggtags
         graphql
         haskell-mode
@@ -115,6 +116,7 @@ See the docstrings of `defalias' and `make-obsolete' for more details."
         prettier
         projectile
         pkg-info ;; cider
+        popup
         popwin
         queue
         reason-mode
@@ -160,6 +162,7 @@ See the docstrings of `defalias' and `make-obsolete' for more details."
         ;; editorconfig
         ;; erc-services
         flycheck-ocaml
+        flycheck-popup-tip
         ;; ggtags
         git-timemachine
         ;; haskell-mode
@@ -179,6 +182,7 @@ See the docstrings of `defalias' and `make-obsolete' for more details."
         merlin
         merlin-company
         merlin-eldoc
+        merlin-imenu
         ;; mpc
         multiple-cursors
         neotree
