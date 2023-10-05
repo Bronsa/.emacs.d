@@ -16,12 +16,13 @@
   ("--no-ff"))
  (magit-pull nil)
  (magit-push
-  ("--force-with-lease")
+  ("--force-with-lease"))
+ (magit-rebase
+  ("--preserve-merges" "--autostash")
   nil)
- (magit-rebase nil
-               ("--preserve-merges" "--autostash"))
  (magit-revert
   ("--edit"))
  (magit-run nil)
  (magit-stash nil)
- (magit-status-jump nil))
+ (magit-status-jump nil)
+ (magit-submodule nil))

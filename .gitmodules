@@ -232,3 +232,9 @@
 [submodule "libs/popup"]
 	path = libs/popup
 	url = https://github.com/auto-complete/popup-el
+[submodule "libs/terraform-mode"]
+	path = libs/terraform-mode
+	url = https://github.com/hcl-emacs/terraform-mode
+[submodule "libs/hcl-mode"]
+	path = libs/hcl-mode
+	url = https://github.com/hcl-emacs/hcl-mode
