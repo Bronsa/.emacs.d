@@ -1,8 +1,9 @@
 ((magit-blame
   ("-w"))
  (magit-branch nil)
- (magit-cherry-pick nil
-                    ("--ff"))
+ (magit-cherry-pick
+  ("--ff")
+  nil)
  (magit-commit nil)
  (magit-dispatch nil)
  (magit-fetch
@@ -15,8 +16,8 @@
  (magit-merge
   ("--no-ff"))
  (magit-pull nil)
- (magit-push
-  ("--force-with-lease"))
+ (magit-push nil
+             ("--force-with-lease"))
  (magit-rebase
   ("--preserve-merges" "--autostash")
   nil)

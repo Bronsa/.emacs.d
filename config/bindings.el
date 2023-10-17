@@ -168,3 +168,5 @@
 (define-key merlin-mode-map (kbd "C-c l") 'flycheck-list-errors-or-hide)
 (define-key merlin-mode-map (kbd "C-c C-l") 'flycheck-list-errors-or-hide)
 (global-set-key (kbd "C-f") 'imenu-anywhere)
+
+(global-set-key (kbd "C-c r") 'rename-current-buffer-file)
