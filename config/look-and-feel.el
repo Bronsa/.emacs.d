@@ -150,15 +150,21 @@
 ;;  :foreground "gray40"
 ;;  :weight 'normal)
 
+(defun mode-line-fill (reserve)
+  "Return empty space using FACE and leaving RESERVE space on the right."
+  (when
+      (and window-system (eq 'right (get-scroll-bar-mode)))
+    (setq reserve (- reserve 3)))
+  (propertize " "
+              'display
+              `((space :align-to (- (+ right right-fringe right-margin) ,reserve)))))
+
 (setq-default
  mode-line-format
  (list
 
-  '(:eval (propertize (format-time-string "%d/%m/%Y %H:%M ")
-                      'help-echo "time"))
-
   ;; the buffer name; the file name as a tool tip
-  '(:eval (propertize "%b" 'face 'font-lock-keyword-face
+  '(:eval (propertize " %b" 'face 'font-lock-keyword-face
                       'help-echo (buffer-file-name)))
 
   '(vc-mode vc-mode)
@@ -222,8 +228,14 @@
                           'help-echo "Buffer is read-only")
             ""))
 
-  ;; minor-mode-alist  ;; list of minor modes
-  " %-" ;; fill with '-'
+  (mode-line-fill 18)
+
+  '(:eval (if (equal (cddr (window-pixel-edges))
+                     (cddr (window-pixel-edges (frame-root-window))))
+              (propertize (format-time-string " %d/%m/%Y %H:%M")
+                          'help-echo "time")))
+
+
   ))
 
 (my-theme)

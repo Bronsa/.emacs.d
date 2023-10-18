@@ -246,7 +246,7 @@
 
 (setq transient-show-common-commands nil)
 (setq transient-default-level 1)
-(setq transient-show-popup 1)
+(setq transient-show-popup 0.3)
 
 
 (setq tuareg-indent-align-with-first-arg t)
@@ -378,3 +378,5 @@
 
 (add-hook 'merlin-mode-hook (lambda ()) (merlin-use-merlin-imenu))
 (add-hook 'flycheck-mode-hook 'flycheck-popup-tip-mode)
+
+(setq transient-display-buffer-action '(display-buffer-below-selected))
