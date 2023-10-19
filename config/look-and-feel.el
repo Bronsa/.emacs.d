@@ -167,12 +167,6 @@
   '(:eval (propertize " %b" 'face 'font-lock-keyword-face
                       'help-echo (buffer-file-name)))
 
-  '(vc-mode vc-mode)
-
-  '(:eval (if (symbol-value 'flycheck-mode) flycheck-mode-line))
-
-  '(:eval (if (eq 'compilation-mode major-mode) compilation-mode-line-errors))
-
   ;; line and column
   " (" ;; '%02' to set to 2 chars at least; prevents flickering
   '(:eval (propertize "%l" 'face 'font-lock-type-face))
@@ -193,7 +187,13 @@
   ;; relative position, size of file
   "["
   '(:eval (propertize "%p" 'face 'font-lock-constant-face)) ;; % above top
-  "] "
+  "]"
+
+  '(vc-mode vc-mode)
+
+  '(:eval (if (symbol-value 'flycheck-mode) flycheck-mode-line))
+
+  '(:eval (if (eq 'compilation-mode major-mode) compilation-mode-line-errors))
 
   ;; '(:eval (or erc-modified-channels-object ""))
 
@@ -202,7 +202,7 @@
   ;;           ""))
 
   ;; the current major mode for the buffer.
-  "["
+  " ["
 
   '(:eval (propertize "%m" 'face 'font-lock-string-face
                       'help-echo buffer-file-coding-system))
