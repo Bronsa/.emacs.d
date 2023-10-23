@@ -309,7 +309,7 @@
   (let ((buffer (get-buffer "*compilation*"))
         (tuareg-compilation-buffer (get-buffer-create "*tuareg-compilation*")))
     (progn
-      (if buffer (popup-buffer buffer))
+      (if (and buffer (get-buffer-process buffer)) (popup-buffer buffer))
       (let ((root-dir (opam-root-dir)))
         (with-current-buffer tuareg-compilation-buffer
           (when (or (not buffer)
