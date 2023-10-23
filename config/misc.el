@@ -306,13 +306,14 @@
 
 (defun tuareg-compile ()
   (interactive)
-  (let ((buffer (get-buffer "*compilation*"))
-        (tuareg-compilation-buffer (get-buffer-create "*tuareg-compilation*")))
+  (let* ((buffer (get-buffer "*compilation*"))
+         (tuareg-compilation-buffer (get-buffer-create "*tuareg-compilation*"))
+         (compilation-running (and buffer (get-buffer-process buffer))))
     (progn
-      (if (and buffer (get-buffer-process buffer)) (popup-buffer buffer))
+      (if compilation-running (popup-buffer buffer))
       (let ((root-dir (opam-root-dir)))
         (with-current-buffer tuareg-compilation-buffer
-          (when (or (not buffer)
+          (when (or (not compilation-running)
                     (not (string-equal root-dir (buffer-string))))
             (erase-buffer)
             (insert root-dir)
