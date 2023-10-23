@@ -18,11 +18,10 @@
  (magit-pull nil)
  (magit-push nil
              ("--force-with-lease"))
- (magit-rebase
-  ("--preserve-merges" "--autostash")
-  nil)
- (magit-revert
-  ("--edit"))
+ (magit-rebase nil
+               ("--preserve-merges" "--autostash"))
+ (magit-revert nil
+               ("--edit"))
  (magit-run nil)
  (magit-stash nil)
  (magit-status-jump nil)
