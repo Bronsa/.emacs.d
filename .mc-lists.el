@@ -5,6 +5,7 @@
       '(
         end-of-visual-line
         isearch-abort
+        isearch-forward-regexp
         paredit-forward-kill-word
         ))
 

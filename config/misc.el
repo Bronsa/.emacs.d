@@ -302,10 +302,10 @@
              nil (current-buffer) nil)))))))
 
 (defun popup-buffer (buffer)
-  (setq outwin (display-buffer buffer '(nil (allow-no-window . t)))))
+  (setq outwin (display-buffer buffer '(nil (allow-no-window . nil)))))
 
-(defun tuareg-compile ()
-  (interactive)
+(defun tuareg-compile (watch)
+  (interactive "P")
   (let* ((buffer (get-buffer "*compilation*"))
          (tuareg-compilation-buffer (get-buffer-create "*tuareg-compilation*"))
          (compilation-running (and buffer (get-buffer-process buffer))))
@@ -317,7 +317,7 @@
                     (not (string-equal root-dir (buffer-string))))
             (erase-buffer)
             (insert root-dir)
-            (compile (concat "make -C " root-dir " watch"))))))))
+            (compile (concat "make -C " root-dir (if watch " watch")))))))))
 
 (advice-add 'ocamlformat--process-errors :filter-args
             (lambda (args)
@@ -381,3 +381,9 @@
 (add-hook 'flycheck-mode-hook 'flycheck-popup-tip-mode)
 
 (setq transient-display-buffer-action '(display-buffer-below-selected))
+
+(defun imandra--merlin-restart ()
+  (interactive)
+  (require 'opam-switch-mode)
+  (call-interactively #'opam-switch-set-switch)
+  (merlin-stop-server))

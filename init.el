@@ -25,6 +25,7 @@
  '(erc-modules
    (quote
     (autojoin track completion irccontrols log netsplit match noncommands readonly stamp autoaway log scrolltobottom fill truncate ring networks move-to-prompt)))
+ '(flycheck-checker-error-threshold nil)
  '(flycheck-popup-tip-error-prefix "! ")
  '(safe-local-variable-values
    (quote
