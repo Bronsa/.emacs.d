@@ -39,6 +39,8 @@
 
 (setq-default
 
+ major-mode 'text-mode
+
  company-idle-delay nil
  company-minimum-prefix-length 0
  company-selection-wrap-around t
