@@ -276,6 +276,7 @@
 (add-hook 'before-save-hook 'ocamlformat-before-save)
 ;; (add-hook 'tuareg-mode-hook 'merlin-eldoc-setup)
 (add-to-list 'auto-mode-alist '("\\.nix\\'" . nix-mode))
+(add-to-list 'auto-mode-alist '("\\.xtend\\'" . java-mode))
 
 (setq ocamlformat-enable 'enable-outside-detected-project)
 (add-to-list 'recentf-exclude "/tmp/ocamlformat.*")
