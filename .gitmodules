@@ -238,3 +238,18 @@
 [submodule "libs/hcl-mode"]
 	path = libs/hcl-mode
 	url = https://github.com/hcl-emacs/hcl-mode
+[submodule "libs/lsp-mode"]
+	path = libs/lsp-mode
+	url = https://github.com/emacs-lsp/lsp-mode.git
+[submodule "libs/eglot"]
+	path = libs/eglot
+	url = https://github.com/joaotavora/eglot.git
+[submodule "libs/jsonrpc"]
+	path = libs/jsonrpc
+	url = https://github.com/emacs-straight/jsonrpc.git
+[submodule "libs/external-completion"]
+	path = libs/external-completion
+	url = https://github.com/emacs-straight/external-completion.git
+[submodule "libs/project"]
+	path = libs/project
+	url = https://github.com/emacs-straight/project.git

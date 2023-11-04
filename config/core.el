@@ -42,9 +42,11 @@
         dockerfile-mode
         diff-hl
         editorconfig-emacs
+        eglot
         edn ;; clj-refactor
         epl ;; cider
         eval-sexp-fu
+        external-completion
         f
         flycheck
         flycheck-ocaml
@@ -62,7 +64,9 @@
         imenu-anywhere
         inf-clojure
         ipl-mode
+        jsonrpc
         less-css-mode
+        ;; lsp-mode
         markdown-mode
         markup-faces
         magithub
@@ -80,6 +84,7 @@
         ;; peg ;; clj-refactor
         ;; pg/generic
         prettier
+        project
         projectile
         pkg-info ;; cider
         popup
@@ -87,7 +92,7 @@
         queue
         reason-mode
         rust-mode
-        ;; s ;; clj-refactor
+        s
         sesman
         shen-mode
         smex
@@ -126,6 +131,8 @@
         diff-hl-flydiff
         diff-hl-margin
         dockerfile-mode
+        project
+        eglot
         ;; editorconfig
         ;; erc-services
         flycheck-ocaml
@@ -140,6 +147,7 @@
         imandra-mode-ocamlformat
         imenu-anywhere
         ipl-mode
+        ;; lsp
         ;; inf-shen
         ;; inf-clojure
         ;; less-css-mode

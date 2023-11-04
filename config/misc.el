@@ -389,3 +389,6 @@
   (require 'opam-switch-mode)
   (call-interactively #'opam-switch-set-switch)
   (merlin-stop-server))
+
+
+(add-to-list 'eglot-server-programs '(ipl-mode . ("ipl-server")))

@@ -103,11 +103,9 @@
 (define-key company-active-map (kbd "TAB") 'company-complete-common-or-cycle)
 (define-key company-active-map (kbd "<backtab>") 'company-select-previous-or-abort)
 
+(define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
 
-(global-set-key (kbd "C-c p f") 'projectile-find-file)
-(global-set-key (kbd "C-c C-p f") 'projectile-find-file)
-(global-set-key (kbd "C-c C-p C-f") 'projectile-find-file)
-;; (define-key cider-mode-map (kbd "C-c C-p") nil)
+;; ;; (define-key cider-mode-map (kbd "C-c C-p") nil)
 
 ;; (define-key cider-clojure-interaction-mode-map (kbd "M-RET") #'cider-eval-print-last-sexp)
 ;; (define-key cider-repl-mode-map (kbd "C-c C-l") #'cider-repl-clear-buffer)
