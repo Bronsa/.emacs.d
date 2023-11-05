@@ -189,6 +189,13 @@
   '(:eval (propertize "%p" 'face 'font-lock-constant-face)) ;; % above top
   "]"
 
+  ;; the current major mode for the buffer.
+  " ["
+
+  '(:eval (propertize "%m" 'face 'font-lock-string-face
+                      'help-echo buffer-file-coding-system))
+  "]"
+
 
   ;; overwrite mode?
   '(:eval (propertize (if overwrite-mode " Ins" "")
@@ -214,13 +221,6 @@
   ;; '(:eval (if (not (string= erc-modified-channels-object ""))
   ;;             (propertize " ")
   ;;           ""))
-
-  ;; the current major mode for the buffer.
-  " ["
-
-  '(:eval (propertize "%m" 'face 'font-lock-string-face
-                      'help-echo buffer-file-coding-system))
-  "]"
 
   '(vc-mode vc-mode)
 
