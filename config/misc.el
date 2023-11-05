@@ -391,12 +391,16 @@
   (call-interactively #'opam-switch-set-switch)
   (merlin-stop-server))
 
-
 (add-to-list 'eglot-server-programs '(ipl-mode . ("ipl-server")))
 
-(add-hook 'ipl-mode-hook 'eglot-ensure)
+(add-hook 'ipl-mode-hook (lambda () (eglot-ensure)))
 
-(add-to-list 'company-backends '(merlin-company-backend company-dabbrev-code))
+(add-hook 'eglot-managed-mode-hook (lambda () (flycheck-eglot-mode 1)))
+
+(add-hook 'merlin-mode-hook
+          (lambda ()
+            (setq-local company-backends '((merlin-company-backend company-dabbrev-code)))))
+
 
 (defun merlin-bounds-of-ocaml-atom-at-point ()
   "Return the start and end points of an ocaml atom near point.

@@ -189,25 +189,6 @@
   '(:eval (propertize "%p" 'face 'font-lock-constant-face)) ;; % above top
   "]"
 
-  '(vc-mode vc-mode)
-
-  '(:eval (if (symbol-value 'flycheck-mode) flycheck-mode-line))
-
-  '(:eval (if (eq 'compilation-mode major-mode) compilation-mode-line-errors))
-
-  ;; '(:eval (or erc-modified-channels-object ""))
-
-  ;; '(:eval (if (not (string= erc-modified-channels-object ""))
-  ;;             (propertize " ")
-  ;;           ""))
-
-  ;; the current major mode for the buffer.
-  " ["
-
-  '(:eval (propertize "%m" 'face 'font-lock-string-face
-                      'help-echo buffer-file-coding-system))
-  "]"
-
 
   ;; overwrite mode?
   '(:eval (propertize (if overwrite-mode " Ins" "")
@@ -227,6 +208,28 @@
                           'face 'font-lock-type-face
                           'help-echo "Buffer is read-only")
             ""))
+
+  ;; '(:eval (or erc-modified-channels-object ""))
+
+  ;; '(:eval (if (not (string= erc-modified-channels-object ""))
+  ;;             (propertize " ")
+  ;;           ""))
+
+  ;; the current major mode for the buffer.
+  " ["
+
+  '(:eval (propertize "%m" 'face 'font-lock-string-face
+                      'help-echo buffer-file-coding-system))
+  "]"
+
+  '(vc-mode vc-mode)
+
+  '(:eval (if (symbol-value 'flycheck-mode) flycheck-mode-line))
+
+  '(:eval (if (eq 'compilation-mode major-mode) compilation-mode-line-errors))
+
+  '(:eval (if (eglot-managed-p) " "))
+  '(:eval (if (eglot-managed-p) (eglot--mode-line-format)))
 
   (mode-line-fill 18)
 
