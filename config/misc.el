@@ -397,3 +397,14 @@
 (add-hook 'ipl-mode-hook 'eglot-ensure)
 
 (add-to-list 'company-backends '(merlin-company-backend company-dabbrev-code))
+
+
+(defun merlin-bounds-of-ocaml-atom-at-point ()
+  "Return the start and end points of an ocaml atom near point.
+An ocaml atom is any string containing [a-z_0-9A-Z`.]."
+  (save-excursion
+    (skip-chars-backward "a-z0-9A-Z_'.")
+    (save-match-data
+      (if (looking-at "['a-z_0-9A-Z.]*['a-z_A-Z0-9]")
+          (cons (point) (match-end 0)) ; returns the bounds
+        nil)))) ; no atom at point
