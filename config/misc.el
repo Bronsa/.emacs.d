@@ -395,3 +395,5 @@
 (add-to-list 'eglot-server-programs '(ipl-mode . ("ipl-server")))
 
 (add-hook 'ipl-mode-hook 'eglot-ensure)
+
+(add-to-list 'company-backends '(merlin-company-backend company-dabbrev-code))
