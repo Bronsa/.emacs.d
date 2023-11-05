@@ -381,7 +381,7 @@
 (advice-add 'imandra--merlin-restart :after #'flycheck-buffer)
 
 (add-hook 'merlin-mode-hook (lambda () (merlin-use-merlin-imenu)))
-(add-hook 'flycheck-mode-hook 'flycheck-popup-tip-mode)
+;; (add-hook 'flycheck-mode-hook 'flycheck-popup-tip-mode)
 
 (setq transient-display-buffer-action '(display-buffer-below-selected))
 

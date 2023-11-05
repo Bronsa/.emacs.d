@@ -54,6 +54,7 @@
                                      (list
                                       "*eldoc*"
                                       "*Flycheck errors*"
+                                      "*Flycheck error messages*"
                                       "*xref*"
                                       "*Messages*"
                                       "*ocamlformat*"
