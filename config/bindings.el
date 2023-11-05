@@ -21,7 +21,6 @@
 
 ;; Align your code in a pretty way.
 (global-set-key (kbd "C-x \\") 'align-regexp)
-(global-set-key (kbd "C-c C-a") 'align-cljlet)
 
 ;; Use regex searches by default.
 (global-set-key (kbd "C-s") 'isearch-forward-regexp)

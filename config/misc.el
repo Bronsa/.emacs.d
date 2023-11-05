@@ -180,7 +180,6 @@
                   (process-send-eof proc)))
               (apply k str args)))
 
-(add-to-list 'auto-mode-alist '("\\.adoc\\'"  . adoc-mode))
 (add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode))
 (add-to-list 'auto-mode-alist '("\\.rs\\'" . rust-mode))
 (add-to-list 'auto-mode-alist '("\\.ml[ip]?\\'" . tuareg-mode))
