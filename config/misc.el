@@ -401,7 +401,6 @@
           (lambda ()
             (setq-local company-backends '((merlin-company-backend company-dabbrev-code)))))
 
-
 (defun merlin-bounds-of-ocaml-atom-at-point ()
   "Return the start and end points of an ocaml atom near point.
 An ocaml atom is any string containing [a-z_0-9A-Z`.]."
@@ -419,3 +418,6 @@ An ocaml atom is any string containing [a-z_0-9A-Z`.]."
           (if is-ipl (cl-map 'vector (lambda (x) (cl-remf x :code) x) diagnostics)
             diagnostics)))
     (cl-call-next-method server method :uri uri :diagnostics diagnostics)))
+
+(setq-default merlin-completion-with-doc t)
+(setq-default merlin-type-after-locate t)

@@ -56,6 +56,7 @@
                                       "*Flycheck errors*"
                                       "*Flycheck error messages*"
                                       "*xref*"
+                                      "*merlin-occurrences*"
                                       "*Messages*"
                                       "*ocamlformat*"
                                       "*Help*"
