@@ -25,10 +25,44 @@
                   (make-variable-buffer-local symbol)
                 (apply orig-fun (list symbol keyword value type)))))
 
+(defmacro setq-local (&rest pairs)
+  "Make each VARIABLE buffer-local and assign to it the corresponding VALUE.
+
+The arguments are variable/value pairs.  For each VARIABLE in a pair,
+make VARIABLE buffer-local and assign to it the corresponding VALUE
+of the pair.  The VARIABLEs are literal symbols and should not be quoted.
+
+The VALUE of the Nth pair is not computed until after the VARIABLE
+of the (N-1)th pair is set; thus, each VALUE can use the new VALUEs
+of VARIABLEs set by earlier pairs.
+
+The return value of the `setq-local' form is the VALUE of the last
+pair.
+
+\(fn [VARIABLE VALUE]...)"
+  (declare (debug setq))
+  (unless (zerop (mod (length pairs) 2))
+    (error "PAIRS must have an even number of variable/value members"))
+  (let ((expr nil))
+    (while pairs
+      (unless (symbolp (car pairs))
+        (error "Attempting to set a non-symbol: %s" (car pairs)))
+      ;; Can't use backquote here, it's too early in the bootstrap.
+      (setq expr
+            (cons
+             (list 'set
+                   (list 'make-local-variable (list 'quote (car pairs)))
+                   (car (cdr pairs)))
+             expr))
+      (setq pairs (cdr (cdr pairs))))
+    (macroexp-progn (nreverse expr))))
+
 (setq config-dir (file-name-directory (or (buffer-file-name) load-file-name)))
 
 (defun load-config-file (f)
   (load-file (concat config-dir f)))
+
+
 
 (setq load-paths
       '(adoc-mode
@@ -65,7 +99,7 @@
         haskell-mode
         hcl-mode
         highlight ;; yasnippet
-        hydra ;; clj-refactor
+        hydra     ;; clj-refactor
         ht
         ido-completing-read-plus
         iedit
