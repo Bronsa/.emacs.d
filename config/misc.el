@@ -411,3 +411,11 @@ An ocaml atom is any string containing [a-z_0-9A-Z`.]."
       (if (looking-at "['a-z_0-9A-Z.]*['a-z_A-Z0-9]")
           (cons (point) (match-end 0)) ; returns the bounds
         nil)))) ; no atom at point
+
+(cl-defmethod eglot-handle-notification
+  :around (server (method (eql textDocument/publishDiagnostics)) &key uri diagnostics &allow-other-keys)
+  (let* ((is-ipl (string-equal "ipl" (file-name-extension uri)))
+         (diagnostics
+          (if is-ipl (cl-map 'vector (lambda (x) (cl-remf x :code) x) diagnostics)
+            diagnostics)))
+    (cl-call-next-method server method :uri uri :diagnostics diagnostics)))
