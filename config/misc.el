@@ -274,7 +274,7 @@
   (call-interactively 'imandra--merlin-restart))
 
 (add-hook 'before-save-hook 'ocamlformat-before-save)
-;; (add-hook 'tuareg-mode-hook 'merlin-eldoc-setup)
+;; (add-hook 'tuareg-mode-hook 'imandra--setup-eldoc)
 (add-to-list 'auto-mode-alist '("\\.nix\\'" . nix-mode))
 (add-to-list 'auto-mode-alist '("\\.xtend\\'" . java-mode))
 
@@ -397,7 +397,6 @@
 (add-hook 'ipl-mode-hook 'eglot-ensure)
 
 (add-to-list 'company-backends '(merlin-company-backend company-dabbrev-code))
-
 
 (defun merlin-bounds-of-ocaml-atom-at-point ()
   "Return the start and end points of an ocaml atom near point.

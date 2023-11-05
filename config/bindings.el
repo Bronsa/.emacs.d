@@ -91,12 +91,10 @@
 (global-set-key (kbd "TAB")
                 (lambda (&optional arg)
                   (interactive "P")
-                  (let ((old-tick (buffer-chars-modified-tick))
-                        (old-point (point))
+                  (let ((old-point (point))
                         (tab-always-indent t))
                     (call-interactively #'indent-for-tab-command)
                     (when (and (eq old-point (point))
-                               (eq old-tick (buffer-chars-modified-tick))
                                (not (or (bolp) (string-match-p "\\s-\\|\\s)\\|\\s(" (string (char-before))))))
                       (company-complete-common)))))
 

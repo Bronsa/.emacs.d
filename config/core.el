@@ -42,6 +42,7 @@
         dockerfile-mode
         diff-hl
         editorconfig-emacs
+        eldoc
         flymake
         eglot
         edn ;; clj-refactor

@@ -259,3 +259,6 @@
 [submodule "libs/flymake"]
 	path = libs/flymake
 	url = https://github.com/emacs-straight/flymake.git
+[submodule "libs/eldoc"]
+	path = libs/eldoc
+	url = https://github.com/emacs-straight/eldoc.git
