@@ -238,7 +238,7 @@
 (setq olivetti-body-width 86)
 
 
-(add-to-list 'auto-mode-alist '("\\.ipl\\'" . ipl-mode))
+(add-to-list 'auto-mode-alist '("\\.ipl[d]?\\'" . ipl-mode))
 
 (setq csv-separators '("," ";"))
 
@@ -380,7 +380,7 @@
 
 (advice-add 'imandra--merlin-restart :after #'flycheck-buffer)
 
-(add-hook 'merlin-mode-hook (lambda ()) (merlin-use-merlin-imenu))
+(add-hook 'merlin-mode-hook (lambda () (merlin-use-merlin-imenu)))
 (add-hook 'flycheck-mode-hook 'flycheck-popup-tip-mode)
 
 (setq transient-display-buffer-action '(display-buffer-below-selected))
@@ -393,3 +393,5 @@
 
 
 (add-to-list 'eglot-server-programs '(ipl-mode . ("ipl-server")))
+
+(add-hook 'ipl-mode-hook 'eglot-ensure)

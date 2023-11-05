@@ -253,3 +253,9 @@
 [submodule "libs/project"]
 	path = libs/project
 	url = https://github.com/emacs-straight/project.git
+[submodule "libs/seq"]
+	path = libs/seq
+	url = https://github.com/emacs-straight/seq.git
+[submodule "libs/flymake"]
+	path = libs/flymake
+	url = https://github.com/emacs-straight/flymake.git

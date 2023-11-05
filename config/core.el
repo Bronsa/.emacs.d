@@ -42,6 +42,7 @@
         dockerfile-mode
         diff-hl
         editorconfig-emacs
+        flymake
         eglot
         edn ;; clj-refactor
         epl ;; cider
@@ -93,6 +94,7 @@
         reason-mode
         rust-mode
         s
+        seq
         sesman
         shen-mode
         smex
@@ -131,6 +133,7 @@
         diff-hl-flydiff
         diff-hl-margin
         dockerfile-mode
+        flymake
         project
         eglot
         ;; editorconfig

@@ -29,7 +29,8 @@
  '(flycheck-popup-tip-error-prefix "! ")
  '(safe-local-variable-values
    (quote
-    ((eval tuareg-opam-update-env
+    ((project-vc-merge-submodules)
+     (eval tuareg-opam-update-env
            (projectile-project-root))
      (projectile-project-type . "make")
      (Syntax . Common-lisp)
