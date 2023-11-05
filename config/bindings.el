@@ -168,3 +168,5 @@
 (global-set-key (kbd "C-c r") 'rename-current-buffer-file)
 
 (define-key flymake-mode-map (kbd "C-c C-x") 'flymake-goto-next-error)
+
+(define-key flycheck-mode-map (kbd "C-c C-x") 'flycheck-next-error)

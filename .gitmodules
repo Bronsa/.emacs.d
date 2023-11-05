@@ -262,3 +262,6 @@
 [submodule "libs/eldoc"]
 	path = libs/eldoc
 	url = https://github.com/emacs-straight/eldoc.git
+[submodule "libs/flycheck-eglot"]
+	path = libs/flycheck-eglot
+	url = https://github.com/intramurz/flycheck-eglot

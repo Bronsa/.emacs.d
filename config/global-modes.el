@@ -24,3 +24,4 @@
 (global-diff-hl-mode)
 (diff-hl-margin-mode)
 (ido-ubiquitous-mode 1)
+(global-flycheck-eglot-mode 1)

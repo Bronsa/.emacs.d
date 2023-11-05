@@ -19,6 +19,12 @@
   `(progn (defalias ,obsolete-name ,current-name ,docstring)
 	  (make-obsolete ,obsolete-name ,current-name ,when)))
 
+(advice-add 'custom-handle-keyword :around
+            (lambda (orig-fun symbol keyword value type)
+              (if (eq keyword :local)
+                  (make-variable-buffer-local symbol)
+                (apply orig-fun (list symbol keyword value type)))))
+
 (setq config-dir (file-name-directory (or (buffer-file-name) load-file-name)))
 
 (defun load-config-file (f)
@@ -53,6 +59,7 @@
         flycheck
         flycheck-ocaml
         flycheck-popup-tip
+        flycheck-eglot
         ggtags
         graphql
         haskell-mode
@@ -140,6 +147,7 @@
         ;; editorconfig
         ;; erc-services
         flycheck-ocaml
+        flycheck-eglot
         flycheck-popup-tip
         ;; ggtags
         git-timemachine
