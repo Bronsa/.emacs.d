@@ -222,7 +222,7 @@
   ;;             (propertize " ")
   ;;           ""))
 
-  '(vc-mode vc-mode)
+  ;; '(vc-mode vc-mode)
 
   '(:eval (if (symbol-value 'flycheck-mode) flycheck-mode-line))
 

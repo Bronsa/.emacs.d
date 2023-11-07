@@ -74,8 +74,9 @@ pair.
         company
         compat
         csv-mode
-	dash
+	    dash
         dockerfile-mode
+        dune/editor-integration/emacs
         diff-hl
         editorconfig-emacs
         eldoc
@@ -135,7 +136,7 @@ pair.
         tuareg
         timemachine
         undo-tree
-	with-editor/lisp
+	    with-editor/lisp
         wgrep
         yaml-mode
         yasnippet
@@ -153,6 +154,7 @@ pair.
         diff-hl-flydiff
         diff-hl-margin
         dockerfile-mode
+        dune
         flymake
         project
         eglot

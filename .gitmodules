@@ -265,3 +265,6 @@
 [submodule "libs/flycheck-eglot"]
 	path = libs/flycheck-eglot
 	url = https://github.com/intramurz/flycheck-eglot
+[submodule "libs/dune"]
+	path = libs/dune
+	url = https://github.com/ocaml/dune

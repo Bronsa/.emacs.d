@@ -45,6 +45,7 @@
                            ((char-equal ?\  (aref (buffer-name b) 0)) nil)
                            ((or
                              (eq major-mode 'compilation-mode)
+                             (string-match "\\.~.*~" (buffer-name b))
                              (string-match "\\*tramp.*" (buffer-name b))
                              (and (string-match "\\*cider-.*" (buffer-name b))
                                   (not (equal "*cider-scratch*" (buffer-name b)))
@@ -112,17 +113,9 @@
                            ((buffer-live-p b) b)))
                       (buffer-list)))))
 
-;; place a space around the label to make it looks less crowd
+
 (defadvice tabbar-buffer-tab-label (after fixup_tab_label_space_and_flag activate)
   (setq ad-return-value	(concat " " (concat ad-return-value " "))))
-;; called each time the modification state of the buffer changed
-(defun ztl-modification-state-change ()
-  (tabbar-set-template tabbar-current-tabset nil)
-  (tabbar-display-update))
-;; first-change-hook is called BEFORE the change is made
-(defun ztl-on-buffer-modification ()
-  (set-buffer-modified-p t)
-  (ztl-modification-state-change))
 
 (setq
  tabbar-scroll-left-help-function nil   ;don't show help information
