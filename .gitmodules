@@ -268,3 +268,9 @@
 [submodule "libs/dune"]
 	path = libs/dune
 	url = https://github.com/ocaml/dune
+[submodule "libs/emacs-dune-format"]
+	path = libs/emacs-dune-format
+	url = https://github.com/purcell/emacs-dune-format.git
+[submodule "libs/emacs-reformatter"]
+	path = libs/emacs-reformatter
+	url = https://github.com/purcell/emacs-reformatter.git

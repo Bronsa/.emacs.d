@@ -79,6 +79,8 @@ pair.
         dune/editor-integration/emacs
         diff-hl
         editorconfig-emacs
+        emacs-dune-format
+        emacs-reformatter
         eldoc
         flymake
         eglot
@@ -158,6 +160,7 @@ pair.
         flymake
         project
         eglot
+        dune-format
         flycheck-ocaml
         flycheck-eglot
         flycheck-popup-tip

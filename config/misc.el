@@ -420,3 +420,4 @@ An ocaml atom is any string containing [a-z_0-9A-Z`.]."
 
 (setq-default merlin-completion-with-doc t)
 (setq-default merlin-type-after-locate t)
+(add-hook 'dune-mode-hook 'dune-format-on-save-mode)
