@@ -19,6 +19,8 @@
  (magit-push nil
              ("--force-with-lease"))
  (magit-rebase
+  ("--preserve-merges")
+  ("--autostash")
   ("--preserve-merges" "--autostash")
   nil)
  (magit-revert nil
