@@ -313,7 +313,7 @@
          (compilation-running (and buffer (get-buffer-process buffer))))
     (progn
       (if compilation-running (popup-buffer buffer))
-      (let ((root-dir (opam-root-dir)))
+      (let ((root-dir (dune-root)))
         (with-current-buffer tuareg-compilation-buffer
           (when (or (not compilation-running)
                     (not (string-equal root-dir (buffer-string))))

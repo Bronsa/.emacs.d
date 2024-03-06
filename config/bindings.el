@@ -50,6 +50,8 @@
 (global-set-key (kbd "ESC <up>") 'paredit-splice-sexp-killing-backward)
 (global-set-key (kbd "C-c g") 'magit-status)
 
+(global-set-key (kbd "<insertchar>") 'overwrite-mode)
+
 ;; (define-key mpc-songs-mode-map (kbd "RET") 'mpc-play-at-point)
 ;; (define-key mpc-songs-mode-map (kbd "M-RET") 'mpc-play)
 ;; (define-key mpc-mode-map (kbd "j") 'mpc-select)

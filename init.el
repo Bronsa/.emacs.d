@@ -101,3 +101,4 @@
 
 (byte-recompile-directory (expand-file-name "~/.emacs.d") 0)
 (delete-file (expand-file-name "~/.emacs.d/init.elc"))
+(put 'overwrite-mode 'disabled nil)
