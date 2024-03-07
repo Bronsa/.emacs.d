@@ -20,7 +20,7 @@
                   (coding-system-for-write 'utf-8))
               (insert content)
               (write-file filename)))
-          (substring (shell-command-to-string (concat "curl -s -F 'f:1=<" filename "' http://ix.io")) 0 -1)))
+          (substring (shell-command-to-string (concat "curl -s -F 'sprunge=<" filename "' http://sprunge.us")) 0 -1)))
 
      (lambda (res)
        (kill-new res)
