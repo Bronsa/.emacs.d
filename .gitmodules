@@ -70,9 +70,6 @@
 [submodule "libs/edn"]
 	path = libs/edn
 	url = https://github.com/expez/edn.el.git
-[submodule "libs/peg.el"]
-	path = libs/peg
-	url = https://github.com/ellerh/peg.el.git
 [submodule "libs/hydra"]
 	path = libs/hydra
 	url = https://github.com/abo-abo/hydra.git
@@ -274,3 +271,6 @@
 [submodule "libs/emacs-reformatter"]
 	path = libs/emacs-reformatter
 	url = https://github.com/purcell/emacs-reformatter.git
+[submodule "libs/peg"]
+	path = libs/peg
+	url = https://github.com/emacs-straight/peg.git

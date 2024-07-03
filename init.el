@@ -99,6 +99,7 @@
  '(tuareg-font-lock-operator-face ((t (:foreground "color-130"))))
  '(undo-tree-visualizer-active-branch-face ((t (:foreground "color-250" :weight bold)))))
 
-(byte-recompile-directory (expand-file-name "~/.emacs.d") 0)
-(delete-file (expand-file-name "~/.emacs.d/init.elc"))
+;; (byte-recompile-directory (expand-file-name "~/.emacs.d") 0)
+;; (delete-file (expand-file-name "~/.emacs.d/init.elc"))
+
 (put 'overwrite-mode 'disabled nil)
