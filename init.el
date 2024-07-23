@@ -24,13 +24,11 @@
  ;; If there is more than one, they won't work right.
  '(company-dabbrev-other-buffers nil)
  '(erc-modules
-   (quote
-    (autojoin track completion irccontrols log netsplit match noncommands readonly stamp autoaway log scrolltobottom fill truncate ring networks move-to-prompt)))
+   '(autojoin track completion irccontrols log netsplit match noncommands readonly stamp autoaway log scrolltobottom fill truncate ring networks move-to-prompt))
  '(flycheck-checker-error-threshold nil)
  '(flycheck-popup-tip-error-prefix "! ")
  '(safe-local-variable-values
-   (quote
-    ((project-vc-merge-submodules)
+   '((project-vc-merge-submodules)
      (eval tuareg-opam-update-env
            (projectile-project-root))
      (projectile-project-type . "make")
@@ -49,8 +47,7 @@
            (lazy-seq 0)
            (match 1)
            (try+ 0)
-           (deftype
-               (quote defun)))
+           (deftype 'defun))
      (checkdoc-package-keywords-flag)
      (bug-reference-bug-regexp . "#\\(?2:[[:digit:]]+\\)")
      (js2-basic-offset . 2)
@@ -58,7 +55,7 @@
      (css-indent-offset . 2)
      (cider-cljs-lein-repl . "(user/cljs-repl)")
      (nameless-current-name . "cider")
-     (nameless-affect-indentation-and-filling))))
+     (nameless-affect-indentation-and-filling)))
  '(transient-show-popup 1))
 
 (customize-set-variable 'magit-ellipsis '((t (nil . " …"))))
@@ -69,6 +66,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(completions-common-part ((t (:foreground "color-27"))))
  '(custom-group-tag ((t (:inherit variable-pitch :foreground "color-33" :weight bold :height 1.2))))
  '(custom-variable-tag ((t (:foreground "color-33" :weight bold))))
  '(diff-refine-added ((t (:inherit diff-refine-change :background "color-22"))))
