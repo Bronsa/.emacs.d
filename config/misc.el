@@ -390,8 +390,8 @@
   (call-interactively #'opam-switch-set-switch)
   (merlin-stop-server))
 
-;; (add-to-list 'eglot-server-programs '(ipl-mode . ("ipl-server")))
-;; (add-hook 'ipl-mode-hook (lambda () (eglot-ensure)))
+(add-to-list 'eglot-server-programs '(ipl-mode . ("ipl-server")))
+(add-hook 'ipl-mode-hook (lambda () (eglot-ensure)))
 
 (add-hook 'eglot-managed-mode-hook (lambda () (flycheck-eglot-mode 1)))
 
