@@ -423,3 +423,6 @@ An ocaml atom is any string containing [a-z_0-9A-Z`.]."
 
 (setq vc-follow-symlinks t)
 (setq eglot-connect-timeout 60)
+
+(setq-default bidi-paragraph-direction 'left-to-right)
+(setq bidi-inhibit-bpa t)
