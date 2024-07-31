@@ -53,6 +53,8 @@
                                   (not (string-match "\\*cider-error.*\\*" (buffer-name b))))
                              (member (buffer-name b)
                                      (list
+                                      "*Async-native-compile-log*"
+                                      "*Native-compile-Log*"
                                       "*dune-format errors*"
                                       "*eldoc*"
                                       "*Flycheck errors*"

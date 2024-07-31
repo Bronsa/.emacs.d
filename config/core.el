@@ -83,7 +83,6 @@ pair.
         emacs-reformatter
         eldoc
         flymake
-        eglot
         eval-sexp-fu
         external-completion
         f

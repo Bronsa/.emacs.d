@@ -4,6 +4,7 @@
 (setq mc/cmds-to-run-for-all
       '(
         end-of-visual-line
+        ido-switch-buffer
         isearch-abort
         isearch-forward-regexp
         paredit-forward-kill-word
@@ -11,4 +12,6 @@
 
 (setq mc/cmds-to-run-once
       '(
+        beginning-of-visual-line
+        ido-switch-buffer
         ))

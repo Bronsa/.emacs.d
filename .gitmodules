@@ -238,9 +238,6 @@
 [submodule "libs/lsp-mode"]
 	path = libs/lsp-mode
 	url = https://github.com/emacs-lsp/lsp-mode.git
-[submodule "libs/eglot"]
-	path = libs/eglot
-	url = https://github.com/joaotavora/eglot.git
 [submodule "libs/jsonrpc"]
 	path = libs/jsonrpc
 	url = https://github.com/emacs-straight/jsonrpc.git
