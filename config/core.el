@@ -102,7 +102,6 @@ pair.
         imenu-anywhere
         inf-clojure
         ipl-mode
-        jsonrpc
         less-css-mode
         markdown-mode
         markup-faces
