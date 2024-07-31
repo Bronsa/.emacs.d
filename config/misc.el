@@ -255,7 +255,7 @@
 
 (add-hook 'tuareg-mode-hook
           (lambda ()
-            (setq-local merlin-command (concat (dune root) "_opam/bin/ocamlmerlin"))))
+            (setq-local merlin-command (concat (dune-root) "_opam/bin/ocamlmerlin"))))
 
 (add-hook 'tuareg-mode-hook (lambda () (abbrev-mode -1) (ocp-setup-indent)))
 (add-hook 'tuareg-interactive-mode-hook (lambda () (abbrev-mode -1)))
