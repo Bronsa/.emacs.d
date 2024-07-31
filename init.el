@@ -94,6 +94,7 @@
  '(secondary-selection ((t (:underline t))))
  '(shadow ((t (:foreground "color-242"))))
  '(transient-active-infix ((t (:underline t :weight ultra-bold))))
+ '(tuareg-font-lock-extension-node-face ((t (:inherit tuareg-font-lock-infix-extension-node-face))))
  '(tuareg-font-lock-interactive-output-face ((t (:foreground "color-153"))))
  '(tuareg-font-lock-operator-face ((t (:foreground "color-130"))))
  '(undo-tree-visualizer-active-branch-face ((t (:foreground "color-250" :weight bold)))))
