@@ -255,7 +255,7 @@
 
 (add-hook 'tuareg-mode-hook
           (lambda ()
-            (setq-local merlin-command (imandra--find-merlin))))
+            (setq-local merlin-command (concat (dune root) "_opam/bin/ocamlmerlin"))))
 
 (add-hook 'tuareg-mode-hook (lambda () (abbrev-mode -1) (ocp-setup-indent)))
 (add-hook 'tuareg-interactive-mode-hook (lambda () (abbrev-mode -1)))
@@ -279,29 +279,6 @@
 
 (setq ocamlformat-enable 'enable-outside-detected-project)
 (add-to-list 'recentf-exclude "/tmp/ocamlformat.*")
-
-(defun opam-root-dir ()
-  (with-temp-buffer
-    (if (eq (call-process-shell-command "opam var bin" nil (current-buffer) nil) 0)
-        (replace-regexp-in-string "_opam/bin\n$" "" (buffer-string))
-      (message "can't find opam root"))))
-
-(defun generate-mli ()
-  (interactive)
-  (let* ((root-dir (opam-root-dir))
-         (file-name (buffer-file-name))
-         (relative-path (substring file-name (length root-dir))))
-    (when relative-path
-      (let* ((mli-file-name (concat file-name "i"))
-             (buffer (get-file-buffer mli-file-name)))
-        (progn
-          (cond
-           (buffer (switch-to-buffer buffer))
-           (t (find-file mli-file-name)))
-          (let ((default-directory root-dir))
-            (call-process-shell-command
-             (concat "opam exec -- dune exec ocaml-print-intf " relative-path)
-             nil (current-buffer) nil)))))))
 
 (defun popup-buffer (buffer)
   (setq outwin (display-buffer buffer '(nil (allow-no-window . nil)))))
