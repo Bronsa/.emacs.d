@@ -74,6 +74,7 @@
  '(ediff-even-diff-C ((t (:background "color-238"))))
  '(ediff-odd-diff-C ((t (:background "color-239"))))
  '(eshell-ls-directory ((t (:foreground "Blue"))))
+ '(help-key-binding ((t (:inherit fixed-pitch :foreground "color-245"))))
  '(highlight ((t (:background "#1f1f1f"))))
  '(magit-branch-current ((t (:inherit magit-branch-local))))
  '(magit-branch-remote-head ((t (:inherit magit-branch-remote :underline "color-23"))))
