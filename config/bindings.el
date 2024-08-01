@@ -144,7 +144,7 @@
 (global-set-key (kbd "C-c <up>")    'hs-hide-all)
 (global-set-key (kbd "C-c <down>")  'hs-show-all)
 
-;; (define-key cider-repl-mode-map (kbd "C-M-q") #'prog-indent-sexp)
+(global-set-key (kbd "C-M-q") #'indent-sexp)
 
 (global-set-key (kbd "C-x j") 'ido-switch-buffer)
 (global-set-key (kbd "C-x C-j") 'ido-switch-buffer)

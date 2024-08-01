@@ -421,3 +421,4 @@ An ocaml atom is any string containing [a-z_0-9A-Z`.]."
       t))))
 
 (advice-add 'kill-buffer--possibly-save :around #'kill-buffer--possibly-save--advice)
+(setq magit-show-long-lines-warning nil)
