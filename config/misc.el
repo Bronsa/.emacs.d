@@ -403,3 +403,21 @@ An ocaml atom is any string containing [a-z_0-9A-Z`.]."
 
 (setq-default bidi-paragraph-direction 'left-to-right)
 (setq bidi-inhibit-bpa t)
+
+(defun kill-buffer--possibly-save--advice (original-function buffer &rest args)
+  (let ((response
+         (car
+          (read-multiple-choice
+           (format "Buffer %s modified. Save before killing?" (buffer-name))
+           '((?y "y" "save the buffer and then kill it")
+             (?n "n" "kill buffer without saving"))
+           nil nil (and (not use-short-answers)
+                        (not (use-dialog-box-p)))))))
+    (cond
+     ((= response ?y)
+      (with-current-buffer buffer (save-buffer))
+      t)
+     ((= response ?s)
+      t))))
+
+(advice-add 'kill-buffer--possibly-save :around #'kill-buffer--possibly-save--advice)
