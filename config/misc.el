@@ -405,10 +405,9 @@ An ocaml atom is any string containing [a-z_0-9A-Z`.]."
 (setq bidi-inhibit-bpa t)
 
 (defun kill-buffer--possibly-save--advice (original-function buffer &rest args)
-  (progn
-    (when (y-or-n-p (format "Buffer %s modified. Save before killing?" (buffer-name)))
-      (with-current-buffer buffer (save-buffer)))
-    t))
+  (when (y-or-n-p (format "Buffer %s modified. Save before killing?" (buffer-name)))
+    (with-current-buffer buffer (save-buffer)))
+  t)
 
 (advice-add 'kill-buffer--possibly-save :around #'kill-buffer--possibly-save--advice)
 (setq magit-show-long-lines-warning nil)
