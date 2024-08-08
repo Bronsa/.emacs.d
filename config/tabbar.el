@@ -57,6 +57,7 @@
                                       "*Native-compile-Log*"
                                       "*dune-format errors*"
                                       "*eldoc*"
+                                      "*Flymake log*"
                                       "*Flycheck errors*"
                                       "*Flycheck error messages*"
                                       "*xref*"
