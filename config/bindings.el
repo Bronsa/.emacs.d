@@ -134,6 +134,12 @@
 (global-unset-key (kbd "<M-down-mouse-1>"))
 (global-unset-key (kbd "<M-mouse-3>"))
 (global-unset-key (kbd "<M-mouse-2>"))
+(global-unset-key (kbd "<C-mouse-1>"))
+(global-unset-key (kbd "<C-mouse-2>"))
+(global-unset-key (kbd "<C-mouse-3>"))
+(global-unset-key (kbd "<C-down-mouse-1>"))
+(global-unset-key (kbd "<C-down-mouse-2>"))
+(global-unset-key (kbd "<C-down-mouse-3>"))
 
 ;; (define-key erc-mode-map (kbd "C-M-i") nil)
 
