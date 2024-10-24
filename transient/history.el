@@ -14,7 +14,8 @@
   ("-n256" "--graph" "--decorate"))
  (magit-log:-n "256")
  (magit-merge
-  ("--no-ff"))
+  ("--no-ff")
+  nil)
  (magit-pull nil)
  (magit-push nil
              ("--force-with-lease"))
@@ -23,6 +24,8 @@
   nil
   ("--preserve-merges")
   ("--preserve-merges" "--autostash"))
+ (magit-remote
+  ("-f"))
  (magit-revert
   ("--edit")
   nil)

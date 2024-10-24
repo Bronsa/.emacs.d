@@ -7,6 +7,7 @@
         ido-switch-buffer
         isearch-abort
         isearch-forward-regexp
+        kill-visual-line
         paredit-forward-kill-word
         ))
 

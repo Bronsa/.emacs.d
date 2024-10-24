@@ -238,6 +238,7 @@
 
 
 (add-to-list 'auto-mode-alist '("\\.ipl[d]?\\'" . ipl-mode))
+(add-to-list 'auto-mode-alist '("\\.tf\\'" . terraform-mode))
 
 (setq csv-separators '("," ";"))
 
@@ -276,6 +277,7 @@
 ;; (add-hook 'tuareg-mode-hook 'imandra--setup-eldoc)
 (add-to-list 'auto-mode-alist '("\\.nix\\'" . nix-mode))
 (add-to-list 'auto-mode-alist '("\\.xtend\\'" . java-mode))
+(add-to-list 'auto-mode-alist '("\\.proto\\'" . javascript-mode))
 
 (setq ocamlformat-enable 'enable-outside-detected-project)
 (add-to-list 'recentf-exclude "/tmp/ocamlformat.*")
@@ -411,3 +413,6 @@ An ocaml atom is any string containing [a-z_0-9A-Z`.]."
 
 (advice-add 'kill-buffer--possibly-save :around #'kill-buffer--possibly-save--advice)
 (setq magit-show-long-lines-warning nil)
+
+
+(setq eglot-ignored-server-capabilites '(:hoverProvider))
