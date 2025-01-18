@@ -7,6 +7,7 @@
                  (equal "*cider-scratch*" (buffer-name b))
                  (string-match "\\*cider-repl.*\\*" (buffer-name b))
                  (string-match "\\*cider-error.*\\*" (buffer-name b))
+                 (string-match "\\*inf-clojure.*\\*" (buffer-name b))
                  (equal "*inferior-lisp*" (buffer-name (current-buffer)))
                  (equal "*OCaml*" (buffer-name (current-buffer)))
                  (equal "*ielm*" (buffer-name (current-buffer)))

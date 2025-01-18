@@ -18,7 +18,8 @@
   nil)
  (magit-pull nil)
  (magit-push nil
-             ("--force-with-lease"))
+             ("--force-with-lease")
+             ("--force"))
  (magit-rebase
   ("--autostash")
   nil
@@ -32,4 +33,6 @@
  (magit-run nil)
  (magit-stash nil)
  (magit-status-jump nil)
- (magit-submodule nil))
+ (magit-submodule nil)
+ (magit-tag
+  ("--force")))
