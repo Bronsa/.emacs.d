@@ -416,3 +416,5 @@ An ocaml atom is any string containing [a-z_0-9A-Z`.]."
 
 
 (setq eglot-ignored-server-capabilites '(:hoverProvider))
+
+(setq-default cider-use-xref nil)

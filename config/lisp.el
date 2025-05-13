@@ -9,3 +9,5 @@
 (setq inf-clojure-generic-cmd "clojure"
       inf-clojure-tools-deps-cmd "clojure"
       inf-clojure-project-type "tools.deps")
+
+(add-hook 'clojure-mode-hook #'cider-mode)

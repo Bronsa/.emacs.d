@@ -69,6 +69,7 @@ pair.
         apiwrap
         async
         auto-highlight-symbol
+        cider
         clojure-mode
         color-theme
         company
@@ -117,6 +118,8 @@ pair.
         opam-switch-mode
         ocp-indent/tools
         paredit
+	parseedn
+	parseclj
         project
         projectile
         popup
@@ -128,6 +131,7 @@ pair.
         seq
         sesman
         smex
+	spinner.el
         string-inflection
         terraform-mode
         transient/lisp
@@ -148,6 +152,7 @@ pair.
 (setq required-libs
       '(async
         auto-highlight-symbol
+        cider
         clojure-mode
         color-theme
         company

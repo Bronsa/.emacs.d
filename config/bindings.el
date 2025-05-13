@@ -182,3 +182,7 @@
     (if (symbol-value 'merlin-mode)
         (merlin-error-next)
       (flycheck-next-error))))
+
+
+(define-key cider-mode-map (kbd "M-.") #'cider-find-var)
+(define-key cider-mode-map (kbd "M-,") #'cider-pop-back)

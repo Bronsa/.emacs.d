@@ -268,3 +268,12 @@
 [submodule "libs/peg"]
 	path = libs/peg
 	url = https://github.com/emacs-straight/peg.git
+[submodule "libs/parseedn"]
+	path = libs/parseedn
+	url = https://github.com/clojure-emacs/parseedn.git
+[submodule "libs/parseclj"]
+	path = libs/parseclj
+	url = https://github.com/clojure-emacs/parseclj.git
+[submodule "libs/spinner.el"]
+	path = libs/spinner.el
+	url = https://github.com/Malabarba/spinner.el.git

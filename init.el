@@ -28,7 +28,77 @@
  '(flycheck-checker-error-threshold nil)
  '(flycheck-popup-tip-error-prefix "! ")
  '(safe-local-variable-values
-   '((project-vc-merge-submodules)
+   '((elisp-lint-indent-specs
+      (if-let* . 2)
+      (when-let* . 1)
+      (let* . defun)
+      (nrepl-dbind-response . 2)
+      (cider-save-marker . 1)
+      (cider-propertize-region . 1)
+      (cider-map-repls . 1)
+      (cider--jack-in . 1)
+      (cider--make-result-overlay . 1)
+      (insert-label . defun)
+      (insert-align-label . defun)
+      (insert-rect . defun)
+      (cl-defun . 2)
+      (with-parsed-tramp-file-name . 2)
+      (thread-first . 0)
+      (thread-last . 0)
+      (transient-define-prefix . defmacro)
+      (transient-define-suffix . defmacro))
+     (cljr-print-right-margin . 118)
+     (cljr-insert-newline-after-require . t)
+     (cljr-favor-prefix-notation)
+     (eval define-clojure-indent
+           (l/matcha
+            '(1
+              (:defn)))
+           (l/matche
+            '(1
+              (:defn)))
+           (p.types/def-abstract-type
+            '(1
+              (:defn)))
+           (p.types/defprotocol+
+            '(1
+              (:defn)))
+           (p.types/defrecord+
+            '(2 nil nil
+                (:defn)))
+           (p.types/deftype+
+            '(2 nil nil
+                (:defn)))
+           (p/def-map-type
+            '(2 nil nil
+                (:defn)))
+           (p/defprotocol+
+            '(1
+              (:defn)))
+           (p/defrecord+
+            '(2 nil nil
+                (:defn)))
+           (p/deftype+
+            '(2 nil nil
+                (:defn)))
+           (tools.macro/macrolet
+            '(1
+              ((:defn))
+              :form)))
+     (eval put 'mu/defn 'clojure-doc-string-elt 2)
+     (eval put 'mr/def 'clojure-doc-string-elt 2)
+     (eval put 'mi/define-batched-hydration-method 'clojure-doc-string-elt 3)
+     (eval put 'mi/define-simple-hydration-method 'clojure-doc-string-elt 3)
+     (eval put 'methodical/defmulti 'clojure-doc-string-elt 2)
+     (eval put 'methodical/defmethod 'clojure-doc-string-elt 3)
+     (eval put 'p.types/defprotocol+ 'clojure-doc-string-elt 2)
+     (eval put 's/defn 'clojure-doc-string-elt 2)
+     (eval put 'setting/defsetting 'clojure-doc-string-elt 2)
+     (eval put 'defsetting 'clojure-doc-string-elt 2)
+     (eval put 'api.macros/defendpoint 'clojure-doc-string-elt 3)
+     (eval put 'define-premium-feature 'clojure-doc-string-elt 2)
+     (ftf-project-finders ftf-get-top-git-dir)
+     (project-vc-merge-submodules)
      (eval tuareg-opam-update-env
            (projectile-project-root))
      (projectile-project-type . "make")
