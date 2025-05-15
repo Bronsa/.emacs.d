@@ -277,3 +277,6 @@
 [submodule "libs/spinner.el"]
 	path = libs/spinner.el
 	url = https://github.com/Malabarba/spinner.el.git
+[submodule "libs/typescript.el"]
+	path = libs/typescript.el
+	url = https://github.com/emacs-typescript/typescript.el.git

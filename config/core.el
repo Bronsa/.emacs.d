@@ -118,8 +118,8 @@ pair.
         opam-switch-mode
         ocp-indent/tools
         paredit
-	parseedn
-	parseclj
+	    parseedn
+	    parseclj
         project
         projectile
         popup
@@ -131,7 +131,7 @@ pair.
         seq
         sesman
         smex
-	spinner.el
+	    spinner.el
         string-inflection
         terraform-mode
         transient/lisp
@@ -139,6 +139,7 @@ pair.
         tabbar
         tuareg
         timemachine
+        typescript.el
         undo-tree
 	    with-editor/lisp
         wgrep
@@ -202,6 +203,7 @@ pair.
         tabbar
         terraform-mode
         tuareg
+        typescript-mode
         undo-tree
         uniquify
         wgrep
