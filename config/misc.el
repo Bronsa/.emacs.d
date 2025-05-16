@@ -418,3 +418,17 @@ An ocaml atom is any string containing [a-z_0-9A-Z`.]."
 (setq eglot-ignored-server-capabilites '(:hoverProvider))
 
 (setq-default cider-use-xref nil)
+
+(defvar-local paredit-was-active nil)
+
+(defun disable-paredit-in-blame ()
+  (when (bound-and-true-p paredit-mode)
+    (setq paredit-was-active t)
+    (paredit-mode -1)))
+
+(defun restore-paredit-after-blame ()
+  (when paredit-was-active
+    (paredit-mode 1)))
+
+(add-hook 'magit-blame-read-only-mode-hook #'disable-paredit-in-blame)
+(advice-add 'magit-blame-quit :after #'restore-paredit-after-blame)
