@@ -186,3 +186,7 @@
 
 (define-key cider-mode-map (kbd "M-.") #'cider-find-var)
 (define-key cider-mode-map (kbd "M-,") #'cider-pop-back)
+
+
+(define-key cider-repl-mode-map (kbd "C-c C-l") #'cider-repl-clear-buffer)
+(define-key cider-repl-mode-map (kbd "C-M-q") #'prog-indent-sexp)
