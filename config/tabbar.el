@@ -49,6 +49,7 @@
                              (eq major-mode 'compilation-mode)
                              (string-match "\\.~.*~" (buffer-name b))
                              (string-match "\\*tramp.*" (buffer-name b))
+                             (string-match "\\*.*-format errors\\*" (buffer-name b))
                              (and (string-match "\\*cider-.*" (buffer-name b))
                                   (not (equal "*cider-scratch*" (buffer-name b)))
                                   (not (string-match "\\*cider-repl.*\\*" (buffer-name b)))
@@ -57,7 +58,6 @@
                                      (list
                                       "*Async-native-compile-log*"
                                       "*Native-compile-Log*"
-                                      "*dune-format errors*"
                                       "*eldoc*"
                                       "*Flymake log*"
                                       "*Flycheck errors*"
