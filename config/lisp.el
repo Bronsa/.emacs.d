@@ -11,3 +11,4 @@
       inf-clojure-project-type "tools.deps")
 
 (add-hook 'clojure-mode-hook #'cider-mode)
+(add-hook 'clojure-mode-hook #'flycheck-mode)

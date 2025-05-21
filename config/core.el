@@ -88,6 +88,7 @@ pair.
         external-completion
         f
         flycheck
+        flycheck-clj-kondo
         flycheck-ocaml
         flycheck-popup-tip
         flycheck-eglot
@@ -154,6 +155,7 @@ pair.
       '(async
         auto-highlight-symbol
         cider
+        cider-ns
         clojure-mode
         color-theme
         company
@@ -165,6 +167,7 @@ pair.
         project
         eglot
         dune-format
+        flycheck-clj-kondo
         flycheck-ocaml
         flycheck-eglot
         flycheck-popup-tip

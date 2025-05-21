@@ -280,3 +280,6 @@
 [submodule "libs/typescript.el"]
 	path = libs/typescript.el
 	url = https://github.com/emacs-typescript/typescript.el.git
+[submodule "libs/flycheck-clj-kondo"]
+	path = libs/flycheck-clj-kondo
+	url = https://github.com/borkdude/flycheck-clj-kondo
