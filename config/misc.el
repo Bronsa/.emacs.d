@@ -432,3 +432,13 @@ An ocaml atom is any string containing [a-z_0-9A-Z`.]."
 
 (add-hook 'magit-blame-read-only-mode-hook #'disable-paredit-in-blame)
 (advice-add 'magit-blame-quit :after #'restore-paredit-after-blame)
+
+(reformatter-define cljfmt-format
+  :input-file (reformatter-temp-file-in-current-directory)
+  :stdin nil
+  :stdout nil
+  :program "cljfmt"
+  :args (list "fix" input-file)
+  :lighter " CljFmt")
+
+(add-hook 'clojure-mode-hook 'cljfmt-format-on-save-mode)
